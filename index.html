@@ -128,6 +128,16 @@ td input{padding:6px 8px;text-align:right}
 footer{max-width:1040px;margin:0 auto;padding:0 16px 40px;color:var(--ink3);font-size:12px}
 
 .t-이벤트{background:var(--purple-soft);color:var(--purple)}.t-확률{background:var(--gold-soft);color:var(--gold)}
+body{background-image:url(assets/pattern-light.svg);background-size:220px}
+@media (prefers-color-scheme:dark){body{background-image:url(assets/pattern-dark.svg)}}
+header{background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:blur(6px)}
+.banner{position:relative;height:150px;border-radius:var(--r);overflow:hidden;margin-bottom:16px;background:#123b34 url(assets/banner.svg) center/cover no-repeat;box-shadow:0 4px 18px rgba(8,29,25,.25)}
+.btxt{position:absolute;left:24px;bottom:22px;color:#f5ead2;text-shadow:0 2px 8px rgba(0,0,0,.5)}
+.btxt b{display:block;font-family:var(--f-display);font-size:42px;line-height:1;letter-spacing:1px}
+.btxt span{font-size:13px;opacity:.85}
+@media (max-width:560px){.banner{height:110px;background-position:72% center}.btxt{left:16px;bottom:14px}.btxt b{font-size:30px}}
+.steps{margin:0 0 12px;padding-left:20px;font-size:14px}.steps li{margin:4px 0}
+.bmk{display:inline-block;background:var(--ink);color:var(--surface);text-decoration:none;border-radius:8px;padding:9px 14px;font-weight:700;cursor:grab}
 .tcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
 .tcard{background:var(--sunk);border-radius:8px;padding:12px 14px;border-left:4px solid var(--jade)}
 .tcard h4{margin:0 0 6px;font-size:15px;display:flex;gap:6px;align-items:center}
@@ -186,7 +196,7 @@ footer{max-width:1040px;margin:0 auto;padding:0 16px 40px;color:var(--ink3);font
 </head>
 <body>
 <header><div class="hwrap">
-  <a class="logo" href="#">깨비노트<small>플러스</small></a>
+  <a class="logo" href="#">깨비노트<small>플러스 · 짐승특공대</small></a>
   <nav>
     <button data-tab="home" class="on">홈</button>
     <button data-tab="patch">패치노트</button>
@@ -200,6 +210,9 @@ footer{max-width:1040px;margin:0 auto;padding:0 16px 40px;color:var(--ink3);font
 </div></header>
 
 <main>
+<div class="banner" role="img" aria-label="짐승특공대 배너">
+  <div class="btxt"><b>짐승특공대</b><span>도깨비의세계 문파 · 깨비노트 플러스</span></div>
+</div>
 <!-- ============ 홈 ============ -->
 <section id="tab-home">
   <div class="hero card">
@@ -295,6 +308,30 @@ footer{max-width:1040px;margin:0 auto;padding:0 16px 40px;color:var(--ink3);font
     <p class="muted">번호를 누르면 복사됩니다. 등록한 쿠폰은 체크해 두세요. <span id="c-src"></span></p>
     <div class="clist" id="clist"></div>
     <div class="chips" style="margin:14px 0 0"><button class="chip" id="c-copyall">미사용 쿠폰 전체 복사</button><button class="chip" id="c-hide">사용한 쿠폰 숨기기</button></div>
+  </div>
+  <div class="grid2">
+    <div class="card">
+      <p class="eyebrow">PC · 한 번만 설정</p>
+      <h3>쿠폰 등록 도우미 (북마클릿)</h3>
+      <ol class="steps">
+        <li>아래 버튼을 <b>북마크바로 끌어다 놓기</b> (북마크바가 안 보이면 Ctrl+Shift+B)</li>
+        <li><a href="https://coupon.kakaogames.com/dokkaebi/ko/" target="_blank" rel="noopener">공식 쿠폰 등록 페이지</a>를 열고 북마크 클릭</li>
+        <li>회원번호를 한 번 넣고, 쿠폰마다 <b>[입력]</b> → 페이지의 <b>쿠폰 사용</b> 클릭</li>
+      </ol>
+      <a class="bmk" id="bmk" href="#" onclick="alert('클릭하지 말고 북마크바로 끌어다 놓으세요.');return false;">🎫 깨비노트 쿠폰 도우미</a>
+      <p class="muted" style="margin:10px 0 0">새 쿠폰은 자동으로 목록에 나타나므로 다시 설치할 필요가 없습니다. 회원번호는 쿠폰 페이지가 열린 이 브라우저에만 저장되고 어디로도 전송되지 않습니다. 제출은 직접 누르는 방식이에요.</p>
+    </div>
+    <div class="card">
+      <p class="eyebrow">모바일 · 바로 등록</p>
+      <h3>복사하고 등록 페이지 열기</h3>
+      <p class="muted" style="margin-top:-4px">다음 미사용 쿠폰을 복사한 뒤 공식 등록 페이지를 엽니다. 붙여넣고 등록 후 돌아와 체크하세요.</p>
+      <button class="btn" id="c-next" style="border:0;cursor:pointer;font:inherit;font-weight:700">다음 쿠폰 복사 + 등록 페이지 열기</button>
+      <p class="muted" id="c-next-info" style="margin:8px 0 0"></p>
+      <hr style="border:0;border-top:1px solid var(--line);margin:16px 0">
+      <h3 style="margin-bottom:6px">문파 자동 등록</h3>
+      <p class="muted" style="margin-top:0">원본 깨비노트에서 문파 자동 등록(하루 3회)을 신청할 수 있어요. 신청 방식과 회원번호 관리는 원본 운영자가 담당합니다.</p>
+      <a class="chip" style="text-decoration:none;display:inline-block" href="https://rok03.github.io/kkaebi-note/" target="_blank" rel="noopener">원본 깨비노트 → 쿠폰 탭에서 신청 ↗</a>
+    </div>
   </div>
 </section>
 
@@ -611,6 +648,15 @@ document.querySelector('nav button[data-tab="coupon"]').addEventListener('click'
   store.set('seenCoupons',[...new Set([...store.get('seenCoupons',[]),...liveCoupons().map(c=>c.code)])]);
   $('nb-coupon').classList.add('hidden');
 });
+{const base=location.href.replace(/[#?].*$/,'').replace(/[^/]*$/,'');
+ $('bmk').href=`javascript:(function(){var s=document.createElement('script');s.src='${base}coupon-helper.js?'+Date.now();document.body.appendChild(s)})()`;}
+$('c-next').onclick=()=>{
+  const next=liveCoupons().find(c=>!used.has(c.code));
+  if(!next){toast('미사용 쿠폰이 없어요');return;}
+  copy(next.code);
+  $('c-next-info').innerHTML=`'${esc(next.code)}' 복사됨 · 등록했다면 위 목록에서 체크하세요`;
+  window.open('https://coupon.kakaogames.com/dokkaebi/ko/','_blank','noopener');
+};
 $('c-copyall').onclick=()=>{const l=liveCoupons().filter(c=>!used.has(c.code)).map(c=>c.code);l.length?copy(l.join('\n')):toast('미사용 쿠폰이 없어요');};
 $('c-hide').onclick=()=>{hideUsed=!hideUsed;store.set('hideUsed',hideUsed);renderCoupons();};
 
