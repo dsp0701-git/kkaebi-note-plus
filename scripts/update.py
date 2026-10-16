@@ -390,8 +390,16 @@ def get_page(url: str, timeout: int = 20) -> str:
         return r.read().decode("utf-8", "replace")
 
 
-def fetch_channel_page(ch: dict) -> list[dict]:
-    return parse_channel_page(get_page(f"https://www.youtube.com/channel/{ch['id']}/videos?hl=en&gl=US"), ch["name"])
+def fetch_channel_page(ch: dict, per_channel: int = 15) -> list[dict]:
+    """동영상 탭 + 라이브 탭(다시보기)을 합쳐 최신순 15개 — RSS 가 주던 범위와 맞춘다."""
+    base = f"https://www.youtube.com/channel/{ch['id']}"
+    items = parse_channel_page(get_page(f"{base}/videos?hl=en&gl=US"), ch["name"])
+    try:
+        items += parse_channel_page(get_page(f"{base}/streams?hl=en&gl=US"), ch["name"])
+    except Exception:
+        pass  # 라이브 탭이 없거나 비어 있는 채널
+    uniq = {v["id"]: v for v in items}
+    return sorted(uniq.values(), key=lambda v: v["date"], reverse=True)[:per_channel]
 
 
 def fetch_videos(cfg: dict, old: list[dict] | None = None) -> list[dict]:
