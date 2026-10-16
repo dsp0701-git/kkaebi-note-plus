@@ -128,8 +128,9 @@ td input{padding:6px 8px;text-align:right}
 footer{max-width:1040px;margin:0 auto;padding:0 16px 40px;color:var(--ink3);font-size:12px}
 
 .t-이벤트{background:var(--purple-soft);color:var(--purple)}.t-확률{background:var(--gold-soft);color:var(--gold)}
-body{background-image:url(assets/pattern-light.svg);background-size:220px}
-@media (prefers-color-scheme:dark){body{background-image:url(assets/pattern-dark.svg)}}
+body{background:#103a34}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:#103a34 url(assets/bg-night.svg) center bottom/cover no-repeat}
+footer{color:#cfe3dc}footer a{color:#f5ead2}
 header{background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:blur(6px)}
 .banner{position:relative;height:150px;border-radius:var(--r);overflow:hidden;margin-bottom:16px;background:#123b34 url(assets/banner.svg) center/cover no-repeat;box-shadow:0 4px 18px rgba(8,29,25,.25)}
 .btxt{position:absolute;left:24px;bottom:22px;color:#f5ead2;text-shadow:0 2px 8px rgba(0,0,0,.5)}
@@ -210,9 +211,6 @@ header{background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-fil
 </div></header>
 
 <main>
-<div class="banner" role="img" aria-label="짐승특공대 배너">
-  <div class="btxt"><b>짐승특공대</b><span>도깨비의세계 문파 · 깨비노트 플러스</span></div>
-</div>
 <!-- ============ 홈 ============ -->
 <section id="tab-home">
   <div class="hero card">
