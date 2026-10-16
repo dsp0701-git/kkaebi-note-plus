@@ -1,5 +1,7 @@
 """python -m unittest discover tests"""
 import json
+import os
+import urllib.parse
 import shutil
 import sys
 import tempfile
@@ -61,6 +63,35 @@ class Parsers(unittest.TestCase):
         self.assertEqual(len(ids), 12)
         self.assertNotIn("zzzOTHERzzz", ids)
         self.assertTrue(any("&" in v["title"] for v in vids))  # XML 엔티티 복원
+
+
+    def test_api_fallback_when_rss_blocked(self):
+        cfg = json.loads((U.ROOT / "data" / "config.json").read_text(encoding="utf-8"))["youtube"]
+        cfg = dict(cfg, days=36500)
+
+        def fake(url):
+            if "feeds/videos.xml" in url:
+                raise OSError("HTTP Error 404")
+            if "/playlistItems" in url:
+                pl = urllib.parse.parse_qs(urllib.parse.urlparse(url).query)["playlistId"][0]
+                ch = "UC" + pl[2:]
+                items = [{"snippet": {"title": t, "publishedAt": d.replace("+00:00", "Z"), "resourceId": {"videoId": v}}}
+                         for c, v, t, d in F.VIDEOS if c == ch]
+                return json.dumps({"items": items}).encode()
+            if "/search" in url:
+                return json.dumps({"items": []}).encode()
+            if "/videos" in url:
+                return json.dumps({"items": [{"id": "OrJ7py7ssqE", "statistics": {"viewCount": "1234"}}]}).encode()
+            raise ValueError(url)
+
+        with mock.patch.object(U, "get", fake), mock.patch.dict(os.environ, {"YT_API_KEY": "test"}):
+            vids = U.fetch_videos(cfg)
+        self.assertEqual(len(vids), 12)
+        self.assertEqual(next(v for v in vids if v["id"] == "OrJ7py7ssqE")["views"], 1234)
+
+        with mock.patch.object(U, "get", fake), mock.patch.dict(os.environ, {}, clear=True):
+            with self.assertRaises(RuntimeError):
+                U.fetch_videos(cfg)
 
 
 class EndToEnd(unittest.TestCase):
