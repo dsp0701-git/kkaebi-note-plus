@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 170" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1f2a"/><stop offset=".6" stop-color="#123b34"/><stop offset="1" stop-color="#1a4a3f"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f5ead2" stop-opacity=".55"/><stop offset="1" stop-color="#f5ead2" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="slash" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ee7a5f" stop-opacity="0"/><stop offset=".35" stop-color="#e2553a"/><stop offset="1" stop-color="#c4472b" stop-opacity="0"/>
+    </linearGradient>
+    <g id="eyes"><ellipse cx="0" cy="0" rx="5" ry="2.6" fill="#ffd34d"/><ellipse cx="16" cy="0" rx="5" ry="2.6" fill="#ffd34d"/>
+      <ellipse cx="0" cy="0" rx="1.2" ry="2.4" fill="#2a1a00"/><ellipse cx="16" cy="0" rx="1.2" ry="2.4" fill="#2a1a00"/></g>
+    <g id="paw" fill="#f5ead2"><ellipse cx="0" cy="6" rx="6" ry="5"/><circle cx="-6" cy="-3" r="2.4"/><circle cx="-2" cy="-6" r="2.4"/><circle cx="3" cy="-6" r="2.4"/><circle cx="7" cy="-3" r="2.4"/></g>
+  </defs>
+  <rect width="1200" height="170" fill="url(#sky)"/>
+  <!-- stars -->
+  <g fill="#f5ead2" opacity=".6">
+    <circle cx="120" cy="22" r="1.2"/><circle cx="260" cy="48" r="1"/><circle cx="410" cy="18" r="1.4"/><circle cx="560" cy="40" r="1"/>
+    <circle cx="700" cy="16" r="1.2"/><circle cx="820" cy="52" r="1"/><circle cx="1110" cy="30" r="1.3"/><circle cx="1160" cy="70" r="1"/>
+  </g>
+  <!-- moon -->
+  <circle cx="985" cy="62" r="90" fill="url(#glow)"/>
+  <circle cx="985" cy="62" r="36" fill="#f5ead2"/>
+  <circle cx="972" cy="52" r="6" fill="#e7d9b8"/><circle cx="996" cy="72" r="4" fill="#e7d9b8"/>
+  <!-- traditional clouds -->
+  <g fill="none" stroke="#d9a843" stroke-width="2.2" stroke-linecap="round" opacity=".55">
+    <path d="M860 92 q14 -16 30 -4 q8 -14 24 -6 q10 -10 22 0 q14 -4 16 10 h-92 z"/>
+    <path d="M884 82 a6 6 0 1 1 8 6"/>
+    <path d="M1060 40 q12 -14 26 -4 q10 -12 24 -2 q12 -2 12 8 h-62 z"/>
+    <path d="M300 70 q12 -14 26 -4 q10 -12 24 -2 q12 -2 12 8 h-62 z"/>
+    <path d="M316 62 a5 5 0 1 1 7 5"/>
+  </g>
+  <!-- far mountains -->
+  <path d="M0 120 L80 88 L150 104 L240 70 L330 102 L420 80 L520 108 L610 76 L700 100 L790 84 L880 110 L980 86 L1080 104 L1200 82 V170 H0 Z" fill="#14403a" opacity=".85"/>
+  <!-- mid mountains -->
+  <path d="M0 140 L110 108 L190 126 L300 98 L390 128 L500 104 L600 132 L720 106 L820 130 L930 112 L1040 134 L1120 116 L1200 128 V170 H0 Z" fill="#0f312b"/>
+  <!-- forest ridge with pines -->
+  <path d="M0 170 V150 L20 150 L28 134 L36 150 L60 148 L70 128 L80 148 L120 150 L130 136 L140 150 L190 146 L202 124 L214 146 L260 150 L270 138 L280 150 L340 148 L352 128 L364 148 L420 150 L430 136 L440 150 L520 146 L532 126 L544 146 L600 150 L612 132 L624 150 L690 148 L702 128 L714 148 L780 150 L790 136 L800 150 L860 146 L872 124 L884 146 L950 150 L960 138 L970 150 L1040 148 L1052 128 L1064 148 L1120 150 L1130 136 L1140 150 L1200 148 V170 Z" fill="#081d19"/>
+  <!-- eyes in the forest -->
+  <use href="#eyes" x="236" y="156"/><use href="#eyes" x="566" y="160" opacity=".85"/><use href="#eyes" x="818" y="158" opacity=".7"/><use href="#eyes" x="1086" y="161"/>
+  <!-- claw slashes -->
+  <g stroke="url(#slash)" stroke-linecap="round" fill="none">
+    <path d="M1078 8 Q1110 70 1158 128" stroke-width="7"/>
+    <path d="M1100 4 Q1132 66 1180 122" stroke-width="8"/>
+    <path d="M1122 2 Q1154 60 1198 112" stroke-width="6"/>
+  </g>
+  <!-- paw trail -->
+  <g opacity=".14">
+    <use href="#paw" transform="translate(620 40) rotate(20)"/><use href="#paw" transform="translate(660 26) rotate(20)"/>
+    <use href="#paw" transform="translate(700 44) rotate(20)"/><use href="#paw" transform="translate(740 30) rotate(20)"/>
+  </g>
+</svg>
