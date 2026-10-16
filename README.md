@@ -8,7 +8,9 @@ GitHub Pages + GitHub Actions 만으로 동작한다 (서버·DB·비용 없음)
 ```
 index.html                     화면 (data/*.json 을 읽어서 그림)
 data/auto.json                 ← Actions 가 2시간마다 자동 갱신 (손대지 말 것)
-data/manual.json               ← 사람이 고치는 것: 운영자 메모, 수동 일정, 숙제 기본값
+data/manual.json               ← 사람이 고치는 것: 이번 주 꼭 볼 것, 수동 일정, 숙제 기본값
+data/timeline.json             ← 패치노트 타임라인 (공식 공지 요약, kkaebi-note-update 스킬로 갱신)
+data/equip.json                ← 장비 추가 효과 공식 수치 범위·확률 (확률 공지 변경 시 갱신)
 data/config.json               수집 설정: 게시판, 유튜브 채널 목록, 키워드
 scripts/update.py              수집기 (Python 표준 라이브러리만 사용)
 tests/                         파서 단위 테스트 + 가짜 응답으로 돌리는 E2E 테스트

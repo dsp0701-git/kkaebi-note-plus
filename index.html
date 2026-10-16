@@ -128,6 +128,50 @@ td input{padding:6px 8px;text-align:right}
 footer{max-width:1040px;margin:0 auto;padding:0 16px 40px;color:var(--ink3);font-size:12px}
 
 .t-이벤트{background:var(--purple-soft);color:var(--purple)}.t-확률{background:var(--gold-soft);color:var(--gold)}
+.tcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.tcard{background:var(--sunk);border-radius:8px;padding:12px 14px;border-left:4px solid var(--jade)}
+.tcard h4{margin:0 0 6px;font-size:15px;display:flex;gap:6px;align-items:center}
+.tcard p{margin:0;font-size:13.5px;color:var(--ink2)}
+.tc-warn{border-left-color:var(--vermil)}.tc-warn h4 span{color:var(--vermil)}
+.tc-ok{border-left-color:var(--sky)}.tc-ok h4 span{color:var(--sky)}.tc-info h4 span{color:var(--jade)}
+.pentry{display:grid;grid-template-columns:76px 1fr;gap:14px;padding:16px 0;border-top:1px solid var(--line)}
+.pentry:first-child{border-top:0}
+.pdate b{display:block;font-family:var(--f-display);font-size:22px;line-height:1.1}
+.pdate span{font-size:12px;color:var(--ink3)}
+.pkind{display:inline-block;font-size:11px;font-weight:700;border-radius:5px;padding:1px 7px;margin-bottom:4px}
+.k-예정{background:var(--sky-soft);color:var(--sky)}.k-정기{background:var(--jade-soft);color:var(--jade)}
+.k-임시{background:var(--gold-soft);color:var(--gold)}.k-라이브{background:var(--purple-soft);color:var(--purple)}.k-오픈{background:var(--vermil-soft);color:var(--vermil)}
+.ptitle{font-weight:700;margin:0 0 8px}
+.pitems{list-style:none;margin:0;padding:0}
+.pitems li{display:flex;gap:10px;align-items:baseline;padding:4px 0;font-size:14px}
+.pitems .tag{min-width:62px;text-align:center}
+.psrc{font-size:12px;color:var(--ink3);margin-top:6px}.psrc a{color:var(--ink3)}
+@media (max-width:560px){.pentry{grid-template-columns:1fr;gap:4px}.pdate b{display:inline;font-size:18px;margin-right:6px}}
+.t-신규{background:var(--sky-soft);color:var(--sky)}.t-성장{background:var(--jade-soft);color:var(--jade)}
+.t-밸런스{background:var(--sunk);color:var(--ink2)}.t-재화·상점{background:var(--gold-soft);color:var(--gold)}
+.t-사냥{background:var(--jade-soft);color:var(--jade)}.t-주의{background:var(--vermil-soft);color:var(--vermil)}
+.t-편의{background:var(--purple-soft);color:var(--purple)}.t-오류{background:var(--sunk);color:var(--ink3)}
+.eform{border:1px solid var(--line);border-radius:var(--r);padding:14px;margin-top:4px}
+.erow1{display:grid;grid-template-columns:auto 90px 110px 1fr;gap:10px;align-items:end}
+@media (max-width:640px){.erow1{grid-template-columns:1fr 1fr}}
+.seg{display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.seg button{border:0;background:var(--surface);color:var(--ink2);font:inherit;font-size:14px;padding:9px 14px;cursor:pointer;border-left:1px solid var(--line)}
+.seg button:first-child{border-left:0}.seg button.on{background:var(--jade);color:#fff;font-weight:700}
+.eline{display:grid;grid-template-columns:22px 1fr 130px 1.2fr;gap:10px;align-items:center;border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin-top:10px}
+@media (max-width:640px){.eline{grid-template-columns:22px 1fr 110px}.eline .eres{grid-column:2/4}}
+.eres .top{display:flex;align-items:baseline;gap:8px}
+.eres b{font-size:18px}.eres .meta{font-size:12px;color:var(--ink3)}
+.gbar{height:6px;background:var(--sunk);border-radius:99px;overflow:hidden;margin:4px 0;position:relative}
+.gbar i{display:block;height:100%;border-radius:99px}
+.gb{font-size:11px;font-weight:700;border-radius:5px;padding:1px 7px}
+.g0{background:var(--sunk);color:var(--ink2)}.g1{background:var(--sky-soft);color:var(--sky)}.g2{background:var(--purple-soft);color:var(--purple)}.g3{background:var(--gold-soft);color:var(--gold)}
+.gx{background:var(--vermil-soft);color:var(--vermil)}
+.edet{font-size:12px;color:var(--ink3)}
+.escore{display:flex;gap:16px;align-items:center;background:var(--sunk);border-radius:8px;padding:12px 14px;margin-top:12px}
+.escore b{font-family:var(--f-display);font-size:34px;line-height:1}
+.etable{width:100%;font-size:13.5px}.etable td,.etable th{text-align:left}
+.etable tr.cur{background:var(--jade-soft)}
+.rk{font-weight:700;color:var(--vermil)}
 .upd{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--ink3)}
 .upd i{width:7px;height:7px;border-radius:50%;background:var(--jade);display:inline-block}
 .upd.stale i{background:var(--gold)}.upd.err i{background:var(--vermil)}
@@ -145,11 +189,13 @@ footer{max-width:1040px;margin:0 auto;padding:0 16px 40px;color:var(--ink3);font
   <a class="logo" href="#">깨비노트<small>플러스</small></a>
   <nav>
     <button data-tab="home" class="on">홈</button>
+    <button data-tab="patch">패치노트</button>
+    <button data-tab="equip">내 장비</button>
     <button data-tab="todo">숙제</button>
     <button data-tab="coupon">쿠폰<span class="nbadge hidden" id="nb-coupon"></span></button>
     <button data-tab="feed">공지·영상<span class="nbadge hidden" id="nb-feed"></span></button>
-    <button data-tab="market">거래소 계산기</button>
-    <button data-tab="growth">강화 재화 계산기</button>
+    <button data-tab="market">거래소</button>
+    <button data-tab="growth">강화 재화</button>
   </nav>
 </div></header>
 
@@ -169,21 +215,48 @@ footer{max-width:1040px;margin:0 auto;padding:0 16px 40px;color:var(--ink3);font
       <div><span class="muted">일일 초기화까지</span><b id="h-reset">-</b></div>
     </div>
   </div>
+  <div class="card" id="tips-card">
+    <p class="eyebrow">이번 주 꼭 볼 것</p>
+    <h2 id="tips-title">할 일</h2>
+    <div class="tcards" id="tips"></div>
+  </div>
   <div class="card">
     <div class="thead"><div><p class="eyebrow">이벤트 마감 · 쿠폰 만료 · 기한 있는 보상</p><h2 style="margin:0">놓치면 안 되는 일정</h2></div>
       <span class="upd" id="upd"><i></i><span>불러오는 중…</span></span></div>
     <ul class="dlist" id="dlist"></ul>
     <div class="chips" style="margin:10px 0 0"><button class="chip" id="d-more">전체 보기</button></div>
   </div>
-  <div class="card" id="tips-card">
-    <p class="eyebrow">운영자 메모</p>
-    <h2 id="tips-title">할 일</h2>
-    <ul class="tips" id="tips"></ul>
-  </div>
   <div class="card">
     <p class="eyebrow">바로가기</p>
     <h2>공식 링크</h2>
     <div class="links" id="links"></div>
+  </div>
+</section>
+
+<!-- ============ 패치노트 ============ -->
+<section id="tab-patch" class="hidden">
+  <div class="card">
+    <p class="eyebrow">타임라인 · 최신 순 · 공식 공지 요약</p>
+    <h2>정식 오픈 이후 변경 사항</h2>
+    <input class="search" id="p-search" placeholder="검색 (예: 엽전, 거래소, 추가 효과)">
+    <div class="chips" id="p-chips"></div>
+    <div id="p-list"></div>
+  </div>
+</section>
+
+<!-- ============ 내 장비 ============ -->
+<section id="tab-equip" class="hidden">
+  <div class="card">
+    <p class="eyebrow">11부위 · 추가 효과 최상급 최댓값 대비</p>
+    <h2>내 장비 추가 효과 평가</h2>
+    <p class="muted" style="margin-top:-6px">등급과 추가 효과 수치를 넣으면 공식 수치 범위로 줄별 등급(하급~최상급)과 최상급 최댓값 대비 %를 계산합니다. 입력은 이 브라우저에 저장됩니다.</p>
+    <div class="chips" id="e-parts"></div>
+    <div class="eform" id="e-form"></div>
+  </div>
+  <div class="card">
+    <div class="thead"><h3>전체 장비 요약</h3><span class="muted" id="e-sum"></span></div>
+    <div style="overflow-x:auto"><table class="etable" id="e-table"></table></div>
+    <p class="muted" id="e-src" style="margin:10px 0 0"></p>
   </div>
 </section>
 
@@ -377,6 +450,7 @@ function chips(el,list,cur,on){
    data/manual.json : 사람이 고치는 것 (운영자 메모, 수동 일정, 숙제 기본값) */
 let AUTO={notices:[],pinned:[],coupons:[],events:[],videos:[],maintenance:null};
 let MANUAL={tips:[],events:[],todo_defaults:{daily:[],weekly:[]}};
+let TIMELINE={entries:[]}, EQUIP=null;
 async function loadJSON(path){
   const r=await fetch(path+'?t='+Math.floor(Date.now()/6e4),{cache:'no-store'});
   if(!r.ok) throw new Error(path+' '+r.status);
@@ -384,7 +458,7 @@ async function loadJSON(path){
 }
 
 /* ================= 탭 ================= */
-const TABS=['home','todo','coupon','feed','market','growth'];
+const TABS=['home','patch','equip','todo','coupon','feed','market','growth'];
 document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{
   document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('on',x===b));
   TABS.forEach(t=>$('tab-'+t).classList.toggle('hidden',t!==b.dataset.tab));
@@ -459,7 +533,8 @@ function renderTips(){
   const tips=MANUAL.tips||[];
   $('tips-card').classList.toggle('hidden',!tips.length);
   $('tips-title').textContent=MANUAL.tips_title||'할 일';
-  $('tips').innerHTML=tips.map(([b,t])=>`<li><b>${esc(b)}</b> — ${esc(t)}</li>`).join('');
+  const ICON={info:'ⓘ',warn:'⚠',ok:'✓'};
+  $('tips').innerHTML=tips.map(([b,t,tone='info'])=>`<div class="tcard tc-${esc(tone)}"><h4><span>${ICON[tone]||'ⓘ'}</span>${esc(b)}</h4><p>${esc(t)}</p></div>`).join('');
 }
 
 /* ================= 링크 ================= */
@@ -664,14 +739,135 @@ function setStatus(){
   u.title=`마지막 데이터 변경 ${fmtDate(t)}`;
 }
 
+/* ================= 패치노트 ================= */
+let pTag='전체';
+const PTAGS=['전체','신규','성장','밸런스','재화·상점','보상','사냥','확률','주의','편의','오류','이벤트'];
+function renderPatch(){
+  const q=$('p-search').value.trim().toLowerCase();
+  const html=(TIMELINE.entries||[]).map(e=>{
+    const items=e.items.filter(([t,x])=>(pTag==='전체'||t===pTag)&&(!q||x.toLowerCase().includes(q)||e.title.toLowerCase().includes(q)));
+    if(!items.length) return '';
+    const d=new Date(e.date+'T00:00:00+09:00');
+    return `<div class="pentry"><div class="pdate"><b>${pad(d.getMonth()+1)}.${pad(d.getDate())}</b><span>${WD[d.getDay()]}요일</span></div>
+      <div><span class="pkind k-${esc(e.kind)}">${esc(e.kind)}</span><p class="ptitle">${esc(e.title)}</p>
+      <ul class="pitems">${items.map(([t,x])=>`<li><span class="tag t-${esc(t)}">${esc(t)}</span><span>${esc(x)}</span></li>`).join('')}</ul>
+      ${e.sources?.length?`<div class="psrc">원문: ${e.sources.map(([n,u])=>`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(n)}</a>`).join(' · ')}</div>`:''}</div></div>`;
+  }).join('');
+  $('p-list').innerHTML=html||'<p class="empty">해당하는 변경 사항이 없습니다.</p>';
+}
+const setP=t=>{pTag=t;const used=new Set((TIMELINE.entries||[]).flatMap(e=>e.items.map(i=>i[0])));
+  chips($('p-chips'),PTAGS.filter(x=>x==='전체'||used.has(x)),t,setP);renderPatch();};
+$('p-search').oninput=renderPatch;
+
+/* ================= 내 장비 ================= */
+const GR=['일반','희귀','영웅','전설'];
+let eq={}, ePart='무기';
+function kindOf(part){for(const [k,v] of Object.entries(EQUIP.slots)) if(v.includes(part)) return k; return '방어구';}
+function optList(part){
+  const k=kindOf(part);
+  if(k==='방어구') return Object.keys(EQUIP.prob['방어']);
+  return ['공격력','공격 정확도','치명타 적중',...EQUIP.styles.map(s=>'스타일 피해 · '+s)];
+}
+const baseOpt=o=>o.startsWith('스타일 피해')?'스타일 피해':o;
+const isPct=o=>o.startsWith('스타일 피해');
+function evalLine(part,grade,opt,val){
+  if(!opt||val===''||val==null||isNaN(val)) return null;
+  const k=kindOf(part), rg=EQUIP.ranges[k]?.[grade]?.[baseOpt(opt)]; if(!rg) return null;
+  const v=isPct(opt)?Math.round(parseFloat(val)*100):parseFloat(val);
+  const max=rg[3][1]; let g=rg.findIndex(([a,b])=>v>=a&&v<=b);
+  const out=v>max?'over':v<rg[0][0]?'under':null;
+  if(g<0) g=v>max?3:0;
+  const prob=EQUIP.prob[k==='방어구'?'방어':'공격'][baseOpt(opt)];
+  const pAtLeast=prob.slice(g).reduce((a,b)=>a+b,0);
+  return {g,pct:Math.min(100,Math.round(v/max*100)),max,rg,out,pAtLeast};
+}
+const fmtV=(o,v)=>isPct(o)?(v/100).toFixed(2)+'%':v.toLocaleString();
+function partScore(part){
+  const d=eq[part]; if(!d||!d.grade||d.grade==='일반') return null;
+  const n=EQUIP.lines[d.grade], res=(d.lines||[]).slice(0,n).map(l=>evalLine(part,d.grade,l.opt,l.val)).filter(Boolean);
+  if(!res.length) return null;
+  return {score:Math.round(res.reduce((a,r)=>a+r.pct,0)/res.length),n:res.length,of:n,low:res.filter(r=>r.g===0).length,res};
+}
+function saveEq(){store.set('equip',eq);}
+function renderParts(){
+  const all=Object.values(EQUIP.slots).flat();
+  $('e-parts').innerHTML=all.map(p=>{const s=partScore(p),d=eq[p];
+    return `<button class="chip${p===ePart?' on':''}" data-p="${p}">${p}${d?.grade&&d.grade!=='일반'?` · ${d.grade}`:''}${s?` <b>${s.score}</b>`:''}</button>`;}).join('');
+  $('e-parts').querySelectorAll('[data-p]').forEach(b=>b.onclick=()=>{ePart=b.dataset.p;renderEquip();});
+}
+function renderForm(){
+  const p=ePart,d=eq[p]=eq[p]||{grade:'영웅',enh:'',type:'',name:'',lines:[]};
+  const k=kindOf(p), n=d.grade==='일반'?0:EQUIP.lines[d.grade], opts=optList(p);
+  while(d.lines.length<n) d.lines.push({opt:'',val:''});
+  let h=`<div class="erow1">
+    <div><label>등급</label><div class="seg">${GR.map(g=>`<button data-g="${g}" class="${d.grade===g?'on':''}">${g}</button>`).join('')}</div></div>
+    <div><label>강화</label><input id="e-enh" type="number" min="0" value="${esc(d.enh)}"></div>
+    ${k==='무기'?`<div><label>무기 종류</label><select id="e-type"><option value="">선택</option>${EQUIP.weapon_types.map(t=>`<option ${d.type===t?'selected':''}>${t}</option>`).join('')}</select></div>`:'<div></div>'}
+    <div><label>장비 이름(선택)</label><input id="e-name" value="${esc(d.name)}" placeholder="예: 고대 제령"></div></div>`;
+  if(!n) h+='<p class="muted" style="margin:12px 0 0">일반 등급은 추가 효과가 없습니다.</p>';
+  for(let i=0;i<n;i++){
+    const l=d.lines[i], r=evalLine(p,d.grade,l.opt,l.val);
+    const unit=isPct(l.opt)?'%':'';
+    let res='<span class="muted">옵션과 수치를 입력하세요</span>';
+    if(r){
+      const col=['var(--ink3)','var(--sky)','var(--purple)','var(--gold)'][r.g];
+      res=`<div class="top"><span class="gb ${r.out?'gx':'g'+r.g}">${r.out==='over'?'범위 초과':r.out==='under'?'범위 미만':EQUIP.grades[r.g]}</span><b>${r.pct}%</b><span class="meta">최댓값 ${fmtV(l.opt,r.max)} 대비</span></div>
+        <div class="gbar"><i style="width:${r.pct}%;background:${col}"></i></div>
+        <details class="edet"><summary>공식 범위 · 재추첨 확률</summary>
+        ${r.rg.map(([a,b],gi)=>`${EQUIP.grades[gi]} ${fmtV(l.opt,a)}${a!==b?'~'+fmtV(l.opt,b):''}`).join(' · ')}<br>
+        새로 뽑을 때 '${esc(l.opt)}' ${EQUIP.grades[r.g]} 이상: ${r.pAtLeast.toFixed(2)}%</details>`;
+    }
+    h+=`<div class="eline"><span class="muted">${i+1}</span>
+      <select data-i="${i}" data-k="opt"><option value="">옵션 선택</option>${opts.map(o=>`<option ${l.opt===o?'selected':''}>${o}</option>`).join('')}</select>
+      <div class="unit"><input data-i="${i}" data-k="val" type="number" step="${unit?'0.01':'1'}" min="0" value="${esc(l.val)}" placeholder="수치"><span>${unit}</span></div>
+      <div class="eres">${res}</div></div>`;
+  }
+  const s=partScore(p);
+  if(s){
+    const verdict=s.score<35?'하급 위주입니다. 변경권 우선 후보입니다.':s.score<60?'평균 수준입니다. 다른 부위와 비교해 보세요.':'좋은 편입니다. 유지를 권합니다.';
+    h+=`<div class="escore"><b>${s.score}</b><div><b style="font:inherit;font-weight:700">점</b> · 줄별 최상급 최댓값 대비 평균 (${s.n}/${s.of}줄 입력, 하급 ${s.low}줄)<br><span class="muted">${verdict} [판단]</span></div></div>`;
+  }
+  h+=`<div style="margin-top:10px"><button class="chip" id="e-clear">이 부위 초기화</button></div>`;
+  $('e-form').innerHTML=h;
+  $('e-form').querySelectorAll('[data-g]').forEach(b=>b.onclick=()=>{d.grade=b.dataset.g;d.lines=d.lines.slice(0,EQUIP.lines[d.grade]||0);saveEq();renderEquip();});
+  $('e-enh').oninput=e=>{d.enh=e.target.value;saveEq();renderTable();};
+  $('e-name').oninput=e=>{d.name=e.target.value;saveEq();renderTable();};
+  if($('e-type')) $('e-type').onchange=e=>{d.type=e.target.value;saveEq();renderTable();};
+  $('e-form').querySelectorAll('[data-k]').forEach(el=>{
+    const ev=el.tagName==='SELECT'?'onchange':'onchange';
+    el[ev]=()=>{d.lines[+el.dataset.i][el.dataset.k]=el.value;saveEq();renderEquip();};
+  });
+  $('e-clear').onclick=()=>{delete eq[p];saveEq();renderEquip();};
+}
+function renderTable(){
+  const all=Object.values(EQUIP.slots).flat();
+  const scored=all.map(p=>({p,s:partScore(p)})).filter(x=>x.s).sort((a,b)=>a.s.score-b.s.score);
+  const rank=Object.fromEntries(scored.map((x,i)=>[x.p,i+1]));
+  $('e-table').innerHTML=`<thead><tr><th>부위</th><th>장비</th><th>등급</th><th>강화</th><th>추가 효과</th><th>점수</th><th>변경권</th></tr></thead><tbody>`+
+    all.map(p=>{const d=eq[p],s=partScore(p);
+      const lines=d?.lines?.filter(l=>l.opt&&l.val!=='').map(l=>`${l.opt.replace('스타일 피해 · ','')} ${isPct(l.opt)?l.val+'%':l.val}`).join(' / ')||'–';
+      return `<tr class="${p===ePart?'cur':''}"><td>${p}</td><td>${esc([d?.type,d?.name].filter(Boolean).join(' '))||'–'}</td><td>${d?.grade||'미입력'}</td><td>${d?.enh?'+'+esc(d.enh):'–'}</td><td>${esc(lines)}</td><td>${s?s.score:'–'}</td><td>${rank[p]&&rank[p]<=3?`<span class="rk">${rank[p]}순위</span>`:''}</td></tr>`;}).join('')+'</tbody>';
+  const avg=scored.length?Math.round(scored.reduce((a,x)=>a+x.s.score,0)/scored.length):null;
+  $('e-sum').textContent=`입력 ${scored.length}/${all.length}부위${avg!=null?` · 평균 ${avg}점`:''}${scored[0]?` · 변경권 1순위: ${scored[0].p}`:''}`;
+}
+function renderEquip(){renderParts();renderForm();renderTable();}
+function initEquip(){
+  if(!EQUIP){$('e-form').innerHTML='<p class="empty">장비 수치 데이터를 불러오지 못했습니다.</p>';return;}
+  eq=store.get('equip',{});
+  $('e-src').innerHTML=`근거: <a href="${esc(EQUIP.source)}" target="_blank" rel="noopener">공식 '장비 등급별 추가 효과 부여 수 확률'</a> (${fmtDate(new Date(EQUIP.as_of))} 기준). 점수·판단은 참고용입니다.`;
+  renderEquip();
+}
+
 /* ================= 시작 ================= */
 (async()=>{
-  const [a,m]=await Promise.allSettled([loadJSON('data/auto.json'),loadJSON('data/manual.json')]);
+  const [a,m,tl,eq]=await Promise.allSettled([loadJSON('data/auto.json'),loadJSON('data/manual.json'),loadJSON('data/timeline.json'),loadJSON('data/equip.json')]);
+  if(tl.status==='fulfilled') TIMELINE=tl.value;
+  if(eq.status==='fulfilled') EQUIP=eq.value;
   if(a.status==='fulfilled') AUTO=Object.assign(AUTO,a.value);
   if(m.status==='fulfilled') MANUAL=Object.assign(MANUAL,m.value);
   if(a.status==='rejected'&&location.protocol==='file:')
     toast('로컬 파일로 열면 데이터가 안 보여요. README의 로컬 실행 방법을 참고하세요.');
-  initTodo();setStatus();renderTips();setN('전체');setV('전체');
+  initTodo();setStatus();renderTips();setN('전체');setV('전체');setP('전체');initEquip();
   calcMarket();renderMats();
   lastDKey=0;tick();setInterval(tick,1000);
   const t=store.get('tab','home');const b=document.querySelector(`nav button[data-tab="${t}"]`);if(b)b.click();
