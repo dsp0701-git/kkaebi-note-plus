@@ -84,14 +84,62 @@ class Parsers(unittest.TestCase):
                 return json.dumps({"items": [{"id": "OrJ7py7ssqE", "statistics": {"viewCount": "1234"}}]}).encode()
             raise ValueError(url)
 
-        with mock.patch.object(U, "get", fake), mock.patch.dict(os.environ, {"YT_API_KEY": "test"}):
+        blocked = mock.patch.object(U, "get_page", side_effect=OSError("HTTP Error 404"))
+        with blocked, mock.patch.object(U, "get", fake), mock.patch.dict(os.environ, {"YT_API_KEY": "test"}):
             vids = U.fetch_videos(cfg)
         self.assertEqual(len(vids), 12)
         self.assertEqual(next(v for v in vids if v["id"] == "OrJ7py7ssqE")["views"], 1234)
 
-        with mock.patch.object(U, "get", fake), mock.patch.dict(os.environ, {}, clear=True):
+        blocked = mock.patch.object(U, "get_page", side_effect=OSError("HTTP Error 404"))
+        with blocked, mock.patch.object(U, "get", fake), mock.patch.dict(os.environ, {}, clear=True):
             with self.assertRaises(RuntimeError):
                 U.fetch_videos(cfg)
+
+
+    def test_parse_relative(self):
+        from datetime import datetime, timezone
+        now = datetime(2026, 10, 16, 6, 30, tzinfo=timezone.utc)  # KST 15:30
+        self.assertEqual(U.parse_relative("3 days ago", now), "2026-10-13T15:00+09:00")
+        self.assertEqual(U.parse_relative("Streamed 2 hours ago", now), "2026-10-16T13:00+09:00")
+        self.assertEqual(U.parse_relative("50분 전", now), "2026-10-16T14:00+09:00")
+        self.assertEqual(U.parse_relative("2주 전", now), "2026-10-02T15:00+09:00")
+        self.assertIsNone(U.parse_relative("1.7K views", now))
+
+    def test_channel_page_fallback_without_key(self):
+        cfg = json.loads((U.ROOT / "data" / "config.json").read_text(encoding="utf-8"))["youtube"]
+        cfg = dict(cfg, days=36500)
+
+        def lockup(vid, title, when):
+            return {"richItemRenderer": {"content": {"lockupViewModel": {
+                "contentId": vid, "contentType": "LOCKUP_CONTENT_TYPE_VIDEO",
+                "metadata": {"lockupMetadataViewModel": {"title": {"content": title}, "metadata": {
+                    "contentMetadataViewModel": {"metadataRows": [{"metadataParts": [
+                        {"text": {"content": "1.7K views"}}, {"text": {"content": when}}]}]}}}}}}}}
+
+        def page(url):
+            ch = url.split("/channel/")[1].split("/")[0]
+            items = [lockup(v, t, "2 days ago") for c, v, t, d in F.VIDEOS if c == ch]
+            items.append({"richItemRenderer": {"content": {"videoRenderer": {
+                "videoId": "old" + ch[-4:], "title": {"runs": [{"text": "도깨비 구형 렌더러"}]},
+                "publishedTimeText": {"simpleText": "1 week ago"}}}}})
+            return "<script>var ytInitialData = " + json.dumps({"contents": items}) + ";</script>"
+
+        def rss_blocked(url):
+            raise OSError("HTTP Error 404")
+
+        some = next(v for c, v, t, d in F.VIDEOS)
+        old = [{"id": some, "date": "2026-01-01T09:00+09:00"}]
+        with mock.patch.object(U, "get", rss_blocked), mock.patch.object(U, "get_page", page), \
+                mock.patch.dict(os.environ, {}, clear=True):
+            vids = U.fetch_videos(cfg, old)
+        ids = [v["id"] for v in vids]
+        self.assertIn(some, ids)
+        self.assertNotIn("zzzOTHERzzz", ids)
+        self.assertEqual(next(v for v in vids if v["id"] == some)["date"], "2026-01-01T09:00+09:00")
+        self.assertTrue(any(i.startswith("old") for i in ids))
+
+        with self.assertRaises(ValueError):
+            U.parse_channel_page("<html>consent</html>", "x")
 
 
 class EndToEnd(unittest.TestCase):
@@ -117,7 +165,7 @@ class EndToEnd(unittest.TestCase):
             # 네트워크 전부 실패 → 이전 데이터 유지, 종료코드 1
             def boom(url):
                 raise OSError("network down")
-            with mock.patch.multiple(U, ROOT=tmp, AUTO=auto, CONFIG=tmp / "data" / "config.json", get=boom):
+            with mock.patch.multiple(U, ROOT=tmp, AUTO=auto, CONFIG=tmp / "data" / "config.json", get=boom, get_page=boom):
                 self.assertEqual(U.main(), 1)
                 self.assertEqual(len(json.loads(auto.read_text(encoding="utf-8"))["coupons"]), 9)
         finally:
