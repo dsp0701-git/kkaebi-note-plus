@@ -1,0 +1,97 @@
+"""python -m unittest discover tests"""
+import json
+import shutil
+import sys
+import tempfile
+import unittest
+from pathlib import Path
+from unittest import mock
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import update as U  # noqa: E402
+import fixtures as F  # noqa: E402
+
+
+class Parsers(unittest.TestCase):
+    def test_utc_to_kst(self):
+        self.assertEqual(U.utc_to_kst("2026-10-13 12:32:12"), "2026-10-13T21:32+09:00")
+
+    def test_tags(self):
+        cases = {
+            "10월 14일(수) 정기 점검 안내": "점검",
+            "10월 14일(수) 정기 점검 완료 및 보상 지급 안내": "보상",
+            "10월 15일(목) 점검 후 변경되는 확률 정보 안내": "확률",
+            "비정상적인 게임 진행 관련 계정 제재 및 보호 조치 안내 <6차>": "제재",
+            "10월 14일(수) 긴급 라이브 방송 안내": "방송",
+            "대구콘텐츠페어 도깨비의세계 참가 안내": "안내",
+        }
+        for t, want in cases.items():
+            self.assertEqual(U.tag_of("notice", t), want, t)
+        self.assertEqual(U.tag_of("update", "아무거나"), "업데이트")
+
+    def test_maintenance(self):
+        text, _ = U.parse_html(F.MAINT_HTML)
+        self.assertEqual(U.parse_maintenance(text, 2026), ("2026-10-14T07:00+09:00", "2026-10-14T10:30+09:00"))
+        self.assertEqual(U.parse_maintenance("1월 1일(목) 23:00 ~ 02:00", 2026)[1], "2026-01-02T02:00+09:00")
+        self.assertIsNone(U.parse_maintenance("일정 미정", 2026))
+
+    def test_coupons(self):
+        cs = {c["code"]: c for c in U.parse_coupons(F.COUPON_HTML)}
+        self.assertEqual(len(cs), 9)
+        self.assertEqual(cs["도깨비1008"]["expires"], "2026-11-05T23:59+09:00")
+        self.assertIsNone(cs["도깨비의마음"]["expires"])
+        self.assertEqual(cs["도깨비1008"]["reward"], "꿀떡 무기 외형")
+        self.assertIn("엽전 100,000개", cs["칭호나와라뚝딱"]["reward"])
+
+    def test_event_deadline(self):
+        pub = "2026-10-08T10:00+09:00"
+        self.assertEqual(U.event_deadline("X (~10/28)", pub), "2026-10-28T23:59+09:00")
+        self.assertEqual(U.event_deadline("X (~10/21 08:00)", pub), "2026-10-21T08:00+09:00")
+        self.assertEqual(U.event_deadline("X (~27/10/6 08:00)", pub), "2027-10-06T08:00+09:00")
+        self.assertEqual(U.event_deadline("X (~1/5)", "2026-12-20T10:00+09:00"), "2027-01-05T23:59+09:00")
+        self.assertIsNone(U.event_deadline("도전! 문파 전투 (~ 별도 공지 시까지)", pub))
+
+    def test_rss_filter(self):
+        cfg = json.loads((U.ROOT / "data" / "config.json").read_text(encoding="utf-8"))["youtube"]
+        cfg = dict(cfg, days=36500)
+        with mock.patch.object(U, "get", F.fake_get):
+            vids = U.fetch_videos(cfg)
+        ids = [v["id"] for v in vids]
+        self.assertEqual(len(ids), 12)
+        self.assertNotIn("zzzOTHERzzz", ids)
+        self.assertTrue(any("&" in v["title"] for v in vids))  # XML 엔티티 복원
+
+
+class EndToEnd(unittest.TestCase):
+    def test_main_writes_auto_json_and_keeps_old_on_failure(self):
+        tmp = Path(tempfile.mkdtemp())
+        try:
+            (tmp / "data").mkdir()
+            shutil.copy(U.ROOT / "data" / "config.json", tmp / "data" / "config.json")
+            auto = tmp / "data" / "auto.json"
+            with mock.patch.multiple(U, ROOT=tmp, AUTO=auto, CONFIG=tmp / "data" / "config.json", get=F.fake_get):
+                self.assertEqual(U.main(), 0)
+                d = json.loads(auto.read_text(encoding="utf-8"))
+                self.assertEqual(d["maintenance"]["start"], "2026-10-14T07:00+09:00")
+                self.assertEqual(len(d["coupons"]), 9)
+                self.assertTrue(d["events"])
+                self.assertTrue(d["notices"][0]["url"].endswith("id=66316"))
+                stamp = d["updated_at"]
+
+                # 두 번째 실행: 변경 없음 → 파일 그대로
+                U.main()
+                self.assertEqual(json.loads(auto.read_text(encoding="utf-8"))["updated_at"], stamp)
+
+            # 네트워크 전부 실패 → 이전 데이터 유지, 종료코드 1
+            def boom(url):
+                raise OSError("network down")
+            with mock.patch.multiple(U, ROOT=tmp, AUTO=auto, CONFIG=tmp / "data" / "config.json", get=boom):
+                self.assertEqual(U.main(), 1)
+                self.assertEqual(len(json.loads(auto.read_text(encoding="utf-8"))["coupons"]), 9)
+        finally:
+            shutil.rmtree(tmp)
+
+
+if __name__ == "__main__":
+    unittest.main()
