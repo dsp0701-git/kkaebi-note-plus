@@ -369,7 +369,11 @@ def parse_channel_page(html: str, channel_name: str, now: datetime | None = None
         title = "".join(r.get("text", "") for r in vr.get("title", {}).get("runs", [])) or vr.get("title", {}).get("simpleText")
         add(vr.get("videoId"), title, vr.get("publishedTimeText", {}).get("simpleText"))
     if not out:
-        raise ValueError("영상 목록을 찾지 못함 (페이지 구조 변경 가능성)")
+        title = re.search(r"<title>(.*?)</title>", html, re.S)
+        tabs = [t.get("title") for t in _walk(data, "tabRenderer") if isinstance(t, dict)]
+        diag = (f"len={len(html)} lockup={html.count('lockupViewModel')} videoRenderer={html.count('videoRenderer')} "
+                f"title={title.group(1).strip()[:40] if title else None!r} keys={list(data)[:6]} tabs={tabs[:6]}")
+        raise ValueError(f"영상 목록을 찾지 못함 (페이지 구조 변경 가능성) [{diag}]")
     return out
 
 
