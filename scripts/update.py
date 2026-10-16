@@ -291,45 +291,85 @@ def parse_rss(xml: bytes, channel_name: str) -> list[dict]:
     return out
 
 
+def yt_api(path: str, key: str, **params) -> dict:
+    params["key"] = key
+    return get_json(f"https://www.googleapis.com/youtube/v3/{path}?{urllib.parse.urlencode(params)}")
+
+
+def fetch_channel_api(ch: dict, key: str) -> list[dict]:
+    """업로드 재생목록(UC→UU) 조회. 1 unit/호출이라 할당량 부담 거의 없음."""
+    data = yt_api("playlistItems", key, part="snippet", maxResults=15, playlistId="UU" + ch["id"][2:])
+    out = []
+    for it in data.get("items", []):
+        s = it["snippet"]
+        out.append({
+            "id": s["resourceId"]["videoId"], "title": _unescape(s["title"]), "channel": ch["name"],
+            "date": datetime.fromisoformat(s["publishedAt"].replace("Z", "+00:00")).astimezone(KST).isoformat(timespec="minutes"),
+            "views": None,
+        })
+    return out
+
+
 def fetch_videos(cfg: dict) -> list[dict]:
+    """채널별 RSS → 실패 시 YouTube Data API(키 있을 때) → 키워드 검색 추가.
+
+    YouTube 는 GitHub Actions 같은 데이터센터 IP 의 RSS 요청을 404/500 으로 막는 경우가 많다.
+    그래서 Actions 에서는 YT_API_KEY 를 등록해 두는 걸 권장.
+    """
     kw = re.compile("|".join(map(re.escape, cfg["keywords"])))
     since = (datetime.now(KST) - timedelta(days=cfg["days"])).isoformat()
+    key = os.environ.get("YT_API_KEY")
     vids: dict[str, dict] = {}
-    errors = 0
+    ok = 0
     for ch in cfg["channels"]:
+        items = None
         try:
-            xml = get(f"https://www.youtube.com/feeds/videos.xml?channel_id={ch['id']}")
-        except Exception as e:  # 채널 하나 실패해도 계속
-            errors += 1
+            items = parse_rss(get(f"https://www.youtube.com/feeds/videos.xml?channel_id={ch['id']}"), ch["name"])
+        except Exception as e:
             print(f"  ! RSS 실패 {ch['name']}: {e}", file=sys.stderr)
+            if key:
+                try:
+                    items = fetch_channel_api(ch, key)
+                except Exception as e2:
+                    print(f"  ! API 실패 {ch['name']}: {e2}", file=sys.stderr)
+        if items is None:
             continue
-        for v in parse_rss(xml, ch["name"]):
+        ok += 1
+        for v in items:
             if v["date"] >= since and (ch.get("all") or kw.search(v["title"])):
                 v["official"] = bool(ch.get("all"))
                 vids[v["id"]] = v
 
-    key = os.environ.get("YT_API_KEY")
     if key:
-        try:
-            q = urllib.parse.urlencode({
-                "part": "snippet", "q": cfg["keywords"][0], "type": "video", "order": "date",
-                "regionCode": "KR", "relevanceLanguage": "ko", "maxResults": 25,
-                "publishedAfter": (datetime.now(timezone.utc) - timedelta(days=cfg["days"])).strftime("%Y-%m-%dT%H:%M:%SZ"),
-                "key": key,
-            })
-            for it in get_json(f"https://www.googleapis.com/youtube/v3/search?{q}").get("items", []):
-                s = it["snippet"]
-                vid = it["id"]["videoId"]
+        try:  # 등록 안 된 채널의 영상까지 키워드 검색 (100 unit/호출)
+            data = yt_api("search", key, part="snippet", q=cfg["keywords"][0], type="video", order="date",
+                          regionCode="KR", relevanceLanguage="ko", maxResults=25,
+                          publishedAfter=(datetime.now(timezone.utc) - timedelta(days=cfg["days"])).strftime("%Y-%m-%dT%H:%M:%SZ"))
+            for it in data.get("items", []):
+                s, vid = it["snippet"], it["id"]["videoId"]
                 vids.setdefault(vid, {
                     "id": vid, "title": _unescape(s["title"]), "channel": _unescape(s["channelTitle"]),
                     "date": datetime.fromisoformat(s["publishedAt"].replace("Z", "+00:00")).astimezone(KST).isoformat(timespec="minutes"),
                     "views": None, "official": False,
                 })
+            ok += 1
         except Exception as e:
-            print(f"  ! YouTube API 실패: {e}", file=sys.stderr)
+            print(f"  ! YouTube 검색 실패: {e}", file=sys.stderr)
+        # 조회수 채우기 (50개당 1 unit)
+        need = [v for v in vids.values() if v.get("views") is None]
+        for i in range(0, len(need), 50):
+            try:
+                ids = ",".join(v["id"] for v in need[i:i + 50])
+                for it in yt_api("videos", key, part="statistics", id=ids).get("items", []):
+                    vc = it.get("statistics", {}).get("viewCount")
+                    if vc and it["id"] in vids:
+                        vids[it["id"]]["views"] = int(vc)
+            except Exception as e:
+                print(f"  ! 조회수 조회 실패: {e}", file=sys.stderr)
 
-    if errors == len(cfg["channels"]) and not vids:
-        raise RuntimeError("모든 RSS 수집 실패")
+    if ok == 0:
+        hint = "" if key else " (Actions 에서는 YT_API_KEY 시크릿 등록 필요)"
+        raise RuntimeError("모든 영상 수집 실패" + hint)
     return sorted(vids.values(), key=lambda v: v["date"], reverse=True)[: cfg["limit"]]
 
 
