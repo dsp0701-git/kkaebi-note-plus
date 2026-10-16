@@ -1,0 +1,20 @@
+{
+ "boards": ["notice", "update", "event"],
+ "notice_limit": 40,
+ "youtube": {
+  "keywords": ["도깨비의세계", "도깨비의 세계", "도깨비"],
+  "days": 14,
+  "limit": 24,
+  "channels": [
+   {"name": "도깨비의세계 공식", "id": "UCo6HhzSfiIO_4BKGQ4_BY0g", "all": true},
+   {"name": "도모", "id": "UCIn3BmGQp6EkJ-rjGwui03w"},
+   {"name": "쵸튜브[쵸피]", "id": "UCEqnhWFiZV-ziHD909994gQ"},
+   {"name": "투즈TV", "id": "UCd9NqAiVQS2Gx__T68i_tFw"},
+   {"name": "맛나는꼬꼬", "id": "UCSTuWSKBNOqLHr7JsJ7smLw"},
+   {"name": "센터로드TV", "id": "UCVmFthSi0wHDMQ9DUld6k_Q"},
+   {"name": "깨비야", "id": "UCWbSavstBDjw09m91kOUn1Q"},
+   {"name": "게임하는인기", "id": "UCawK5EIfr66Z7fjAlZgfB2g"},
+   {"name": "오지조", "id": "UCiOtCo5fgyEMY7syMPEa9ug"}
+  ]
+ }
+}

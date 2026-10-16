@@ -1,0 +1,624 @@
+{
+ "notices": [
+  {
+   "id": 66316,
+   "board": "notice",
+   "title": "비정상적인 게임 진행 관련 계정 제재 및 보호 조치 안내 <6차>",
+   "date": "2026-10-15T19:50+09:00",
+   "tag": "제재",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=66316"
+  },
+  {
+   "id": 25433,
+   "board": "notice",
+   "title": "대구콘텐츠페어 도깨비의세계 참가 안내",
+   "date": "2026-10-15T12:12+09:00",
+   "tag": "안내",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=25433"
+  },
+  {
+   "id": 24963,
+   "board": "notice",
+   "title": "필드 보스 전투력 기준 입장 제한 적용 안내",
+   "date": "2026-10-15T12:11+09:00",
+   "tag": "안내",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=24963"
+  },
+  {
+   "id": 23792,
+   "board": "notice",
+   "title": "[정상화] 도깨비의세계 공식 커뮤니티 접속 불가 현상 안내",
+   "date": "2026-10-15T12:08+09:00",
+   "tag": "안내",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=23792"
+  },
+  {
+   "id": 20960,
+   "board": "event",
+   "title": "도사님의 품격과 어울리는 탈것 디자인 공모전! (~10/28)",
+   "date": "2026-10-15T11:03+09:00",
+   "tag": "이벤트",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=20960"
+  },
+  {
+   "id": 17206,
+   "board": "event",
+   "title": "보름달에 숨은 요귀를 봉인하라! (~11/11)",
+   "date": "2026-10-15T11:00+09:00",
+   "tag": "이벤트",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=17206"
+  },
+  {
+   "id": 20567,
+   "board": "notice",
+   "title": "[내용추가] 10월 15일(목) 임시 점검 완료 및 보상 안내",
+   "date": "2026-10-15T09:03+09:00",
+   "tag": "보상",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=20567"
+  },
+  {
+   "id": 20562,
+   "board": "notice",
+   "title": "10월 15일(목) 점검 후 변경되는 확률 정보 안내",
+   "date": "2026-10-15T09:00+09:00",
+   "tag": "확률",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=20562"
+  },
+  {
+   "id": 19973,
+   "board": "notice",
+   "title": "[조기종료] 10월 15일(목) 임시 점검 안내",
+   "date": "2026-10-14T23:22+09:00",
+   "tag": "점검",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=19973"
+  },
+  {
+   "id": 19813,
+   "board": "notice",
+   "title": "비정상적인 게임 진행 관련 계정 제재 및 보호 조치 안내 <5차>",
+   "date": "2026-10-14T19:52+09:00",
+   "tag": "제재",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=19813"
+  },
+  {
+   "id": 19240,
+   "board": "notice",
+   "title": "[내용추가] 10월 14일(수) 긴급 라이브 방송 요약 및 사과 안내",
+   "date": "2026-10-14T14:36+09:00",
+   "tag": "방송",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=19240"
+  },
+  {
+   "id": 10859,
+   "board": "notice",
+   "title": "오류 및 개선사항 제보 통합 안내 [26/10/15 13:00 최신화]",
+   "date": "2026-10-14T12:00+09:00",
+   "tag": "안내",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=10859"
+  },
+  {
+   "id": 18762,
+   "board": "notice",
+   "title": "10월 14일(수) 긴급 라이브 방송 안내",
+   "date": "2026-10-14T11:43+09:00",
+   "tag": "방송",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=18762"
+  },
+  {
+   "id": 18524,
+   "board": "notice",
+   "title": "10월 14일(수) 안내 상품이 라이브 방송 안내와 다른 점에 대해 사과드립니다.",
+   "date": "2026-10-14T10:41+09:00",
+   "tag": "방송",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=18524"
+  },
+  {
+   "id": 18496,
+   "board": "notice",
+   "title": "10월 14일(수) 정기 점검 완료 및 보상 지급 안내",
+   "date": "2026-10-14T10:30+09:00",
+   "tag": "보상",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=18496"
+  },
+  {
+   "id": 18403,
+   "board": "update",
+   "title": "[내용수정] 10월 14일(수) 업데이트 안내",
+   "date": "2026-10-14T10:07+09:00",
+   "tag": "업데이트",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=update&id=18403"
+  },
+  {
+   "id": 17816,
+   "board": "notice",
+   "title": "10월 14일(수) 정기 점검 안내",
+   "date": "2026-10-13T21:32+09:00",
+   "tag": "점검",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=17816"
+  },
+  {
+   "id": 17815,
+   "board": "notice",
+   "title": "도술 초기화 진행 및 도술 돌파 일시 제한 안내",
+   "date": "2026-10-13T21:31+09:00",
+   "tag": "안내",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=17815"
+  },
+  {
+   "id": 17740,
+   "board": "notice",
+   "title": "10월 13일(화) 20:10 라이브 방송 바로가기 안내",
+   "date": "2026-10-13T19:57+09:00",
+   "tag": "방송",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=17740"
+  },
+  {
+   "id": 17730,
+   "board": "notice",
+   "title": "비정상적인 게임 진행 관련 계정 제재 및 보호 조치 안내 <4차>",
+   "date": "2026-10-13T19:50+09:00",
+   "tag": "제재",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=17730"
+  },
+  {
+   "id": 17728,
+   "board": "notice",
+   "title": "운영자 사칭 및 홍보/광고성 게시물 등록 관련 정책 안내",
+   "date": "2026-10-13T19:50+09:00",
+   "tag": "안내",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=17728"
+  },
+  {
+   "id": 17184,
+   "board": "notice",
+   "title": "고객센터 문의에 신속히 답변드리겠습니다.",
+   "date": "2026-10-13T11:26+09:00",
+   "tag": "안내",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=17184"
+  },
+  {
+   "id": 17089,
+   "board": "notice",
+   "title": "마켓 매출 1위 달성 기념 특별 쿠폰 안내",
+   "date": "2026-10-13T10:00+09:00",
+   "tag": "안내",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=17089"
+  },
+  {
+   "id": 14969,
+   "board": "event",
+   "title": "해월의 응원이 담긴 특별 선물! (~10/12 23:59)",
+   "date": "2026-10-12T13:00+09:00",
+   "tag": "이벤트",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=14969"
+  },
+  {
+   "id": 13114,
+   "board": "event",
+   "title": "도전! 문파 전투 (~ 별도 공지 시까지)",
+   "date": "2026-10-10T12:34+09:00",
+   "tag": "이벤트",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=13114"
+  },
+  {
+   "id": 10676,
+   "board": "event",
+   "title": "도깨비의세계 정식 오픈 기념! 몽련이 드리는 특별 선물 (~10/21 08:00)",
+   "date": "2026-10-08T19:32+09:00",
+   "tag": "이벤트",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=10676"
+  },
+  {
+   "id": 10001,
+   "board": "event",
+   "title": "혼자 알고 있기 아까운 도사님의 비법을 공유해 주세요! (~10/21)",
+   "date": "2026-10-08T12:32+09:00",
+   "tag": "이벤트",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=10001"
+  },
+  {
+   "id": 9990,
+   "board": "event",
+   "title": "도사님의 문파를 홍보해 보세요! (~10/21)",
+   "date": "2026-10-08T12:28+09:00",
+   "tag": "이벤트",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=9990"
+  },
+  {
+   "id": 9983,
+   "board": "event",
+   "title": "타바로 성에 입성한 도사님 모여 주세요! (~10/21)",
+   "date": "2026-10-08T12:27+09:00",
+   "tag": "이벤트",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=9983"
+  },
+  {
+   "id": 9285,
+   "board": "event",
+   "title": "도사님을 위한 이벤트 한눈에 보기!",
+   "date": "2026-10-08T10:09+09:00",
+   "tag": "이벤트",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=9285"
+  },
+  {
+   "id": 9248,
+   "board": "event",
+   "title": "[내용수정] 한글날 기념! OX 퀴즈 이벤트 (~10/21 08:00)",
+   "date": "2026-10-08T10:04+09:00",
+   "tag": "이벤트",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=9248"
+  },
+  {
+   "id": 9243,
+   "board": "event",
+   "title": "훈민증표 수집 이벤트 (~10/21 08:00)",
+   "date": "2026-10-08T10:03+09:00",
+   "tag": "이벤트",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=9243"
+  },
+  {
+   "id": 9240,
+   "board": "event",
+   "title": "도깨비의세계 패스 (~10/21 08:00)",
+   "date": "2026-10-08T10:03+09:00",
+   "tag": "이벤트",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=9240"
+  },
+  {
+   "id": 9237,
+   "board": "event",
+   "title": "초보 도사 성장 지원! (~10/21 08:00)",
+   "date": "2026-10-08T10:02+09:00",
+   "tag": "이벤트",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=9237"
+  },
+  {
+   "id": 9233,
+   "board": "event",
+   "title": "도깨비의세계 특별 출석! (~11/4 08:00)",
+   "date": "2026-10-08T10:02+09:00",
+   "tag": "이벤트",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=9233"
+  },
+  {
+   "id": 9226,
+   "board": "event",
+   "title": "전래동화 : 콩쥐 팥쥐 이벤트 (~12/10 08:00)",
+   "date": "2026-10-08T10:01+09:00",
+   "tag": "이벤트",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=9226"
+  },
+  {
+   "id": 9217,
+   "board": "event",
+   "title": "치지직&SOOP 드롭스 이벤트 진행 안내",
+   "date": "2026-10-08T10:00+09:00",
+   "tag": "이벤트",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=9217"
+  },
+  {
+   "id": 9196,
+   "board": "event",
+   "title": "달성! 단 봉인 해제 (~27/10/6 08:00)",
+   "date": "2026-10-08T09:57+09:00",
+   "tag": "이벤트",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=9196"
+  },
+  {
+   "id": 9190,
+   "board": "event",
+   "title": "단련의 길 Ⅰ~ Ⅲ 패스 (~27/10/6 08:00)",
+   "date": "2026-10-08T09:56+09:00",
+   "tag": "이벤트",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=9190"
+  },
+  {
+   "id": 3648,
+   "board": "event",
+   "title": "[내용 수정] 전국 도깨비 흔적 찾기 & 초성 퀴즈 이벤트! (~10/15)",
+   "date": "2026-10-01T11:02+09:00",
+   "tag": "이벤트",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=3648"
+  }
+ ],
+ "pinned": [
+  {
+   "id": 19240,
+   "board": "notice",
+   "title": "[내용추가] 10월 14일(수) 긴급 라이브 방송 요약 및 사과 안내",
+   "date": "2026-10-14T14:36+09:00",
+   "tag": "방송",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=19240"
+  },
+  {
+   "id": 10859,
+   "board": "notice",
+   "title": "오류 및 개선사항 제보 통합 안내 [26/10/15 13:00 최신화]",
+   "date": "2026-10-14T12:00+09:00",
+   "tag": "안내",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=10859"
+  },
+  {
+   "id": 17815,
+   "board": "notice",
+   "title": "도술 초기화 진행 및 도술 돌파 일시 제한 안내",
+   "date": "2026-10-13T21:31+09:00",
+   "tag": "안내",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=17815"
+  },
+  {
+   "id": 14036,
+   "board": "notice",
+   "title": "비정상적인 게임 이용 행위에 대한 강경 대응 안내",
+   "date": "2026-10-11T12:44+09:00",
+   "tag": "제재",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=14036"
+  },
+  {
+   "id": 13991,
+   "board": "notice",
+   "title": "도깨비의세계 쿠폰 종합 안내",
+   "date": "2026-10-11T11:27+09:00",
+   "tag": "안내",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=13991"
+  },
+  {
+   "id": 7327,
+   "board": "notice",
+   "title": "PC 버전(Google Play Games) 이용 환경 및 계정 이용 안내",
+   "date": "2026-10-07T11:39+09:00",
+   "tag": "안내",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=7327"
+  }
+ ],
+ "maintenance": {
+  "title": "10월 14일(수) 정기 점검 안내",
+  "kind": "정기",
+  "start": "2026-10-14T07:00+09:00",
+  "end": "2026-10-14T10:30+09:00",
+  "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=17816"
+ },
+ "coupons": [
+  {
+   "code": "도깨비1008",
+   "name": "무기 외형",
+   "expires": "2026-11-05T23:59+09:00",
+   "reward": "꿀떡 무기 외형"
+  },
+  {
+   "code": "매출1위감사합니다",
+   "name": "마켓 매출 1위 달성 기념 특별 쿠폰",
+   "expires": "2026-11-11T23:59+09:00",
+   "reward": ""
+  },
+  {
+   "code": "칭호나와라뚝딱",
+   "name": "SNS 구독 이벤트",
+   "expires": "2026-11-11T23:59+09:00",
+   "reward": "인게임 칭호 [타바로 소식통] (방어력+3) + 엽전 100,000개"
+  },
+  {
+   "code": "애플1위풍악을울려라",
+   "name": "앱스토어 마켓 인기 순위 1위",
+   "expires": "2026-11-11T23:59+09:00",
+   "reward": "염색약 선택 상자 1개 + (귀속) 엽전 111,111개 + 1위 기념 도술 조각 선택 상자 1개 (귀속)"
+  },
+  {
+   "code": "구글1위잔치로구나",
+   "name": "구글 플레이 스토어 인기 순위 1위",
+   "expires": "2026-11-11T23:59+09:00",
+   "reward": ""
+  },
+  {
+   "code": "도깨비의다짐",
+   "name": "10월 9일(금) 라이브 방송감사 쿠폰",
+   "expires": null,
+   "reward": ""
+  },
+  {
+   "code": "도깨비의약속",
+   "name": "10월 9일(금) 라이브 방송감사 쿠폰",
+   "expires": null,
+   "reward": ""
+  },
+  {
+   "code": "도깨비의마음",
+   "name": "10월 9일(금) 라이브 방송감사 쿠폰",
+   "expires": null,
+   "reward": ""
+  },
+  {
+   "code": "도깨비의내일",
+   "name": "10월 13일(화) 라이브 방송감사 쿠폰",
+   "expires": "2026-11-11T23:59+09:00",
+   "reward": ""
+  }
+ ],
+ "coupon_source": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=13991",
+ "events": [
+  {
+   "name": "해월의 응원이 담긴 특별 선물!",
+   "end": "2026-10-12T23:59+09:00",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=14969"
+  },
+  {
+   "name": "전국 도깨비 흔적 찾기 & 초성 퀴즈 이벤트!",
+   "end": "2026-10-15T23:59+09:00",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=3648"
+  },
+  {
+   "name": "쇼케이스 현장에 숨어든 묘롱을 찾아보세요!",
+   "end": "2026-10-15T23:59+09:00",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=3646"
+  },
+  {
+   "name": "도깨비의세계 정식 오픈 기념! 몽련이 드리는 특별 선물",
+   "end": "2026-10-21T08:00+09:00",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=10676"
+  },
+  {
+   "name": "한글날 기념! OX 퀴즈 이벤트",
+   "end": "2026-10-21T08:00+09:00",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=9248"
+  },
+  {
+   "name": "훈민증표 수집 이벤트",
+   "end": "2026-10-21T08:00+09:00",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=9243"
+  },
+  {
+   "name": "도깨비의세계 패스",
+   "end": "2026-10-21T08:00+09:00",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=9240"
+  },
+  {
+   "name": "초보 도사 성장 지원!",
+   "end": "2026-10-21T08:00+09:00",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=9237"
+  },
+  {
+   "name": "혼자 알고 있기 아까운 도사님의 비법을 공유해 주세요!",
+   "end": "2026-10-21T23:59+09:00",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=10001"
+  },
+  {
+   "name": "도사님의 문파를 홍보해 보세요!",
+   "end": "2026-10-21T23:59+09:00",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=9990"
+  },
+  {
+   "name": "타바로 성에 입성한 도사님 모여 주세요!",
+   "end": "2026-10-21T23:59+09:00",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=9983"
+  },
+  {
+   "name": "도사님의 품격과 어울리는 탈것 디자인 공모전!",
+   "end": "2026-10-28T23:59+09:00",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=20960"
+  },
+  {
+   "name": "도깨비의세계 특별 출석!",
+   "end": "2026-11-04T08:00+09:00",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=9233"
+  },
+  {
+   "name": "보름달에 숨은 요귀를 봉인하라!",
+   "end": "2026-11-11T23:59+09:00",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=17206"
+  },
+  {
+   "name": "전래동화 : 콩쥐 팥쥐 이벤트",
+   "end": "2026-12-10T08:00+09:00",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=9226"
+  },
+  {
+   "name": "달성! 단 봉인 해제",
+   "end": "2027-10-06T08:00+09:00",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=9196"
+  },
+  {
+   "name": "단련의 길 Ⅰ~ Ⅲ 패스",
+   "end": "2027-10-06T08:00+09:00",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=9190"
+  }
+ ],
+ "videos": [
+  {
+   "id": "OrJ7py7ssqE",
+   "title": "도깨비 무과금 엽전, 재화 공략 10가지 - 도모의 루틴",
+   "channel": "도모",
+   "date": "2026-10-15T18:00+09:00",
+   "views": null,
+   "official": false
+  },
+  {
+   "id": "uq3aspemZA4",
+   "title": "[도깨비의세계] 10.15 패치후 최고 효율의 광역 도술은? - 기동, 강타, 연타 빌드 공개",
+   "channel": "쵸튜브[쵸피]",
+   "date": "2026-10-15T17:00+09:00",
+   "views": null,
+   "official": false
+  },
+  {
+   "id": "fvVbJyeX4cI",
+   "title": "[도깨비의세계] 💥역대급 팁 공개 - 비경 3단계 무과금도 무한 파밍하는 방법 / 재화 미쳤네요",
+   "channel": "쵸튜브[쵸피]",
+   "date": "2026-10-15T16:00+09:00",
+   "views": null,
+   "official": false
+  },
+  {
+   "id": "dxQqog9fzSI",
+   "title": "[도깨비의 세계] 황무지 노물약 광역사냥 최소스펙 세팅법😮영웅도안 드랍률 30% 상승!!",
+   "channel": "투즈TV",
+   "date": "2026-10-15T15:00+09:00",
+   "views": null,
+   "official": false
+  },
+  {
+   "id": "mjE-oYpNTKQ",
+   "title": "도깨비 무과금 영웅 장비 공략 10가지 - 전설이 진짜다...",
+   "channel": "도모",
+   "date": "2026-10-15T14:00+09:00",
+   "views": null,
+   "official": false
+  },
+  {
+   "id": "15dWbxZelw8",
+   "title": "[도깨비의세계] 무소과금 황무지 광역 기동 도술⚔️ 노물약 최소컷 핵심 정리",
+   "channel": "맛나는꼬꼬",
+   "date": "2026-10-15T13:00+09:00",
+   "views": null,
+   "official": false
+  },
+  {
+   "id": "Qfuvx9BDFCA",
+   "title": "영웅 무기 칼이냐 활이냐 부채냐 지팡이냐... [도깨비의세계]",
+   "channel": "센터로드TV",
+   "date": "2026-10-15T12:00+09:00",
+   "views": null,
+   "official": false
+  },
+  {
+   "id": "ABH4HUJFAqQ",
+   "title": "[도깨비의 세계]무소🔰황무지 무한사냥! 사기 영웅장비부터 사냥 효율 끝판왕 도술덱까지 총정리 가이드[feat.기동덱]",
+   "channel": "깨비야",
+   "date": "2026-10-15T11:00+09:00",
+   "views": null,
+   "official": false
+  },
+  {
+   "id": "0uKUAi7P5Fg",
+   "title": "제발 강화하지마세요 모르면 뒤쳐집니다! 방어구&장신구 우선 순위, 엽전 쓸어 담는 도술 등 [도깨비의세계]",
+   "channel": "게임하는인기",
+   "date": "2026-10-14T21:00+09:00",
+   "views": null,
+   "official": false
+  },
+  {
+   "id": "82vyzvSzlSk",
+   "title": "도깨비의 세계🔥패치 대혼란 현재 가장중요 3가지 │광역사냥·영웅장비·스킬·필수교환",
+   "channel": "오지조",
+   "date": "2026-10-14T19:00+09:00",
+   "views": null,
+   "official": false
+  },
+  {
+   "id": "cvDOG2MQpf8",
+   "title": "[도깨비의 세계] 패치후 반드시 해야하는것&사야하는것 총정리📢 [10.14 업데이트 상세리뷰]",
+   "channel": "투즈TV",
+   "date": "2026-10-14T18:00+09:00",
+   "views": null,
+   "official": false
+  },
+  {
+   "id": "YfbtzfSnrB4",
+   "title": "2차 라방 정리. 스펙 확 올리고 도술 초기화한다 [도깨비의세계]",
+   "channel": "센터로드TV",
+   "date": "2026-10-14T17:00+09:00",
+   "views": null,
+   "official": false
+  }
+ ],
+ "updated_at": "2026-10-16T09:43+09:00"
+}
