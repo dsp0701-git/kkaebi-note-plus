@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """깨비노트 플러스 데이터 수집기.
 
-공식 커뮤니티(forum-api) + YouTube RSS(+선택: YouTube Data API)를 읽어
+공식 커뮤니티(forum-api) + YouTube RSS/채널 페이지(+선택: YouTube Data API)를 읽어
 data/auto.json 을 갱신한다. 표준 라이브러리만 사용 (pip 설치 불필요).
 
   python scripts/update.py            # 수집 후 변경 시 data/auto.json 저장
@@ -310,8 +310,87 @@ def fetch_channel_api(ch: dict, key: str) -> list[dict]:
     return out
 
 
-def fetch_videos(cfg: dict) -> list[dict]:
-    """채널별 RSS → 실패 시 YouTube Data API(키 있을 때) → 키워드 검색 추가.
+# ---------------------------------------------------------------- YouTube 채널 페이지 (키 없는 대체 경로)
+PAGE_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
+_REL_UNITS = [  # (정규식, 초)
+    (r"(\d+)\s*(?:second|초)", 1), (r"(\d+)\s*(?:minute|분)", 60), (r"(\d+)\s*(?:hour|시간)", 3600),
+    (r"(\d+)\s*(?:day|일)", 86400), (r"(\d+)\s*(?:week|주)", 7 * 86400),
+    (r"(\d+)\s*(?:month|개월|달)", 30 * 86400), (r"(\d+)\s*(?:year|년)", 365 * 86400),
+]
+
+
+def parse_relative(text: str, now: datetime) -> str | None:
+    """'3 days ago' / '3일 전' / 'Streamed 2 hours ago' -> KST ISO (시 단위로 내림)."""
+    t = text.lower()
+    if "ago" not in t and "전" not in t:
+        return None
+    for pat, sec in _REL_UNITS:
+        m = re.search(pat, t)
+        if m:
+            dt = (now - timedelta(seconds=int(m.group(1)) * sec)).astimezone(KST)
+            return dt.replace(minute=0, second=0, microsecond=0).isoformat(timespec="minutes")
+    return None
+
+
+def _walk(o, key: str):
+    if isinstance(o, dict):
+        if key in o:
+            yield o[key]
+        for v in o.values():
+            yield from _walk(v, key)
+    elif isinstance(o, list):
+        for v in o:
+            yield from _walk(v, key)
+
+
+def parse_channel_page(html: str, channel_name: str, now: datetime | None = None) -> list[dict]:
+    """채널 /videos 페이지의 ytInitialData 에서 영상 목록 추출 (신형 lockupViewModel·구형 videoRenderer 모두)."""
+    now = now or datetime.now(timezone.utc)
+    m = re.search(r"var ytInitialData\s*=\s*(\{.*?\});\s*</script>", html, re.S)
+    if not m:
+        raise ValueError("ytInitialData 없음 (차단·동의 페이지 가능성)")
+    data = json.loads(m.group(1))
+    out, seen = [], set()
+
+    def add(vid, title, when):
+        date = parse_relative(when or "", now)
+        if vid and title and date and vid not in seen:
+            seen.add(vid)
+            out.append({"id": vid, "title": title, "channel": channel_name, "date": date, "views": None})
+
+    for lk in _walk(data, "lockupViewModel"):
+        if lk.get("contentType") not in (None, "LOCKUP_CONTENT_TYPE_VIDEO"):
+            continue
+        md = lk.get("metadata", {}).get("lockupMetadataViewModel", {})
+        texts = [p.get("text", {}).get("content", "") for row in _walk(md, "metadataRows") for r in row
+                 for p in r.get("metadataParts", [])]
+        add(lk.get("contentId"), md.get("title", {}).get("content"), next((x for x in texts if parse_relative(x, now)), None))
+    for vr in _walk(data, "videoRenderer"):
+        title = "".join(r.get("text", "") for r in vr.get("title", {}).get("runs", [])) or vr.get("title", {}).get("simpleText")
+        add(vr.get("videoId"), title, vr.get("publishedTimeText", {}).get("simpleText"))
+    if not out:
+        raise ValueError("영상 목록을 찾지 못함 (페이지 구조 변경 가능성)")
+    return out
+
+
+def get_page(url: str, timeout: int = 20) -> str:
+    req = urllib.request.Request(url, headers={
+        "User-Agent": PAGE_UA, "Accept-Language": "en-US,en;q=0.9",
+        "Cookie": "CONSENT=YES+cb; SOCS=CAI",  # EU 동의 페이지 회피
+    })
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        return r.read().decode("utf-8", "replace")
+
+
+def fetch_channel_page(ch: dict) -> list[dict]:
+    return parse_channel_page(get_page(f"https://www.youtube.com/channel/{ch['id']}/videos?hl=en&gl=US"), ch["name"])
+
+
+def fetch_videos(cfg: dict, old: list[dict] | None = None) -> list[dict]:
+    """채널별 RSS → 실패 시 채널 페이지 → 그래도 실패면 YouTube Data API(키 있을 때) → 키워드 검색 추가.
+
+    채널 페이지는 '3일 전' 같은 상대 시각만 주므로, 이미 아는 영상은 이전 날짜를 유지해
+    실행할 때마다 날짜가 흔들려 불필요한 커밋이 생기지 않게 한다.
 
     YouTube 는 GitHub Actions 같은 데이터센터 IP 의 RSS 요청을 404/500 으로 막는 경우가 많다.
     그래서 Actions 에서는 YT_API_KEY 를 등록해 두는 걸 권장.
@@ -320,6 +399,7 @@ def fetch_videos(cfg: dict) -> list[dict]:
     since = (datetime.now(KST) - timedelta(days=cfg["days"])).isoformat()
     key = os.environ.get("YT_API_KEY")
     vids: dict[str, dict] = {}
+    known = {v["id"]: v["date"] for v in (old or []) if v.get("id") and v.get("date")}
     ok = 0
     for ch in cfg["channels"]:
         items = None
@@ -327,7 +407,14 @@ def fetch_videos(cfg: dict) -> list[dict]:
             items = parse_rss(get(f"https://www.youtube.com/feeds/videos.xml?channel_id={ch['id']}"), ch["name"])
         except Exception as e:
             print(f"  ! RSS 실패 {ch['name']}: {e}", file=sys.stderr)
-            if key:
+            try:
+                items = fetch_channel_page(ch)
+                for v in items:
+                    if v["id"] in known:
+                        v["date"] = known[v["id"]]
+            except Exception as e2:
+                print(f"  ! 채널 페이지 실패 {ch['name']}: {e2}", file=sys.stderr)
+            if items is None and key:
                 try:
                     items = fetch_channel_api(ch, key)
                 except Exception as e2:
@@ -426,7 +513,7 @@ def main() -> int:
         new["events"] = fetch_events(notices)
 
     def s_videos():
-        new["videos"] = fetch_videos(cfg["youtube"])
+        new["videos"] = fetch_videos(cfg["youtube"], old.get("videos"))
 
     step("notices", s_notices)
     step("maintenance", s_maint)
