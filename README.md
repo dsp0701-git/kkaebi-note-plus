@@ -40,8 +40,11 @@ tests/                         파서 단위 테스트 + 가짜 응답으로 돌
 3. **Settings → Actions → General → Workflow permissions** → `Read and write permissions`
 4. **Actions** 탭 → `update-data` → `Run workflow` 로 첫 실행, 로그에서 `notices ok` 등 확인
 
-(선택) 키워드 검색으로 영상을 더 넓게 모으려면 YouTube Data API 키를 발급받아
-**Settings → Secrets → Actions** 에 `YT_API_KEY` 로 등록. 없으면 RSS 만 쓴다.
+**영상 수집용 YouTube API 키 (사실상 필수)** — YouTube 는 GitHub Actions 서버의 RSS 요청을 404/500 으로 막는다.
+1. https://console.cloud.google.com → 프로젝트 생성 → "YouTube Data API v3" 사용 설정
+2. 사용자 인증 정보 → API 키 만들기 → (권장) API 제한사항에서 YouTube Data API v3 만 허용
+3. 저장소 **Settings → Secrets and variables → Actions → New repository secret** → 이름 `YT_API_KEY`
+무료 할당량(10,000 unit/일) 중 하루 약 1,300 unit 사용. 키가 없으면 영상만 이전 목록을 유지하고 나머지는 정상 갱신된다.
 
 ## 평소 운영
 
