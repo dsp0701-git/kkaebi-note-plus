@@ -362,8 +362,8 @@ def parse_channel_page(html: str, channel_name: str, now: datetime | None = None
         if lk.get("contentType") not in (None, "LOCKUP_CONTENT_TYPE_VIDEO"):
             continue
         md = lk.get("metadata", {}).get("lockupMetadataViewModel", {})
-        texts = [p.get("text", {}).get("content", "") for row in _walk(md, "metadataRows") for r in row
-                 for p in r.get("metadataParts", [])]
+        texts = [t for row in _walk(md, "metadataRows") for r in row for p in r.get("metadataParts", [])
+                 for t in (p.get("text", {}).get("content", ""), p.get("accessibilityLabel", ""))]
         add(lk.get("contentId"), md.get("title", {}).get("content"), next((x for x in texts if parse_relative(x, now)), None))
     for vr in _walk(data, "videoRenderer"):
         title = "".join(r.get("text", "") for r in vr.get("title", {}).get("runs", [])) or vr.get("title", {}).get("simpleText")
@@ -372,7 +372,11 @@ def parse_channel_page(html: str, channel_name: str, now: datetime | None = None
         title = re.search(r"<title>(.*?)</title>", html, re.S)
         tabs = [t.get("title") for t in _walk(data, "tabRenderer") if isinstance(t, dict)]
         diag = (f"len={len(html)} lockup={html.count('lockupViewModel')} videoRenderer={html.count('videoRenderer')} "
-                f"title={title.group(1).strip()[:40] if title else None!r} keys={list(data)[:6]} tabs={tabs[:6]}")
+                f"title={title.group(1).strip()[:40] if title else None!r} tabs={tabs[:6]}")
+        first = next(_walk(data, "lockupViewModel"), None)
+        if first:
+            md = first.get("metadata", {}).get("lockupMetadataViewModel", {})
+            diag += f" first={json.dumps({'type': first.get('contentType'), 'id': first.get('contentId'), 'md': md.get('metadata')}, ensure_ascii=False)[:900]}"
         raise ValueError(f"영상 목록을 찾지 못함 (페이지 구조 변경 가능성) [{diag}]")
     return out
 
