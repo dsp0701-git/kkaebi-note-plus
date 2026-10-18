@@ -1,6 +1,14 @@
 {
  "notices": [
   {
+   "id": 292270,
+   "board": "notice",
+   "title": "일부 서버 캐릭터 생성 제한 해제 안내 (10/18 12:00부터 순차 적용)",
+   "date": "2026-10-18T10:04+09:00",
+   "tag": "안내",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=292270"
+  },
+  {
    "id": 248434,
    "board": "notice",
    "title": "비정상적인 게임 진행 관련 계정 제재 및 보호 조치 안내 <8차>",
@@ -177,14 +185,6 @@
    "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=update&id=18403"
   },
   {
-   "id": 17816,
-   "board": "notice",
-   "title": "10월 14일(수) 정기 점검 안내",
-   "date": "2026-10-13T21:32+09:00",
-   "tag": "점검",
-   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=17816"
-  },
-  {
    "id": 14969,
    "board": "event",
    "title": "해월의 응원이 담긴 특별 선물! (~10/12 23:59)",
@@ -322,6 +322,14 @@
   }
  ],
  "pinned": [
+  {
+   "id": 292270,
+   "board": "notice",
+   "title": "일부 서버 캐릭터 생성 제한 해제 안내 (10/18 12:00부터 순차 적용)",
+   "date": "2026-10-18T10:04+09:00",
+   "tag": "안내",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=292270"
+  },
   {
    "id": 242548,
    "board": "notice",
@@ -684,45 +692,45 @@
    "official": false
   },
   {
+   "id": "nJ1N-8-HDwk",
+   "title": "[도깨비의세계] 업데이트 이후 필수!! 스펙업 떡상 개이득 입니다",
+   "channel": "투즈TV",
+   "date": "2026-10-15T11:00+09:00",
+   "views": null,
+   "official": false
+  },
+  {
+   "id": "cmuxzRCTDu8",
+   "title": "[도깨비의세계] 업데이트 후 기동 도술 버프! 무한 정기단 수급중 무이 서버",
+   "channel": "맛나는꼬꼬",
+   "date": "2026-10-15T11:00+09:00",
+   "views": null,
+   "official": false
+  },
+  {
+   "id": "wqTGBLNm2cQ",
+   "title": "오 패치 미쳤다! 영웅 지팡이 만듭니다 [도깨비의세계]",
+   "channel": "센터로드TV",
+   "date": "2026-10-15T11:00+09:00",
+   "views": null,
+   "official": false
+  },
+  {
+   "id": "IShYdWw1i4A",
+   "title": "[도깨비의 세계]긴급라이브방송같이봐요!  깨장수 등장ㅋ_ㅋ 16만투력 전설가호 [무 소과금 꿀팁  정보 공유]  #도깨비 #슈퍼캣",
+   "channel": "깨비야",
+   "date": "2026-10-15T11:00+09:00",
+   "views": null,
+   "official": false
+  },
+  {
    "id": "3RCLTcqpfHw",
    "title": "[도깨비의세계👾] 긴급 LIVE 📢 [26.10.14]",
    "channel": "도깨비의세계 공식",
    "date": "2026-10-15T10:00+09:00",
    "views": null,
    "official": true
-  },
-  {
-   "id": "EQFrGn-9R2U",
-   "title": "도깨비 무과금 영웅 악세 제작 공략 및 19만 전투력, 공격력 2만 달성 공략 6가지",
-   "channel": "도모",
-   "date": "2026-10-15T10:00+09:00",
-   "views": null,
-   "official": false
-  },
-  {
-   "id": "ncXgnsgprFI",
-   "title": "도깨비 무과금 점검 보상 및 업데이트 핵심 공략 10가지 - 영웅 무기 제작 후기",
-   "channel": "도모",
-   "date": "2026-10-15T10:00+09:00",
-   "views": null,
-   "official": false
-  },
-  {
-   "id": "cfInJvkcjN0",
-   "title": "도깨비 무과금 업뎃 후 꼭 알아야 하는 10가지 정리 - 영웅 장비, 추옵 추천, 도안 파밍 등등",
-   "channel": "도모",
-   "date": "2026-10-15T10:00+09:00",
-   "views": null,
-   "official": false
-  },
-  {
-   "id": "WV8kWkuCPMQ",
-   "title": "[도깨비의세계] 긴급 라이브 방송! 전투력 떡상 광역떡상? 업데이트 한번 살펴보시죠!  / 쵸피",
-   "channel": "쵸튜브[쵸피]",
-   "date": "2026-10-15T10:00+09:00",
-   "views": null,
-   "official": false
   }
  ],
- "updated_at": "2026-10-18T10:00+09:00"
+ "updated_at": "2026-10-18T11:47+09:00"
 }
