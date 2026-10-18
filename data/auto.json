@@ -3,9 +3,9 @@
   {
    "id": 292270,
    "board": "notice",
-   "title": "일부 서버 캐릭터 생성 제한 해제 안내 (10/18 12:00부터 순차 적용)",
+   "title": "[적용 완료] 일부 서버 캐릭터 생성 제한 해제 안내 (10/18 12:10 기준)",
    "date": "2026-10-18T10:04+09:00",
-   "tag": "안내",
+   "tag": "보상",
    "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=292270"
   },
   {
@@ -325,9 +325,9 @@
   {
    "id": 292270,
    "board": "notice",
-   "title": "일부 서버 캐릭터 생성 제한 해제 안내 (10/18 12:00부터 순차 적용)",
+   "title": "[적용 완료] 일부 서버 캐릭터 생성 제한 해제 안내 (10/18 12:10 기준)",
    "date": "2026-10-18T10:04+09:00",
-   "tag": "안내",
+   "tag": "보상",
    "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=292270"
   },
   {
@@ -692,6 +692,30 @@
    "official": false
   },
   {
+   "id": "EQFrGn-9R2U",
+   "title": "도깨비 무과금 영웅 악세 제작 공략 및 19만 전투력, 공격력 2만 달성 공략 6가지",
+   "channel": "도모",
+   "date": "2026-10-15T13:00+09:00",
+   "views": null,
+   "official": false
+  },
+  {
+   "id": "ncXgnsgprFI",
+   "title": "도깨비 무과금 점검 보상 및 업데이트 핵심 공략 10가지 - 영웅 무기 제작 후기",
+   "channel": "도모",
+   "date": "2026-10-15T13:00+09:00",
+   "views": null,
+   "official": false
+  },
+  {
+   "id": "WV8kWkuCPMQ",
+   "title": "[도깨비의세계] 긴급 라이브 방송! 전투력 떡상 광역떡상? 업데이트 한번 살펴보시죠!  / 쵸피",
+   "channel": "쵸튜브[쵸피]",
+   "date": "2026-10-15T13:00+09:00",
+   "views": null,
+   "official": false
+  },
+  {
    "id": "nJ1N-8-HDwk",
    "title": "[도깨비의세계] 업데이트 이후 필수!! 스펙업 떡상 개이득 입니다",
    "channel": "투즈TV",
@@ -706,31 +730,7 @@
    "date": "2026-10-15T11:00+09:00",
    "views": null,
    "official": false
-  },
-  {
-   "id": "wqTGBLNm2cQ",
-   "title": "오 패치 미쳤다! 영웅 지팡이 만듭니다 [도깨비의세계]",
-   "channel": "센터로드TV",
-   "date": "2026-10-15T11:00+09:00",
-   "views": null,
-   "official": false
-  },
-  {
-   "id": "IShYdWw1i4A",
-   "title": "[도깨비의 세계]긴급라이브방송같이봐요!  깨장수 등장ㅋ_ㅋ 16만투력 전설가호 [무 소과금 꿀팁  정보 공유]  #도깨비 #슈퍼캣",
-   "channel": "깨비야",
-   "date": "2026-10-15T11:00+09:00",
-   "views": null,
-   "official": false
-  },
-  {
-   "id": "3RCLTcqpfHw",
-   "title": "[도깨비의세계👾] 긴급 LIVE 📢 [26.10.14]",
-   "channel": "도깨비의세계 공식",
-   "date": "2026-10-15T10:00+09:00",
-   "views": null,
-   "official": true
   }
  ],
- "updated_at": "2026-10-18T11:47+09:00"
+ "updated_at": "2026-10-18T13:48+09:00"
 }
