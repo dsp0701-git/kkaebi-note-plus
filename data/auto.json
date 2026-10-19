@@ -1,6 +1,14 @@
 {
  "notices": [
   {
+   "id": 394804,
+   "board": "notice",
+   "title": "보스토벌 레이드 관련 사과 보상 안내",
+   "date": "2026-10-19T13:42+09:00",
+   "tag": "보상",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=394804"
+  },
+  {
    "id": 380568,
    "board": "notice",
    "title": "레이드 일시 이용 제한 안내",
@@ -11,7 +19,7 @@
   {
    "id": 376739,
    "board": "notice",
-   "title": "10월 19일(월) 13:00 라이브 방송 안내",
+   "title": "[링크추가] 10월 19일(월) 13:00 라이브 방송 안내",
    "date": "2026-10-19T10:03+09:00",
    "tag": "방송",
    "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=376739"
@@ -167,14 +175,6 @@
    "date": "2026-10-14T19:52+09:00",
    "tag": "제재",
    "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=19813"
-  },
-  {
-   "id": 19240,
-   "board": "notice",
-   "title": "[내용추가] 10월 14일(수) 긴급 라이브 방송 요약 및 사과 안내",
-   "date": "2026-10-14T14:36+09:00",
-   "tag": "방송",
-   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=19240"
   },
   {
    "id": 18403,
@@ -333,7 +333,7 @@
   {
    "id": 376739,
    "board": "notice",
-   "title": "10월 19일(월) 13:00 라이브 방송 안내",
+   "title": "[링크추가] 10월 19일(월) 13:00 라이브 방송 안내",
    "date": "2026-10-19T10:03+09:00",
    "tag": "방송",
    "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=376739"
@@ -548,6 +548,22 @@
  ],
  "videos": [
   {
+   "id": "leSLOYeoXgk",
+   "title": "[도깨비의세계👾] 긴급 LIVE 📢 [26.10.19]",
+   "channel": "도깨비의세계 공식",
+   "date": "2026-10-19T13:00+09:00",
+   "views": null,
+   "official": true
+  },
+  {
+   "id": "X0bnHOKtBdk",
+   "title": "[도깨비의세계] 24만 전투력 기동덱 창시자 긴급 라방 대기중 무이 서버",
+   "channel": "맛나는꼬꼬",
+   "date": "2026-10-19T13:00+09:00",
+   "views": null,
+   "official": false
+  },
+  {
    "id": "ki-P8yYANXE",
    "title": "30만원 5초컷 도깨비의세계 레전드 과금 컨텐츠 \"내면의길\" 이거 피통쌉니다ㄷㄷ",
    "channel": "게임하는인기",
@@ -716,29 +732,13 @@
    "official": false
   },
   {
-   "id": "15dWbxZelw8",
-   "title": "[도깨비의세계] 무소과금 황무지 광역 기동 도술⚔️ 노물약 최소컷 핵심 정리",
-   "channel": "맛나는꼬꼬",
-   "date": "2026-10-16T11:00+09:00",
-   "views": null,
-   "official": false
-  },
-  {
-   "id": "i8kShZIGXIg",
-   "title": "장신구 제작 고고싱! 투력 22만 가보자 [도깨비의세계]",
-   "channel": "센터로드TV",
-   "date": "2026-10-16T11:00+09:00",
-   "views": null,
-   "official": false
-  },
-  {
-   "id": "HY2M7vGnIl4",
-   "title": "[도깨비의 세계]이거  겹사가 너무많아서 기동덱 안쓸수가 없네ㅋ_ㅋ 17만투력 전설가호 [무 소과금 꿀팁  정보 공유]  #도깨비 #슈퍼캣",
-   "channel": "깨비야",
-   "date": "2026-10-16T11:00+09:00",
+   "id": "OrJ7py7ssqE",
+   "title": "도깨비 무과금 엽전, 재화 공략 10가지 - 도모의 루틴",
+   "channel": "도모",
+   "date": "2026-10-16T13:00+09:00",
    "views": null,
    "official": false
   }
  ],
- "updated_at": "2026-10-19T11:49+09:00"
+ "updated_at": "2026-10-19T13:52+09:00"
 }
