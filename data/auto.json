@@ -1,6 +1,30 @@
 {
  "notices": [
   {
+   "id": 380568,
+   "board": "notice",
+   "title": "레이드 일시 이용 제한 안내",
+   "date": "2026-10-19T10:45+09:00",
+   "tag": "안내",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=380568"
+  },
+  {
+   "id": 376739,
+   "board": "notice",
+   "title": "10월 19일(월) 13:00 라이브 방송 안내",
+   "date": "2026-10-19T10:03+09:00",
+   "tag": "방송",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=376739"
+  },
+  {
+   "id": 10859,
+   "board": "notice",
+   "title": "오류 및 개선사항 제보 통합 안내 [26/10/19 11:47 최신화]",
+   "date": "2026-10-18T21:00+09:00",
+   "tag": "안내",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=10859"
+  },
+  {
    "id": 332856,
    "board": "notice",
    "title": "비정상적인 게임 진행 관련 계정 제재 및 보호 조치 안내 <9차>",
@@ -63,14 +87,6 @@
    "date": "2026-10-16T15:29+09:00",
    "tag": "안내",
    "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=149540"
-  },
-  {
-   "id": 10859,
-   "board": "notice",
-   "title": "오류 및 개선사항 제보 통합 안내 [26/10/16 16:59 최신화]",
-   "date": "2026-10-16T12:00+09:00",
-   "tag": "안내",
-   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=10859"
   },
   {
    "id": 66316,
@@ -159,22 +175,6 @@
    "date": "2026-10-14T14:36+09:00",
    "tag": "방송",
    "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=19240"
-  },
-  {
-   "id": 18762,
-   "board": "notice",
-   "title": "10월 14일(수) 긴급 라이브 방송 안내",
-   "date": "2026-10-14T11:43+09:00",
-   "tag": "방송",
-   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=18762"
-  },
-  {
-   "id": 18524,
-   "board": "notice",
-   "title": "10월 14일(수) 안내 상품이 라이브 방송 안내와 다른 점에 대해 사과드립니다.",
-   "date": "2026-10-14T10:41+09:00",
-   "tag": "방송",
-   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=18524"
   },
   {
    "id": 18403,
@@ -323,6 +323,22 @@
  ],
  "pinned": [
   {
+   "id": 380568,
+   "board": "notice",
+   "title": "레이드 일시 이용 제한 안내",
+   "date": "2026-10-19T10:45+09:00",
+   "tag": "안내",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=380568"
+  },
+  {
+   "id": 376739,
+   "board": "notice",
+   "title": "10월 19일(월) 13:00 라이브 방송 안내",
+   "date": "2026-10-19T10:03+09:00",
+   "tag": "방송",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=376739"
+  },
+  {
    "id": 292270,
    "board": "notice",
    "title": "[적용 완료] 일부 서버 캐릭터 생성 제한 해제 안내 (10/18 12:10 기준)",
@@ -349,8 +365,8 @@
   {
    "id": 10859,
    "board": "notice",
-   "title": "오류 및 개선사항 제보 통합 안내 [26/10/16 16:59 최신화]",
-   "date": "2026-10-16T12:00+09:00",
+   "title": "오류 및 개선사항 제보 통합 안내 [26/10/19 11:47 최신화]",
+   "date": "2026-10-18T21:00+09:00",
    "tag": "안내",
    "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=10859"
   },
@@ -700,29 +716,29 @@
    "official": false
   },
   {
-   "id": "OrJ7py7ssqE",
-   "title": "도깨비 무과금 엽전, 재화 공략 10가지 - 도모의 루틴",
-   "channel": "도모",
-   "date": "2026-10-16T10:00+09:00",
+   "id": "15dWbxZelw8",
+   "title": "[도깨비의세계] 무소과금 황무지 광역 기동 도술⚔️ 노물약 최소컷 핵심 정리",
+   "channel": "맛나는꼬꼬",
+   "date": "2026-10-16T11:00+09:00",
    "views": null,
    "official": false
   },
   {
-   "id": "mjE-oYpNTKQ",
-   "title": "도깨비 무과금 영웅 장비 공략 10가지 - 전설이 진짜다...",
-   "channel": "도모",
-   "date": "2026-10-16T10:00+09:00",
+   "id": "i8kShZIGXIg",
+   "title": "장신구 제작 고고싱! 투력 22만 가보자 [도깨비의세계]",
+   "channel": "센터로드TV",
+   "date": "2026-10-16T11:00+09:00",
    "views": null,
    "official": false
   },
   {
-   "id": "tbgf6M5vzXI",
-   "title": "[도깨비의세계] 기동단 합류했습니다😂파멸덱보다 훨씬좋음...",
-   "channel": "투즈TV",
-   "date": "2026-10-16T10:00+09:00",
+   "id": "HY2M7vGnIl4",
+   "title": "[도깨비의 세계]이거  겹사가 너무많아서 기동덱 안쓸수가 없네ㅋ_ㅋ 17만투력 전설가호 [무 소과금 꿀팁  정보 공유]  #도깨비 #슈퍼캣",
+   "channel": "깨비야",
+   "date": "2026-10-16T11:00+09:00",
    "views": null,
    "official": false
   }
  ],
- "updated_at": "2026-10-19T10:01+09:00"
+ "updated_at": "2026-10-19T11:49+09:00"
 }
