@@ -35,7 +35,14 @@ UA = "Mozilla/5.0 (kkaebi-note-plus updater; +https://github.com/)"
 
 # ---------------------------------------------------------------- HTTP
 def get(url: str, timeout: int = 20) -> bytes:
-    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/json, */*"})
+    headers = {"User-Agent": UA, "Accept": "application/json, */*"}
+    if "kakaogames.com" in url:  # 공식 커뮤니티 API 는 봇 UA 를 403 으로 막음 → 브라우저와 같은 헤더로 요청
+        headers.update({
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36",
+            "Accept-Language": "ko-KR,ko;q=0.9", "Origin": "https://forum.kakaogames.com",
+            "Referer": "https://forum.kakaogames.com/dokkaebi/",
+        })
+    req = urllib.request.Request(url, headers=headers)
     with urllib.request.urlopen(req, timeout=timeout) as r:
         return r.read()
 
