@@ -28,6 +28,13 @@ jobs:
       - name: Test parsers
         run: python -m unittest discover tests
 
+      - name: Diag forum-api (임시)
+        continue-on-error: true
+        run: |
+          U="https://forum-api.kakaogames.com/v1/dokkaebi/boards/notice/list?size=1&lang=ko"
+          curl -sS -i -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36" "$U" | head -c 1500; echo
+          pip install -q curl_cffi && python -c "from curl_cffi import requests as r; x=r.get('$U', impersonate='chrome'); print('cffi', x.status_code, x.headers.get('server'), x.text[:200])"
+
       - name: Fetch data
         env:
           YT_API_KEY: ${{ secrets.YT_API_KEY }}   # 없으면 RSS만 사용
