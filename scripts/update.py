@@ -2,7 +2,7 @@
 """깨비노트 플러스 데이터 수집기.
 
 공식 커뮤니티(forum-api) + YouTube RSS/채널 페이지(+선택: YouTube Data API)를 읽어
-data/auto.json 을 갱신한다. 표준 라이브러리만 사용 (pip 설치 불필요).
+data/auto.json 을 갱신한다. 표준 라이브러리 + curl_cffi(공식 API 403 회피용, Actions 에서 설치).
 
   python scripts/update.py            # 수집 후 변경 시 data/auto.json 저장
   python scripts/update.py --dry-run  # 저장하지 않고 결과만 출력
@@ -23,6 +23,11 @@ from datetime import datetime, timedelta, timezone
 from html.parser import HTMLParser
 from pathlib import Path
 
+try:  # 공식 커뮤니티 API 는 파이썬 기본 TLS 지문을 403 으로 막음 → 크롬 TLS 를 흉내 내는 curl_cffi 사용
+    from curl_cffi import requests as cffi_requests
+except ImportError:  # 로컬 테스트 등 미설치 환경에서는 urllib 로 시도
+    cffi_requests = None
+
 ROOT = Path(__file__).resolve().parent.parent
 AUTO = ROOT / "data" / "auto.json"
 CONFIG = ROOT / "data" / "config.json"
@@ -42,6 +47,10 @@ def get(url: str, timeout: int = 20) -> bytes:
             "Accept-Language": "ko-KR,ko;q=0.9", "Origin": "https://forum.kakaogames.com",
             "Referer": "https://forum.kakaogames.com/dokkaebi/",
         })
+    if cffi_requests is not None and "kakaogames.com" in url:
+        r = cffi_requests.get(url, headers=headers, impersonate="chrome", timeout=timeout)
+        r.raise_for_status()
+        return r.content
     req = urllib.request.Request(url, headers=headers)
     with urllib.request.urlopen(req, timeout=timeout) as r:
         return r.read()
