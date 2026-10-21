@@ -31,16 +31,6 @@ jobs:
       - name: Install deps
         run: pip install -q curl_cffi   # 공식 커뮤니티 API 가 기본 파이썬 TLS 를 403 으로 막아서 필요
 
-      - name: Diag (임시)
-        continue-on-error: true
-        run: |
-          python -c "
-          from curl_cffi import requests as r
-          import curl_cffi; print('curl_cffi', curl_cffi.__version__)
-          for p in ['notice/list?size=1&lang=ko','notice/list?size=20&lang=ko','update/list?size=20&lang=ko']:
-              x=r.get('https://forum-api.kakaogames.com/v1/dokkaebi/boards/'+p, impersonate='chrome'); print(p.split('?')[0], x.status_code)
-          "
-
       - name: Fetch data
         env:
           YT_API_KEY: ${{ secrets.YT_API_KEY }}   # 없으면 RSS만 사용
