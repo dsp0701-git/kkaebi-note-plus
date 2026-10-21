@@ -286,11 +286,22 @@ def parse_coupons(html: str) -> list[dict]:
 
 
 def fetch_coupons(candidates: list[dict]) -> tuple[list[dict], str] | None:
-    post = next((n for n in candidates if "쿠폰" in n["title"] and "안내" in n["title"]), None)
-    if not post:
-        return None
-    coupons = parse_coupons(post_content(post["board"], post["id"]))
-    return (coupons, post["url"]) if coupons else None
+    """'쿠폰 종합 안내' 글을 우선, 없으면 제목에 쿠폰·안내가 들어간 글을 차례로 시도 (표가 있는 첫 글)."""
+    posts = [n for n in candidates if "쿠폰" in n["title"] and "안내" in n["title"]]
+    posts.sort(key=lambda n: "종합" not in n["title"])  # 종합 안내가 맨 앞 (안정 정렬)
+    seen = set()
+    for post in posts:
+        if post["id"] in seen:
+            continue
+        seen.add(post["id"])
+        try:
+            coupons = parse_coupons(post_content(post["board"], post["id"]))
+        except Exception as e:
+            print(f"  ! 쿠폰 글 파싱 실패 {post['title']}: {e}", file=sys.stderr)
+            continue
+        if coupons:
+            return coupons, post["url"]
+    return None
 
 
 # ---------------------------------------------------------------- 유튜브
