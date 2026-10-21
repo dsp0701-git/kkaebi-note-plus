@@ -48,7 +48,8 @@ def get(url: str, timeout: int = 20) -> bytes:
             "Referer": "https://forum.kakaogames.com/dokkaebi/",
         })
     if cffi_requests is not None and "kakaogames.com" in url:
-        r = cffi_requests.get(url, headers=headers, impersonate="chrome", timeout=timeout)
+        # 헤더는 impersonate 가 크롬과 똑같이 채움 — UA 등을 직접 넣으면 TLS 지문과 어긋나 다시 403
+        r = cffi_requests.get(url, impersonate="chrome", timeout=timeout)
         r.raise_for_status()
         return r.content
     req = urllib.request.Request(url, headers=headers)
