@@ -49,9 +49,15 @@ def get(url: str, timeout: int = 20) -> bytes:
         })
     if cffi_requests is not None and "kakaogames.com" in url:
         # 헤더는 impersonate 가 크롬과 똑같이 채움 — UA 등을 직접 넣으면 TLS 지문과 어긋나 다시 403
-        r = cffi_requests.get(url, impersonate="chrome", timeout=timeout)
+        import time
+        for attempt in range(3):
+            time.sleep(0.6 + attempt * 2)  # 연속 요청 간격 (봇 판정 완화)
+            r = cffi_requests.get(url, impersonate="chrome", timeout=timeout)
+            if r.status_code == 200:
+                return r.content
+            print(f"  ! {r.status_code} {urllib.parse.urlparse(url).path} (시도 {attempt + 1}) "
+                  f"server={r.headers.get('server')} cache={r.headers.get('x-cache')}", file=sys.stderr)
         r.raise_for_status()
-        return r.content
     req = urllib.request.Request(url, headers=headers)
     with urllib.request.urlopen(req, timeout=timeout) as r:
         return r.read()
