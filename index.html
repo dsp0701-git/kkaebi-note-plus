@@ -285,9 +285,9 @@ el.querySelector('.enter').focus();})();
 <!-- ============ 내 장비 ============ -->
 <section id="tab-equip" class="hidden">
   <div class="card">
-    <p class="eyebrow">11부위 · 추가 효과 최상급 최댓값 대비</p>
+    <p class="eyebrow">11부위 · 추가 효과 1~17단계 (10/21 패치 기준)</p>
     <h2>내 장비 추가 효과 평가</h2>
-    <p class="muted" style="margin-top:-6px">등급과 추가 효과 수치를 넣으면 공식 수치 범위로 줄별 등급(하급~최상급)과 최상급 최댓값 대비 %를 계산합니다. 입력은 이 브라우저에 저장됩니다.</p>
+    <p class="muted" style="margin-top:-6px">등급과 추가 효과 수치를 넣으면 공식 확률표로 줄별 단계(1~17)와 최소~최대 사이 위치(%)를 계산합니다. 10/21 패치로 수치 체계가 바뀌었으니 이전에 넣은 값은 게임에서 다시 확인해 주세요. 입력은 이 브라우저에 저장됩니다.</p>
     <div class="chips" id="e-parts"></div>
     <div class="eform" id="e-form"></div>
   </div>
@@ -833,33 +833,32 @@ const setP=t=>{pTag=t;const used=new Set((TIMELINE.entries||[]).flatMap(e=>e.ite
 $('p-search').oninput=renderPatch;
 
 /* ================= 내 장비 ================= */
+// equip.json v2: table[부위][등급] = {options:{옵션:{p,pvp}}, values:{옵션:[1~17단계 수치]}}, stage_prob = 단계별 확률(%)
 const GR=['일반','희귀','영웅','전설'];
 let eq={}, ePart='무기';
 function kindOf(part){for(const [k,v] of Object.entries(EQUIP.slots)) if(v.includes(part)) return k; return '방어구';}
-function optList(part){
-  const k=kindOf(part);
-  if(k==='방어구') return Object.keys(EQUIP.prob['방어']);
-  return ['공격력','공격 정확도','치명타 적중',...EQUIP.styles.map(s=>'스타일 피해 · '+s)];
-}
-const baseOpt=o=>o.startsWith('스타일 피해')?'스타일 피해':o;
-const isPct=o=>o.startsWith('스타일 피해');
+const secOf=(part,grade)=>EQUIP.table?.[kindOf(part)]?.[grade];
+const optList=(part,grade)=>Object.keys(secOf(part,grade)?.options||{});
+const isPct=o=>/피해/.test(o||'');
+const fmtV=(o,v)=>isPct(o)?(+v).toFixed(2)+'%':(+v).toLocaleString();
 function evalLine(part,grade,opt,val){
   if(!opt||val===''||val==null||isNaN(val)) return null;
-  const k=kindOf(part), rg=EQUIP.ranges[k]?.[grade]?.[baseOpt(opt)]; if(!rg) return null;
-  const v=isPct(opt)?Math.round(parseFloat(val)*100):parseFloat(val);
-  const max=rg[3][1]; let g=rg.findIndex(([a,b])=>v>=a&&v<=b);
-  const out=v>max?'over':v<rg[0][0]?'under':null;
-  if(g<0) g=v>max?3:0;
-  const prob=EQUIP.prob[k==='방어구'?'방어':'공격'][baseOpt(opt)];
-  const pAtLeast=prob.slice(g).reduce((a,b)=>a+b,0);
-  return {g,pct:Math.min(100,Math.round(v/max*100)),max,rg,out,pAtLeast};
+  const s=secOf(part,grade); if(!s) return null;
+  const vals=s.values[opt]; if(!vals) return {missing:true};
+  const v=parseFloat(val), n=vals.length, min=vals[0], max=vals[n-1], e=1e-6;
+  const out=v>max+e?'over':v<min-e?'under':null;
+  let st=0; vals.forEach((x,i)=>{if(x<=v+e) st=i;});
+  let lo=st; while(lo>0&&vals[lo-1]===vals[st]) lo--;           // 같은 수치가 여러 단계면 묶음
+  const pAtLeast=EQUIP.stage_prob.slice(lo).reduce((a,b)=>a+b,0); // 이 옵션일 때 이 수치 이상 나올 확률
+  const pct=out==='over'?100:out==='under'?0:max>min?Math.round((v-min)/(max-min)*100):100;
+  return {st,lo,n,min,max,out,pct,pAtLeast,optP:s.options[opt].p,band:pct<34?0:pct<67?1:pct<90?2:3};
 }
-const fmtV=(o,v)=>isPct(o)?(v/100).toFixed(2)+'%':v.toLocaleString();
+const stageLabel=r=>r.out==='over'?'범위 초과':r.out==='under'?'범위 미만':`${r.lo===r.st?r.st+1:(r.lo+1)+'~'+(r.st+1)}단계`;
 function partScore(part){
   const d=eq[part]; if(!d||!d.grade||d.grade==='일반') return null;
-  const n=EQUIP.lines[d.grade], res=(d.lines||[]).slice(0,n).map(l=>evalLine(part,d.grade,l.opt,l.val)).filter(Boolean);
+  const n=EQUIP.lines[d.grade], res=(d.lines||[]).slice(0,n).map(l=>evalLine(part,d.grade,l.opt,l.val)).filter(r=>r&&!r.missing);
   if(!res.length) return null;
-  return {score:Math.round(res.reduce((a,r)=>a+r.pct,0)/res.length),n:res.length,of:n,low:res.filter(r=>r.g===0).length,res};
+  return {score:Math.round(res.reduce((a,r)=>a+r.pct,0)/res.length),n:res.length,of:n,low:res.filter(r=>r.band===0).length,res};
 }
 function saveEq(){store.set('equip',eq);}
 function renderParts(){
@@ -870,7 +869,7 @@ function renderParts(){
 }
 function renderForm(){
   const p=ePart,d=eq[p]=eq[p]||{grade:'영웅',enh:'',type:'',name:'',lines:[]};
-  const k=kindOf(p), n=d.grade==='일반'?0:EQUIP.lines[d.grade], opts=optList(p);
+  const k=kindOf(p), n=d.grade==='일반'?0:EQUIP.lines[d.grade], opts=optList(p,d.grade);
   while(d.lines.length<n) d.lines.push({opt:'',val:''});
   let h=`<div class="erow1">
     <div><label>등급</label><div class="seg">${GR.map(g=>`<button data-g="${g}" class="${d.grade===g?'on':''}">${g}</button>`).join('')}</div></div>
@@ -879,26 +878,28 @@ function renderForm(){
     <div><label>장비 이름(선택)</label><input id="e-name" value="${esc(d.name)}" placeholder="예: 고대 제령"></div></div>`;
   if(!n) h+='<p class="muted" style="margin:12px 0 0">일반 등급은 추가 효과가 없습니다.</p>';
   for(let i=0;i<n;i++){
-    const l=d.lines[i], r=evalLine(p,d.grade,l.opt,l.val);
-    const unit=isPct(l.opt)?'%':'';
+    const l=d.lines[i], r=evalLine(p,d.grade,l.opt,l.val), unit=isPct(l.opt)?'%':'';
     let res='<span class="muted">옵션과 수치를 입력하세요</span>';
-    if(r){
-      const col=['var(--ink3)','var(--sky)','var(--purple)','var(--gold)'][r.g];
-      res=`<div class="top"><span class="gb ${r.out?'gx':'g'+r.g}">${r.out==='over'?'범위 초과':r.out==='under'?'범위 미만':EQUIP.grades[r.g]}</span><b>${r.pct}%</b><span class="meta">최댓값 ${fmtV(l.opt,r.max)} 대비</span></div>
+    if(r?.missing) res=`<span class="gb gx">이 등급·부위엔 없는 옵션</span>`;
+    else if(r){
+      const col=['var(--ink3)','var(--sky)','var(--purple)','var(--gold)'][r.band];
+      const both=r.optP*r.pAtLeast/100;
+      res=`<div class="top"><span class="gb ${r.out?'gx':'g'+r.band}">${stageLabel(r)}</span><b>${r.pct}%</b><span class="meta">${fmtV(l.opt,r.min)} ~ ${fmtV(l.opt,r.max)} 중 위치</span></div>
         <div class="gbar"><i style="width:${r.pct}%;background:${col}"></i></div>
-        <details class="edet"><summary>공식 범위 · 재추첨 확률</summary>
-        ${r.rg.map(([a,b],gi)=>`${EQUIP.grades[gi]} ${fmtV(l.opt,a)}${a!==b?'~'+fmtV(l.opt,b):''}`).join(' · ')}<br>
-        새로 뽑을 때 '${esc(l.opt)}' ${EQUIP.grades[r.g]} 이상: ${r.pAtLeast.toFixed(2)}%</details>`;
+        <details class="edet"><summary>단계표 · 재조율 확률</summary>
+        ${secOf(p,d.grade).values[l.opt].map((x,j)=>j>=r.lo&&j<=r.st&&!r.out?`<b>${j+1}:${fmtV(l.opt,x)}</b>`:`${j+1}:${fmtV(l.opt,x)}`).join(' · ')}<br>
+        '${esc(l.opt)}'이(가) 붙었을 때 이 수치 이상: ${r.pAtLeast.toFixed(2)}%<br>
+        재조율 한 줄에서 '${esc(l.opt)}' + 이 수치 이상: ${both<0.01?both.toFixed(4):both.toFixed(2)}% (옵션 등장 ${r.optP}%)</details>`;
     }
     h+=`<div class="eline"><span class="muted">${i+1}</span>
-      <select data-i="${i}" data-k="opt"><option value="">옵션 선택</option>${opts.map(o=>`<option ${l.opt===o?'selected':''}>${o}</option>`).join('')}</select>
+      <select data-i="${i}" data-k="opt"><option value="">옵션 선택</option>${opts.map(o=>`<option ${l.opt===o?'selected':''}>${o}</option>`).join('')}${l.opt&&!opts.includes(l.opt)?`<option selected>${esc(l.opt)}</option>`:''}</select>
       <div class="unit"><input data-i="${i}" data-k="val" type="number" step="${unit?'0.01':'1'}" min="0" value="${esc(l.val)}" placeholder="수치"><span>${unit}</span></div>
       <div class="eres">${res}</div></div>`;
   }
   const s=partScore(p);
   if(s){
-    const verdict=s.score<35?'하급 위주입니다. 변경권 우선 후보입니다.':s.score<60?'평균 수준입니다. 다른 부위와 비교해 보세요.':'좋은 편입니다. 유지를 권합니다.';
-    h+=`<div class="escore"><b>${s.score}</b><div><b style="font:inherit;font-weight:700">점</b> · 줄별 최상급 최댓값 대비 평균 (${s.n}/${s.of}줄 입력, 하급 ${s.low}줄)<br><span class="muted">${verdict} [판단]</span></div></div>`;
+    const verdict=s.score<35?'낮은 단계 위주입니다. 재조율 우선 후보입니다.':s.score<60?'평균 수준입니다. 다른 부위와 비교해 보세요.':'좋은 편입니다. 유지를 권합니다.';
+    h+=`<div class="escore"><b>${s.score}</b><div><b style="font:inherit;font-weight:700">점</b> · 줄별 최소~최대 사이 위치 평균 (${s.n}/${s.of}줄 입력, 낮은 줄 ${s.low}개)<br><span class="muted">${verdict} [판단]</span></div></div>`;
   }
   h+=`<div style="margin-top:10px"><button class="chip" id="e-clear">이 부위 초기화</button></div>`;
   $('e-form').innerHTML=h;
@@ -906,28 +907,25 @@ function renderForm(){
   $('e-enh').oninput=e=>{d.enh=e.target.value;saveEq();renderTable();};
   $('e-name').oninput=e=>{d.name=e.target.value;saveEq();renderTable();};
   if($('e-type')) $('e-type').onchange=e=>{d.type=e.target.value;saveEq();renderTable();};
-  $('e-form').querySelectorAll('[data-k]').forEach(el=>{
-    const ev=el.tagName==='SELECT'?'onchange':'onchange';
-    el[ev]=()=>{d.lines[+el.dataset.i][el.dataset.k]=el.value;saveEq();renderEquip();};
-  });
+  $('e-form').querySelectorAll('[data-k]').forEach(el=>{el.onchange=()=>{d.lines[+el.dataset.i][el.dataset.k]=el.value;saveEq();renderEquip();};});
   $('e-clear').onclick=()=>{delete eq[p];saveEq();renderEquip();};
 }
 function renderTable(){
   const all=Object.values(EQUIP.slots).flat();
   const scored=all.map(p=>({p,s:partScore(p)})).filter(x=>x.s).sort((a,b)=>a.s.score-b.s.score);
   const rank=Object.fromEntries(scored.map((x,i)=>[x.p,i+1]));
-  $('e-table').innerHTML=`<thead><tr><th>부위</th><th>장비</th><th>등급</th><th>강화</th><th>추가 효과</th><th>점수</th><th>변경권</th></tr></thead><tbody>`+
+  $('e-table').innerHTML=`<thead><tr><th>부위</th><th>장비</th><th>등급</th><th>강화</th><th>추가 효과</th><th>점수</th><th>재조율</th></tr></thead><tbody>`+
     all.map(p=>{const d=eq[p],s=partScore(p);
       const lines=d?.lines?.filter(l=>l.opt&&l.val!=='').map(l=>`${l.opt.replace('스타일 피해 · ','')} ${isPct(l.opt)?l.val+'%':l.val}`).join(' / ')||'–';
       return `<tr class="${p===ePart?'cur':''}"><td>${p}</td><td>${esc([d?.type,d?.name].filter(Boolean).join(' '))||'–'}</td><td>${d?.grade||'미입력'}</td><td>${d?.enh?'+'+esc(d.enh):'–'}</td><td>${esc(lines)}</td><td>${s?s.score:'–'}</td><td>${rank[p]&&rank[p]<=3?`<span class="rk">${rank[p]}순위</span>`:''}</td></tr>`;}).join('')+'</tbody>';
   const avg=scored.length?Math.round(scored.reduce((a,x)=>a+x.s.score,0)/scored.length):null;
-  $('e-sum').textContent=`입력 ${scored.length}/${all.length}부위${avg!=null?` · 평균 ${avg}점`:''}${scored[0]?` · 변경권 1순위: ${scored[0].p}`:''}`;
+  $('e-sum').textContent=`입력 ${scored.length}/${all.length}부위${avg!=null?` · 평균 ${avg}점`:''}${scored[0]?` · 재조율 1순위: ${scored[0].p}`:''}`;
 }
 function renderEquip(){renderParts();renderForm();renderTable();}
 function initEquip(){
-  if(!EQUIP){$('e-form').innerHTML='<p class="empty">장비 수치 데이터를 불러오지 못했습니다.</p>';return;}
+  if(!EQUIP?.table){$('e-form').innerHTML='<p class="empty">장비 수치 데이터를 불러오지 못했습니다.</p>';return;}
   eq=store.get('equip',{});
-  $('e-src').innerHTML=`근거: <a href="${esc(EQUIP.source)}" target="_blank" rel="noopener">공식 '장비 등급별 추가 효과 부여 수 확률'</a> (${fmtDate(new Date(EQUIP.as_of))} 기준). 점수·판단은 참고용입니다.`;
+  $('e-src').innerHTML=`근거: <a href="${esc(EQUIP.source)}" target="_blank" rel="noopener">공식 '장비 등급별 추가 효과 부여 확률'</a> (${fmtDate(new Date(EQUIP.as_of))} 기준, 자동 갱신). 점수·판단은 참고용입니다.`;
   renderEquip();
 }
 
