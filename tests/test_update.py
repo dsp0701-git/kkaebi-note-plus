@@ -142,6 +142,26 @@ class Parsers(unittest.TestCase):
             U.parse_channel_page("<html>consent</html>", "x")
 
 
+    def test_parse_equip(self):
+        html = (Path(__file__).parent / "equip_fixture.html").read_text(encoding="utf-8")
+        styles = json.loads((U.ROOT / "data" / "equip.json").read_text(encoding="utf-8"))["styles"]
+        r = U.parse_equip(html, styles)
+        self.assertEqual(r["lines"], {"희귀": 2, "영웅": 3, "전설": 4})
+        self.assertEqual(len(r["stage_prob"]), 17)
+        self.assertAlmostEqual(sum(r["stage_prob"]), 100, delta=0.1)
+        w = r["table"]["무기"]
+        self.assertEqual(w["희귀"]["values"]["공격력"][0], 200)
+        self.assertEqual(w["전설"]["values"]["공격력"][-1], 1600)       # 쉼표 제거
+        self.assertEqual(w["전설"]["values"]["스타일 피해 · 강인"][-1], 6)  # 12종 공통 값 펼침
+        self.assertEqual(len([o for o in w["전설"]["options"] if o.startswith("스타일")]), 12)
+        acc = r["table"]["장신구"]["전설"]
+        self.assertIn("PvP 공격 정확도", acc["values"])                 # 'PvP공격' 띄어쓰기 보정
+        self.assertIn("일반 요귀 피해 증가", acc["values"])
+        self.assertTrue(acc["options"]["PvP 피해 증가"]["pvp"])
+        with self.assertRaises(ValueError):
+            U.parse_equip("<p>표 없음</p>", styles)
+
+
 class EndToEnd(unittest.TestCase):
     def test_main_writes_auto_json_and_keeps_old_on_failure(self):
         tmp = Path(tempfile.mkdtemp())
@@ -149,7 +169,7 @@ class EndToEnd(unittest.TestCase):
             (tmp / "data").mkdir()
             shutil.copy(U.ROOT / "data" / "config.json", tmp / "data" / "config.json")
             auto = tmp / "data" / "auto.json"
-            with mock.patch.multiple(U, ROOT=tmp, AUTO=auto, CONFIG=tmp / "data" / "config.json", get=F.fake_get):
+            with mock.patch.multiple(U, ROOT=tmp, AUTO=auto, CONFIG=tmp / "data" / "config.json", get=F.fake_get, EQUIP=tmp / "data" / "equip.json"):
                 self.assertEqual(U.main(), 0)
                 d = json.loads(auto.read_text(encoding="utf-8"))
                 self.assertEqual(d["maintenance"]["start"], "2026-10-14T07:00+09:00")
@@ -165,7 +185,7 @@ class EndToEnd(unittest.TestCase):
             # 네트워크 전부 실패 → 이전 데이터 유지, 종료코드 1
             def boom(url):
                 raise OSError("network down")
-            with mock.patch.multiple(U, ROOT=tmp, AUTO=auto, CONFIG=tmp / "data" / "config.json", get=boom, get_page=boom):
+            with mock.patch.multiple(U, ROOT=tmp, AUTO=auto, CONFIG=tmp / "data" / "config.json", get=boom, get_page=boom, EQUIP=tmp / "data" / "equip.json"):
                 self.assertEqual(U.main(), 1)
                 self.assertEqual(len(json.loads(auto.read_text(encoding="utf-8"))["coupons"]), 9)
         finally:
