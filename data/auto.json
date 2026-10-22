@@ -530,6 +530,14 @@
  ],
  "videos": [
   {
+   "id": "ZGw-1fTYCpA",
+   "title": "[도깨비의세계] BGM 참선 | 1 Hour Loop🧘",
+   "channel": "도깨비의세계 공식",
+   "date": "2026-10-22T11:00+09:00",
+   "views": null,
+   "official": true
+  },
+  {
    "id": "mjQYbJYWM5c",
    "title": "무슨 도술이 핫한가요? 구미호나 뽑아볼까 [도깨비의세계]",
    "channel": "센터로드TV",
@@ -712,15 +720,7 @@
    "date": "2026-10-21T09:00+09:00",
    "views": null,
    "official": false
-  },
-  {
-   "id": "FJWFL0GtRIg",
-   "title": "도깨비 무과금 전설 무기 제작 계획 10가지",
-   "channel": "도모",
-   "date": "2026-10-20T10:00+09:00",
-   "views": null,
-   "official": false
   }
  ],
- "updated_at": "2026-10-22T10:01+09:00"
+ "updated_at": "2026-10-22T11:51+09:00"
 }
