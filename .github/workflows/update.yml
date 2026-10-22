@@ -38,11 +38,11 @@ jobs:
 
       - name: Commit if changed
         run: |
-          if git diff --quiet -- data/auto.json; then
+          if git diff --quiet -- data/auto.json data/equip.json; then
             echo "no changes"; exit 0
           fi
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/auto.json
+          git add data/auto.json data/equip.json
           git commit -m "data: auto update $(TZ=Asia/Seoul date '+%m/%d %H:%M')"
           git push
