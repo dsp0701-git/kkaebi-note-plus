@@ -31,6 +31,7 @@ except ImportError:  # 로컬 테스트 등 미설치 환경에서는 urllib 로
 ROOT = Path(__file__).resolve().parent.parent
 AUTO = ROOT / "data" / "auto.json"
 CONFIG = ROOT / "data" / "config.json"
+EQUIP = ROOT / "data" / "equip.json"
 
 KST = timezone(timedelta(hours=9))
 API = "https://forum-api.kakaogames.com/v1/dokkaebi"
@@ -243,6 +244,116 @@ def fetch_events(notices: list[dict]) -> list[dict]:
             name = re.sub(r"^\[[^\]]*\]\s*", "", name)
             out.append({"name": name, "end": end, "url": n["url"]})
     return sorted(out, key=lambda e: e["end"])
+
+
+# ---------------------------------------------------------------- 장비 추가 효과 표 (prob 게시판)
+EQUIP_TITLE = "장비 등급별 추가 효과"
+_EQ_HEAD = re.compile(r"^#\s*(희귀|영웅|전설)\s*(무기|방어구|장신구)\s*$")
+
+
+class _EquipHtml(_Html):
+    """표 행마다 직전 '# 등급 부위' 제목을 붙여 모은다."""
+
+    def __init__(self):
+        super().__init__()
+        self.head: tuple[str, str] | None = None
+        self.tagged: list[tuple[tuple[str, str] | None, list[str]]] = []
+
+    def handle_data(self, data):
+        super().handle_data(data)
+        m = _EQ_HEAD.match(data.strip())
+        if m and self._cell is None:
+            self.head = (m.group(1), m.group(2))
+
+    def handle_endtag(self, tag):
+        if tag == "tr" and self._row:
+            self.tagged.append((self.head, list(self._row)))
+        super().handle_endtag(tag)
+
+
+def _opt_name(s: str) -> str:
+    s = re.sub(r"\s+", " ", s).strip()
+    s = re.sub(r"PvP(?=[가-힣])", "PvP ", s)
+    return s.replace("요귀피해", "요귀 피해")
+
+
+def _num(s: str) -> float | int:
+    v = float(s.replace(",", "").replace("%", "").strip())
+    return int(v) if v.is_integer() else v
+
+
+def parse_equip(html: str, styles: list[str]) -> dict:
+    """공식 '장비 등급별 추가 효과 부여 확률' 글 → equip.json 의 lines·stage_prob·table.
+
+    table[부위][등급] = {"options": {옵션: {"p": 등장확률%, "pvp": bool}}, "values": {옵션: [1~17단계 수치]}}
+    스타일 피해는 옵션명 '스타일 피해 · 강인' 형식, 값은 % 숫자(3.0 = 3.00%).
+    """
+    p = _EquipHtml()
+    p.feed(html or "")
+    text = "".join(p.text)
+    m = re.search(r"각각\s*(\d)개\s*·\s*(\d)개\s*·\s*(\d)개", text)
+    lines = dict(zip(["희귀", "영웅", "전설"], map(int, m.groups()))) if m else {"희귀": 2, "영웅": 3, "전설": 4}
+    table: dict = {}
+    stage_prob: list[float] = []
+    style_re = re.compile(r"^(" + "|".join(map(re.escape, styles)) + r") 피해 증가$")
+    hdr: list[str] | None = None
+    for head, row in p.tagged:
+        if not head:
+            continue
+        sec = table.setdefault(head[1], {}).setdefault(head[0], {"options": {}, "values": {}})
+        if row[0] in ("추가 효과", "단계"):
+            hdr = row
+            continue
+        if not hdr:
+            continue
+        if hdr[0] == "추가 효과" and len(row) >= 3:
+            name = _opt_name(row[0])
+            sm = style_re.match(name)
+            if sm:
+                name = "스타일 피해 · " + sm.group(1)
+            sec["options"][name] = {"p": _num(row[2]), "pvp": "PvP" in row[1]}
+        elif hdr[0] == "단계" and re.match(r"\d+단계", row[0]):
+            stage = int(re.match(r"\d+", row[0]).group()) - 1
+            if len(stage_prob) == stage:
+                stage_prob.append(_num(row[1]))
+            for name, val in zip(hdr[2:], row[2:]):
+                name = _opt_name(name)
+                if name.startswith("스타일 피해"):
+                    for st in styles:
+                        sec["values"].setdefault("스타일 피해 · " + st, []).append(_num(val))
+                else:
+                    sec["values"].setdefault(name, []).append(_num(val))
+    # 등장 확률 표에 없는 스타일 값(등급에 없는 스타일)은 제거
+    for kind in table.values():
+        for sec in kind.values():
+            sec["values"] = {k: v for k, v in sec["values"].items() if k in sec["options"]}
+    n = len(stage_prob)
+    bad = [f"{g} {k}:{o}" for k, gs in table.items() for g, sec in gs.items()
+           for o in sec["options"] if len(sec["values"].get(o, [])) != n]
+    if n < 5 or len(table) != 3 or bad:
+        raise ValueError(f"장비 표 구조 이상 (단계 {n}, 부위 {list(table)}, 누락 {bad[:3]})")
+    return {"lines": lines, "stage_prob": stage_prob, "table": table}
+
+
+def fetch_equip(old: dict) -> dict | None:
+    posts = api("boards/prob/list", size=20).get("posts", [])
+    post = next((x for x in posts if EQUIP_TITLE in x["title"]), None)
+    if not post:
+        raise RuntimeError("장비 추가 효과 확률 글을 찾지 못함")
+    parsed = parse_equip(post_content("prob", post["post_id"]), old.get("styles") or [
+        "절명", "연타", "강타", "척살", "저격", "주술", "파멸", "강인", "기동", "헌신", "기만", "제압"])
+    new = {
+        "_help": "공식 '장비 등급별 추가 효과 부여 확률' 글을 Actions 가 자동 변환. "
+                 "table[부위][등급].options[옵션] = {p: 등장확률%, pvp}, values[옵션] = 1~N단계 수치 "
+                 "(스타일·피해 증감은 % 숫자). stage_prob = 옵션이 정해졌을 때 단계별 확률%.",
+        "version": 2,
+        "source": POST_URL.format(board="prob", id=post["post_id"]),
+        "as_of": utc_to_kst(post["published_at"]),
+        **{k: old[k] for k in ("styles", "slots", "weapon_types") if k in old},
+        **parsed,
+    }
+    same = {k: v for k, v in new.items() if k != "as_of"} == {k: v for k, v in old.items() if k != "as_of"}
+    return None if same else new
 
 
 # ---------------------------------------------------------------- 쿠폰
@@ -570,6 +681,17 @@ def main() -> int:
     step("coupons", s_coupons)
     step("events", s_events)
     step("videos", s_videos)
+
+    def s_equip():  # 별도 파일(data/equip.json) — 표가 바뀐 경우에만 저장
+        cur = json.loads(EQUIP.read_text(encoding="utf-8")) if EQUIP.exists() else {}
+        eq = fetch_equip(cur)
+        if eq and not dry:
+            EQUIP.write_text(json.dumps(eq, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+            print(f"저장: {EQUIP.relative_to(ROOT)}")
+        elif eq:
+            print("equip 변경 감지 (dry-run)")
+
+    step("equip", s_equip)
 
     for k, v in status.items():
         print(f"{k:12} {v}  ({len(new.get(k, []) or []) if isinstance(new.get(k), list) else ''})")
