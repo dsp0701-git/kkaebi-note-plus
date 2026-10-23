@@ -530,19 +530,11 @@
  ],
  "videos": [
   {
-   "id": "ACueok_hI1E",
-   "title": "[도깨비의세계] 패치후 무과금 최고의 사냥터는? - 24시간 비경 vs 필드",
-   "channel": "쵸튜브[쵸피]",
-   "date": "2026-10-23T07:31+09:00",
-   "views": 624,
-   "official": false
-  },
-  {
    "id": "-DjTOR8cE30",
    "title": "[도깨비의세계] 강화서 어디다쓸까 고민중... 득템 많이하셨나요?",
    "channel": "투즈TV",
    "date": "2026-10-23T05:10+09:00",
-   "views": 58530,
+   "views": null,
    "official": false
   },
   {
@@ -550,15 +542,7 @@
    "title": "[도깨비의 세계]절명·파멸·강인·기만, 뭘 써야 할까?🔰도술덱+강화 정리 가이드",
    "channel": "깨비야",
    "date": "2026-10-23T00:25+09:00",
-   "views": 15220,
-   "official": false
-  },
-  {
-   "id": "xsj1ZeKqiTo",
-   "title": "[도깨비의 세계] 무소과금 도술강화 후회하지마세요💧도술50렙 꼭 찍어야할까??",
-   "channel": "투즈TV",
-   "date": "2026-10-22T23:39+09:00",
-   "views": 27364,
+   "views": null,
    "official": false
   },
   {
@@ -566,15 +550,7 @@
    "title": "[도깨비의 세계] 부채도안 먹었네  파멸+강타덱 2000회피 23만투력 전설가호 [무 소과금 꿀팁  정보 공유]  #도깨비 #슈퍼캣",
    "channel": "깨비야",
    "date": "2026-10-22T22:29+09:00",
-   "views": 31507,
-   "official": false
-  },
-  {
-   "id": "EDT1YhcDGIg",
-   "title": "[도깨비의 세계] 부채도안 먹었네  파멸+강타덱 2000회피 23만투력 전설가호 [무 소과금 꿀팁  정보 공유]  #도깨비 #슈퍼캣",
-   "channel": "깨비야",
-   "date": "2026-10-22T20:01+09:00",
-   "views": 0,
+   "views": null,
    "official": false
   },
   {
@@ -582,7 +558,7 @@
    "title": "[도깨비의세계] 무소과금 보상 효율 2배💎신기 쟁탈전 핵심 꿀팁 5가지",
    "channel": "맛나는꼬꼬",
    "date": "2026-10-22T19:00+09:00",
-   "views": 5119,
+   "views": null,
    "official": false
   },
   {
@@ -590,7 +566,7 @@
    "title": "도깨비 무과금 업뎃 후 전래동화 3시간 광역 사냥 시 재료 얼마나 먹을까?",
    "channel": "도모",
    "date": "2026-10-22T17:15+09:00",
-   "views": 23842,
+   "views": null,
    "official": false
   },
   {
@@ -598,7 +574,7 @@
    "title": "도깨비 무과금 비경 실험 3가지 공략 - 상시 비경, 전래동화 비경, 엽전 비경",
    "channel": "도모",
    "date": "2026-10-22T13:31+09:00",
-   "views": 46856,
+   "views": null,
    "official": false
   },
   {
@@ -606,7 +582,7 @@
    "title": "[도깨비의세계] BGM 늘 곁에 | 1 Hour Loop 🌿",
    "channel": "도깨비의세계 공식",
    "date": "2026-10-22T11:51+09:00",
-   "views": 1736,
+   "views": null,
    "official": true
   },
   {
@@ -614,7 +590,7 @@
    "title": "[도깨비의세계] BGM 왕의 무게 | 1 Hour Loop 👑",
    "channel": "도깨비의세계 공식",
    "date": "2026-10-22T11:51+09:00",
-   "views": 895,
+   "views": null,
    "official": true
   },
   {
@@ -622,31 +598,47 @@
    "title": "[도깨비의세계] BGM 참선 | 1 Hour Loop🧘",
    "channel": "도깨비의세계 공식",
    "date": "2026-10-22T11:50+09:00",
-   "views": 3807,
+   "views": null,
    "official": true
   },
   {
-   "id": "Vh0cLYFNmSM",
-   "title": "절명에 50 때려박고 구미호 뽑은 이유 [도깨비의 세계]",
-   "channel": "센터로드TV",
-   "date": "2026-10-22T09:00+09:00",
-   "views": 47478,
+   "id": "1V2QX6CJ1s0",
+   "title": "[도깨비의세계] 도사들의 기묘한 밤🎃업데이트!",
+   "channel": "도깨비의세계 공식",
+   "date": "2026-10-22T10:00+09:00",
+   "views": null,
+   "official": true
+  },
+  {
+   "id": "OuJIaR99zMs",
+   "title": "도깨비 무과금 광역 사냥 공략 7가지 - 시간당 7만 엽전?!",
+   "channel": "도모",
+   "date": "2026-10-22T10:00+09:00",
+   "views": null,
    "official": false
   },
   {
-   "id": "KrV_6n4RBcc",
-   "title": "[도깨비의세계] 패치후 모두가 쓸수있는 한방 프리셋 - 광역사냥, 보스딜, 단일DPS사냥, PVP",
-   "channel": "쵸튜브[쵸피]",
-   "date": "2026-10-22T06:47+09:00",
-   "views": 89373,
+   "id": "1CXxt3lU2_Q",
+   "title": "도깨비 무과금 업뎃 도술 필수 공략 10가지 - 파멸, 주술, 강타",
+   "channel": "도모",
+   "date": "2026-10-22T10:00+09:00",
+   "views": null,
    "official": false
   },
   {
-   "id": "oO55jTJ2ORU",
-   "title": "[도깨비의 세계] 패치후 정교해진 보스단일 스킬트리 '절명+저격' 스킬순서 공략법",
-   "channel": "투즈TV",
-   "date": "2026-10-22T06:24+09:00",
-   "views": 55392,
+   "id": "7_u3Prj5kkw",
+   "title": "[도깨비의세계] 패치 이후 떡상한 누리덱 빌드🚨 의심이 믿음이 되는 순간",
+   "channel": "맛나는꼬꼬",
+   "date": "2026-10-22T10:00+09:00",
+   "views": null,
+   "official": false
+  },
+  {
+   "id": "NF192P-GWhI",
+   "title": "[도깨비의세계] 장비 추가 효과 재조율권 지급🔥 10.21 업데이트 요약 정리",
+   "channel": "맛나는꼬꼬",
+   "date": "2026-10-22T10:00+09:00",
+   "views": null,
    "official": false
   },
   {
@@ -654,7 +646,7 @@
    "title": "무슨 도술이 핫한가요? 구미호나 뽑아볼까 [도깨비의세계]",
    "channel": "센터로드TV",
    "date": "2026-10-22T02:01+09:00",
-   "views": 40535,
+   "views": null,
    "official": false
   },
   {
@@ -662,7 +654,7 @@
    "title": "[도깨비의 세계]깨떡덱 만들었다  패치노트 정리+도술빌드 실험 해보쟈ㅋ_ㅋ 2000회피 22만투력 전설가호 [무 소과금 꿀팁  정보 공유]  #도깨비 #슈퍼캣",
    "channel": "깨비야",
    "date": "2026-10-22T01:16+09:00",
-   "views": 47451,
+   "views": null,
    "official": false
   },
   {
@@ -670,7 +662,7 @@
    "title": "[도깨비의세계] 떡상한 빌드찾기! 업데이트 노트 떴습니다",
    "channel": "투즈TV",
    "date": "2026-10-21T23:27+09:00",
-   "views": 154370,
+   "views": null,
    "official": false
   },
   {
@@ -678,23 +670,7 @@
    "title": "밸패로 싹 바뀐 도술 트리! 1분에 1700+엽전 ㄷㄷ 개꿀사냥터 추천과 업데이트 요약 정리까지! [도깨비의세계]",
    "channel": "게임하는인기",
    "date": "2026-10-21T23:19+09:00",
-   "views": 36133,
-   "official": false
-  },
-  {
-   "id": "otvOKnrMKOk",
-   "title": "[도깨비의세계]🔰누구나 쓸 수 있는 효율 광역 제자리 사냥 도술 빌드 공개(강타+파멸 깨떡덱)",
-   "channel": "깨비야",
-   "date": "2026-10-21T21:37+09:00",
-   "views": 47357,
-   "official": false
-  },
-  {
-   "id": "sCrcnv6Dn0o",
-   "title": "[도깨비의세계] 패치후 \"단일 최강 DPS덱\" - 사냥, 레이드 공용 가능",
-   "channel": "쵸튜브[쵸피]",
-   "date": "2026-10-21T21:25+09:00",
-   "views": 71800,
+   "views": null,
    "official": false
   },
   {
@@ -702,15 +678,7 @@
    "title": "[도깨비의세계] 도술 대개편 분석 /만능 \"기강덱\" 좋네요  -  쵸피 무이1서버",
    "channel": "쵸튜브[쵸피]",
    "date": "2026-10-21T21:18+09:00",
-   "views": 124738,
-   "official": false
-  },
-  {
-   "id": "N7xX2HYecsU",
-   "title": "[도깨비의 세계] 8시간 실험결과💦기동 나락가고 7만까지 노리는 빌드 4가지",
-   "channel": "투즈TV",
-   "date": "2026-10-21T21:09+09:00",
-   "views": 56131,
+   "views": null,
    "official": false
   },
   {
@@ -718,9 +686,41 @@
    "title": "[도깨비의세계] 기동덱 창시자 새로운 빌드 연구중 떡상 갑니다 무이 서버",
    "channel": "맛나는꼬꼬",
    "date": "2026-10-21T20:49+09:00",
-   "views": 41833,
+   "views": null,
+   "official": false
+  },
+  {
+   "id": "kBwYWAicbQk",
+   "title": "도깨비의세계 LIVE 👾 [26.10.20]",
+   "channel": "도깨비의세계 공식",
+   "date": "2026-10-21T10:00+09:00",
+   "views": null,
+   "official": true
+  },
+  {
+   "id": "fX8XgfVwHVc",
+   "title": "도깨비 무과금 공략 - 생방송 핵심 42가지 정리 (쿠폰 : 도깨비의보답)",
+   "channel": "도모",
+   "date": "2026-10-21T10:00+09:00",
+   "views": null,
+   "official": false
+  },
+  {
+   "id": "sIaZ5MgE1xc",
+   "title": "도깨비 무과금 도술 강화 요령서 도모의 생각 10가지 공유",
+   "channel": "도모",
+   "date": "2026-10-21T10:00+09:00",
+   "views": null,
+   "official": false
+  },
+  {
+   "id": "CLqbx9RiuqM",
+   "title": "도깨비 무과금 13시간 50분 재화 수급량 - 정기단 1,000개, 2,042,000엽전?! ← 단각 구매 포함",
+   "channel": "도모",
+   "date": "2026-10-21T10:00+09:00",
+   "views": null,
    "official": false
   }
  ],
- "updated_at": "2026-10-23T07:48+09:00"
+ "updated_at": "2026-10-23T10:06+09:00"
 }
