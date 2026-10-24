@@ -17,21 +17,36 @@ jobs:
         run: |
           import re, time
           from curl_cffi import requests as r
-          urls = [
-            "https://forum-api.kakaogames.com/v1/dokkaebi/boards/notice/list?size=3&lang=ko",
-            "https://forum.kakaogames.com/dokkaebi/postList/?code=notice",
+          def get(u):
+            time.sleep(1)
+            x = r.get(u, impersonate="chrome", timeout=20)
+            return x.status_code, x.text
+          def show(u, body):
+            titles = re.findall(r'"title"\s*:\s*"([^"]{4,90})"', body) or re.findall(r'"([^"]{6,90}(?:안내|점검|이벤트)[^"]{0,20})"', body)
+            print(f"  post_id={body.count('post_id')} titles={len(titles)}")
+            for t in titles[:12]: print("   *", t)
+          pages = [
             "https://m-forum.kakaogames.com/dokkaebi/",
-            "https://bbs.kakaogames.com/ko/1329429/notice/list",
+            "https://m-forum.kakaogames.com/dokkaebi/postList/?code=notice",
+            "https://forum.kakaogames.com/dokkaebi/postList/?code=notice",
             "https://dokkaebi.kakaogames.com/",
           ]
-          for u in urls:
-            time.sleep(1)
+          for u in pages:
             try:
-              x = r.get(u, impersonate="chrome", timeout=20)
-              body = x.text
-              print(f"\n=== {x.status_code} {u}\n  server={x.headers.get('server')} cache={x.headers.get('x-cache')} len={len(body)}")
-              hosts = sorted(set(re.findall(r"https?://[a-z0-9.-]*kakaogames\.com[^\"' <>]{0,60}", body)))
-              for h in hosts[:25]: print("  ->", h)
-              print("  snippet:", re.sub(r"\s+", " ", body[:300]))
+              s, body = get(u)
+              print(f"\n=== {s} {u} len={len(body)}"); show(u, body)
+              for p in sorted(set(re.findall(r'(?:https://[a-z.-]+kakaogames\.com)?/[a-z/]*_payload\.json\?_b=[0-9a-f-]+', body))):
+                pu = p if p.startswith("http") else re.match(r"https://[^/]+", u).group(0) + p
+                s2, b2 = get(pu)
+                print(f"  [payload] {s2} {pu} len={len(b2)}"); show(pu, b2)
             except Exception as e:
               print(f"\n=== ERR {u}: {e}")
+          # bbs SPA: API 호스트 찾기
+          try:
+            s, body = get("https://bbs.kakaogames.com/ko/1329429/notice/list")
+            for js in re.findall(r'src="(/[0-9a-f]+\.js)"', body)[:8]:
+              s2, b2 = get("https://bbs.kakaogames.com" + js)
+              apis = sorted(set(re.findall(r'https?://[a-z0-9.-]+\.kakaogames\.com[/a-zA-Z0-9_.{}$-]*', b2)))
+              if apis: print(f"\n[bbs js] {js}:", apis[:15])
+          except Exception as e:
+            print("bbs ERR", e)
