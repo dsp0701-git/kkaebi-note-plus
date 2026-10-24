@@ -68,10 +68,44 @@ def get_json(url: str) -> dict:
     return json.loads(get(url).decode("utf-8"))
 
 
+def cache_key(path: str, params: dict) -> str:
+    """브라우저 동기화 스크립트(tools/kkaebi-sync.user.js)와 같은 규칙: lang 제외, 파라미터 이름순."""
+    q = urllib.parse.urlencode(sorted((k, v) for k, v in params.items() if k != "lang"))
+    return f"{path}?{q}" if q else path
+
+
+_cache: dict | None = None
+_live_blocked = False  # 한 번 403 이 나면 이번 실행 동안은 바로 캐시 사용
+
+
+def load_cache() -> dict:
+    global _cache
+    if _cache is None:
+        f = ROOT / "data" / "forum_cache.json"
+        _cache = json.loads(f.read_text(encoding="utf-8")) if f.exists() else {}
+        if _cache:
+            print(f"  (forum_cache.json: {_cache.get('saved_at')} 저장분, {len(_cache.get('responses', {}))}건)")
+    return _cache
+
+
 def api(path: str, **params) -> dict:
+    """공식 API. GitHub Actions IP 는 403 으로 막혀 있어서, 실패하면
+    사용자가 커뮤니티 방문 시 브라우저가 올려둔 data/forum_cache.json 을 쓴다."""
+    global _live_blocked
     params.setdefault("lang", "ko")
-    data = get_json(f"{API}/{path}?{urllib.parse.urlencode(params)}")
-    return data.get("payload", data)
+    if not _live_blocked:
+        try:
+            data = get_json(f"{API}/{path}?{urllib.parse.urlencode(params)}")
+            return data.get("payload", data)
+        except Exception as e:
+            _live_blocked = True
+            live_err = e
+    else:
+        live_err = RuntimeError("live API 차단됨")
+    hit = load_cache().get("responses", {}).get(cache_key(path, params))
+    if hit is None:
+        raise RuntimeError(f"{live_err} / 캐시에 없음: {cache_key(path, params)}")
+    return hit
 
 
 # ---------------------------------------------------------------- 시간
@@ -628,6 +662,8 @@ def _unescape(s: str) -> str:
 
 # ---------------------------------------------------------------- main
 def main() -> int:
+    global _cache, _live_blocked
+    _cache, _live_blocked = None, False
     dry = "--dry-run" in sys.argv
     cfg = json.loads(CONFIG.read_text(encoding="utf-8"))
     old = json.loads(AUTO.read_text(encoding="utf-8")) if AUTO.exists() else {}
