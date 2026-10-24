@@ -1,13 +1,15 @@
 // ==UserScript==
 // @name         깨비노트 플러스 공지 동기화
 // @namespace    https://dsp0701-git.github.io/kkaebi-note-plus/
-// @version      1.0.0
+// @version      1.0.1
 // @description  도깨비의세계 공식 커뮤니티에 들어가면 공지·점검·쿠폰·장비확률 원본을 깨비노트 플러스 저장소(data/forum_cache.json)로 올린다.
 // @match        https://forum.kakaogames.com/dokkaebi/*
 // @match        https://m-forum.kakaogames.com/dokkaebi/*
 // @grant        GM_getValue
 // @grant        GM_setValue
 // @grant        GM_registerMenuCommand
+// @grant        GM_xmlhttpRequest
+// @grant        unsafeWindow
 // @connect      api.github.com
 // @run-at       document-idle
 // @downloadURL  https://raw.githubusercontent.com/dsp0701-git/kkaebi-note-plus/main/tools/kkaebi-sync.user.js
@@ -45,8 +47,12 @@
   async function api(path, params = {}) {
     await sleep(400); // 연속 요청 간격
     const q = new URLSearchParams({ ...params, lang: 'ko' });
-    const r = await fetch(`${API}/${path}?${q}`, { headers: { Accept: 'application/json' } });
-    if (!r.ok) throw new Error(`${r.status} ${path}`);
+    // 페이지 자신의 fetch 로 호출 (사이트가 공지를 불러오는 것과 같은 요청)
+    const pageFetch = (typeof unsafeWindow !== 'undefined' && unsafeWindow.fetch) ? unsafeWindow.fetch.bind(unsafeWindow) : fetch;
+    let r;
+    try { r = await pageFetch(`${API}/${path}?${q}`, { headers: { Accept: 'application/json' } }); }
+    catch (e) { throw new Error(`[공식 API] ${e.message} (${path})`); }
+    if (!r.ok) throw new Error(`[공식 API] ${r.status} ${path}`);
     const j = await r.json();
     return j.payload ?? j;
   }
@@ -91,14 +97,20 @@
     return btoa(bin);
   }
 
-  async function gh(method, url, token, body) {
-    const r = await fetch(`https://api.github.com/repos/${REPO}/contents/${FILE}${url}`, {
+  // GitHub 은 GM_xmlhttpRequest 로 (페이지 CORS/CSP 영향 없음)
+  function gh(method, url, token, body) {
+    return new Promise((resolve, reject) => GM_xmlhttpRequest({
       method,
-      headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json' },
-      body: body && JSON.stringify(body),
-    });
-    if (!r.ok && !(method === 'GET' && r.status === 404)) throw new Error(`GitHub ${r.status}: ${(await r.text()).slice(0, 120)}`);
-    return r.status === 404 ? null : r.json();
+      url: `https://api.github.com/repos/${REPO}/contents/${FILE}${url}`,
+      headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json', 'Content-Type': 'application/json' },
+      data: body && JSON.stringify(body),
+      onload: r => {
+        if (method === 'GET' && r.status === 404) return resolve(null);
+        if (r.status < 200 || r.status >= 300) return reject(new Error(`[GitHub] ${r.status}: ${(r.responseText || '').slice(0, 120)}`));
+        resolve(JSON.parse(r.responseText));
+      },
+      onerror: r => reject(new Error(`[GitHub] 연결 실패 ${r.error || ''}`)),
+    }));
   }
 
   async function run(force) {
@@ -126,7 +138,7 @@
       GM_setValue('last', Date.now());
       toast('공지 동기화 완료 — 1~2분 뒤 사이트에 반영');
     } catch (e) {
-      console.error('[kkaebi-sync]', e);
+      console.error('[kkaebi-sync]', e.message, e);
       toast('동기화 실패: ' + e.message, true);
     }
   }
