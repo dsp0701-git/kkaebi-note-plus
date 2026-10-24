@@ -1,0 +1,37 @@
+name: probe-sources
+
+on:
+  workflow_dispatch:
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install -q curl_cffi
+      - name: Probe
+        shell: python
+        run: |
+          import re, time
+          from curl_cffi import requests as r
+          urls = [
+            "https://forum-api.kakaogames.com/v1/dokkaebi/boards/notice/list?size=3&lang=ko",
+            "https://forum.kakaogames.com/dokkaebi/postList/?code=notice",
+            "https://m-forum.kakaogames.com/dokkaebi/",
+            "https://bbs.kakaogames.com/ko/1329429/notice/list",
+            "https://dokkaebi.kakaogames.com/",
+          ]
+          for u in urls:
+            time.sleep(1)
+            try:
+              x = r.get(u, impersonate="chrome", timeout=20)
+              body = x.text
+              print(f"\n=== {x.status_code} {u}\n  server={x.headers.get('server')} cache={x.headers.get('x-cache')} len={len(body)}")
+              hosts = sorted(set(re.findall(r"https?://[a-z0-9.-]*kakaogames\.com[^\"' <>]{0,60}", body)))
+              for h in hosts[:25]: print("  ->", h)
+              print("  snippet:", re.sub(r"\s+", " ", body[:300]))
+            except Exception as e:
+              print(f"\n=== ERR {u}: {e}")
