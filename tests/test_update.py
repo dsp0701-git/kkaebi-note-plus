@@ -1,6 +1,7 @@
 """python -m unittest discover tests"""
 import json
 import os
+import re
 import urllib.parse
 import shutil
 import sys
@@ -188,6 +189,54 @@ class EndToEnd(unittest.TestCase):
             with mock.patch.multiple(U, ROOT=tmp, AUTO=auto, CONFIG=tmp / "data" / "config.json", get=boom, get_page=boom, EQUIP=tmp / "data" / "equip.json"):
                 self.assertEqual(U.main(), 1)
                 self.assertEqual(len(json.loads(auto.read_text(encoding="utf-8"))["coupons"]), 9)
+        finally:
+            shutil.rmtree(tmp)
+
+
+class ForumCache(unittest.TestCase):
+    """공식 API 403 → tools/kkaebi-sync.user.js 가 올린 data/forum_cache.json 으로 대체."""
+
+    @staticmethod
+    def build_cache() -> dict:
+        # kkaebi-sync.user.js 의 수집 규칙과 동일하게 구성
+        api = lambda p: F.fake_api(f"{U.API}/{p}")["payload"]
+        res = {}
+        for b in ("notice", "update", "event"):
+            res[f"boards/{b}/list?size=20"] = api(f"boards/{b}/list")
+        res["boards/notice/pinned?page=1"] = api("boards/notice/pinned")
+        res["boards/prob/list?size=20"] = api("boards/prob/list")
+        items = [(b, p) for b in ("notice", "update", "event") for p in res[f"boards/{b}/list?size=20"]["posts"]]
+        items += [("notice", p) for p in res["boards/notice/pinned?page=1"]["posts"]]
+        items += [("prob", p) for p in res["boards/prob/list?size=20"]["posts"]]
+        maint = 0
+        for b, p in items:
+            t = p["title"]
+            want = ("쿠폰" in t and "안내" in t) or U.EQUIP_TITLE in t
+            if "점검 안내" in t and not re.search(r"완료|보상", t) and maint < 6:
+                maint, want = maint + 1, True
+            if want:
+                res[f"boards/{b}/posts/{p['post_id']}"] = {"content": api(f"boards/{b}/posts/{p['post_id']}")["content"]}
+        return {"saved_at": "2026-10-24T22:00+09:00", "responses": res}
+
+    def test_main_uses_cache_when_api_forbidden(self):
+        tmp = Path(tempfile.mkdtemp())
+        try:
+            (tmp / "data").mkdir()
+            shutil.copy(U.ROOT / "data" / "config.json", tmp / "data" / "config.json")
+            (tmp / "data" / "forum_cache.json").write_text(json.dumps(self.build_cache(), ensure_ascii=False), encoding="utf-8")
+            auto = tmp / "data" / "auto.json"
+
+            def forbidden(url):
+                if "kakaogames.com" in url:
+                    raise OSError("HTTP Error 403: Forbidden")
+                return F.fake_get(url)
+            with mock.patch.multiple(U, ROOT=tmp, AUTO=auto, CONFIG=tmp / "data" / "config.json", get=forbidden, EQUIP=tmp / "data" / "equip.json"):
+                self.assertEqual(U.main(), 0)
+            d = json.loads(auto.read_text(encoding="utf-8"))
+            self.assertTrue(d["notices"][0]["url"].endswith("id=66316"))
+            self.assertEqual(d["maintenance"]["start"], "2026-10-14T07:00+09:00")
+            self.assertEqual(len(d["coupons"]), 9)
+            self.assertTrue(d["events"])
         finally:
             shutil.rmtree(tmp)
 
