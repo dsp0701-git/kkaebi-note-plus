@@ -5,7 +5,7 @@ on:
     - cron: "17 */2 * * *"   # 2시간마다(UTC 기준, 정각 혼잡 피해서 17분)
   workflow_dispatch:          # Actions 탭에서 수동 실행
   push:
-    paths: ["scripts/**", "data/config.json"]
+    paths: ["scripts/**", "data/config.json", "data/forum_cache.json"]  # forum_cache: 커뮤니티 방문 시 브라우저(tools/kkaebi-sync.user.js)가 올림
 
 permissions:
   contents: write
