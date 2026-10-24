@@ -1,12 +1,100 @@
 {
  "notices": [
   {
+   "id": 803590,
+   "board": "notice",
+   "title": "10월 24일(토) 필드 보스 입장 전투력 기준 변경 안내",
+   "date": "2026-10-24T14:16+09:00",
+   "tag": "안내",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=803590"
+  },
+  {
+   "id": 794727,
+   "board": "notice",
+   "title": "안전한 거래소 이용을 위한 유의사항 안내",
+   "date": "2026-10-24T11:45+09:00",
+   "tag": "안내",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=794727"
+  },
+  {
+   "id": 794703,
+   "board": "notice",
+   "title": "신기 쟁탈전 및 미혹의 정원 주요 변경사항 안내",
+   "date": "2026-10-24T11:45+09:00",
+   "tag": "안내",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=794703"
+  },
+  {
+   "id": 746447,
+   "board": "notice",
+   "title": "비정상적인 게임 진행 관련 계정 제재 및 보호 조치 안내 <14차>",
+   "date": "2026-10-23T20:50+09:00",
+   "tag": "제재",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=746447"
+  },
+  {
+   "id": 743966,
+   "board": "notice",
+   "title": "10월 23일(금) 라이브 방송 다시보기 및 감사 보상 안내",
+   "date": "2026-10-23T20:02+09:00",
+   "tag": "보상",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=743966"
+  },
+  {
+   "id": 716824,
+   "board": "notice",
+   "title": "[링크추가] 10월 23일(금) 19:00 라이브 방송 안내",
+   "date": "2026-10-23T11:16+09:00",
+   "tag": "방송",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=716824"
+  },
+  {
+   "id": 713229,
+   "board": "notice",
+   "title": "10월 23일(금) 일부 문제 현상 해결을 위한 마켓 업데이트 안내",
+   "date": "2026-10-23T10:30+09:00",
+   "tag": "안내",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=713229"
+  },
+  {
+   "id": 662174,
+   "board": "notice",
+   "title": "비정상적인 게임 진행 관련 계정 제재 및 보호 조치 안내 <13차>",
+   "date": "2026-10-22T19:50+09:00",
+   "tag": "제재",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=662174"
+  },
+  {
+   "id": 638128,
+   "board": "notice",
+   "title": "10월 22일(목) 공식 커뮤니티 내 건의 & 오류 제보 게시판 신설 안내",
+   "date": "2026-10-22T11:10+09:00",
+   "tag": "안내",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=638128"
+  },
+  {
+   "id": 637438,
+   "board": "event",
+   "title": "깨비티아이 테스트하고 결과를 공유해 주세요! (~11/4 23:59)",
+   "date": "2026-10-22T11:00+09:00",
+   "tag": "이벤트",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=637438"
+  },
+  {
    "id": 627315,
    "board": "notice",
    "title": "10월 22일(목) 임시 점검 완료 및 보상 지급 안내",
    "date": "2026-10-22T09:00+09:00",
    "tag": "보상",
    "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=627315"
+  },
+  {
+   "id": 10859,
+   "board": "notice",
+   "title": "오류 및 개선사항 제보 통합 안내 [26/10/23 13:17 최신화]",
+   "date": "2026-10-21T19:52+09:00",
+   "tag": "안내",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=10859"
   },
   {
    "id": 579608,
@@ -113,14 +201,6 @@
    "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=504707"
   },
   {
-   "id": 10859,
-   "board": "notice",
-   "title": "오류 및 개선사항 제보 통합 안내 [26/10/22 09:08 최신화]",
-   "date": "2026-10-20T22:00+09:00",
-   "tag": "안내",
-   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=10859"
-  },
-  {
    "id": 498563,
    "board": "notice",
    "title": "10월 20일(화) 라이브 방송 다시보기 및 감사 쿠폰 안내",
@@ -135,78 +215,6 @@
    "date": "2026-10-20T19:51+09:00",
    "tag": "제재",
    "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=492939"
-  },
-  {
-   "id": 469531,
-   "board": "notice",
-   "title": "[링크추가] 10월 20일(화) 20:10 라이브 방송 안내",
-   "date": "2026-10-20T12:40+09:00",
-   "tag": "방송",
-   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=469531"
-  },
-  {
-   "id": 460025,
-   "board": "notice",
-   "title": "[정상화] 10월 20일(화) 공식 커뮤니티 이용 불안정 안내",
-   "date": "2026-10-20T10:43+09:00",
-   "tag": "안내",
-   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=460025"
-  },
-  {
-   "id": 413451,
-   "board": "notice",
-   "title": "비정상적인 게임 진행 관련 계정 제재 및 보호 조치 안내 <10차>",
-   "date": "2026-10-19T19:50+09:00",
-   "tag": "제재",
-   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=413451"
-  },
-  {
-   "id": 396088,
-   "board": "notice",
-   "title": "필드 보스 입장 전투력 기준 변경 안내",
-   "date": "2026-10-19T14:01+09:00",
-   "tag": "안내",
-   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=396088"
-  },
-  {
-   "id": 394804,
-   "board": "notice",
-   "title": "보스토벌 레이드 관련 사과 보상 안내",
-   "date": "2026-10-19T13:42+09:00",
-   "tag": "보상",
-   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=394804"
-  },
-  {
-   "id": 380568,
-   "board": "notice",
-   "title": "[내용추가] 레이드 일시 이용 제한 안내",
-   "date": "2026-10-19T10:45+09:00",
-   "tag": "안내",
-   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=380568"
-  },
-  {
-   "id": 376739,
-   "board": "notice",
-   "title": "[링크추가] 10월 19일(월) 13:00 라이브 방송 안내",
-   "date": "2026-10-19T10:03+09:00",
-   "tag": "방송",
-   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=376739"
-  },
-  {
-   "id": 332856,
-   "board": "notice",
-   "title": "비정상적인 게임 진행 관련 계정 제재 및 보호 조치 안내 <9차>",
-   "date": "2026-10-18T19:43+09:00",
-   "tag": "제재",
-   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=332856"
-  },
-  {
-   "id": 292270,
-   "board": "notice",
-   "title": "[적용 완료] 일부 서버 캐릭터 생성 제한 해제 안내 (10/18 12:10 기준)",
-   "date": "2026-10-18T10:04+09:00",
-   "tag": "보상",
-   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=292270"
   },
   {
    "id": 20960,
@@ -311,30 +319,38 @@
    "date": "2026-10-08T10:03+09:00",
    "tag": "이벤트",
    "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=9240"
-  },
-  {
-   "id": 9237,
-   "board": "event",
-   "title": "[기간연장] 초보 도사 성장 지원! (~10/28 08:00)",
-   "date": "2026-10-08T10:02+09:00",
-   "tag": "이벤트",
-   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=9237"
   }
  ],
  "pinned": [
   {
-   "id": 627315,
+   "id": 803590,
    "board": "notice",
-   "title": "10월 22일(목) 임시 점검 완료 및 보상 지급 안내",
-   "date": "2026-10-22T09:00+09:00",
-   "tag": "보상",
-   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=627315"
+   "title": "10월 24일(토) 필드 보스 입장 전투력 기준 변경 안내",
+   "date": "2026-10-24T14:16+09:00",
+   "tag": "안내",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=803590"
+  },
+  {
+   "id": 794727,
+   "board": "notice",
+   "title": "안전한 거래소 이용을 위한 유의사항 안내",
+   "date": "2026-10-24T11:45+09:00",
+   "tag": "안내",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=794727"
+  },
+  {
+   "id": 794703,
+   "board": "notice",
+   "title": "신기 쟁탈전 및 미혹의 정원 주요 변경사항 안내",
+   "date": "2026-10-24T11:45+09:00",
+   "tag": "안내",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=794703"
   },
   {
    "id": 10859,
    "board": "notice",
-   "title": "오류 및 개선사항 제보 통합 안내 [26/10/22 09:08 최신화]",
-   "date": "2026-10-20T22:00+09:00",
+   "title": "오류 및 개선사항 제보 통합 안내 [26/10/23 13:17 최신화]",
+   "date": "2026-10-21T19:52+09:00",
    "tag": "안내",
    "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=10859"
   },
@@ -345,14 +361,6 @@
    "date": "2026-10-16T19:38+09:00",
    "tag": "안내",
    "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=162825"
-  },
-  {
-   "id": 149540,
-   "board": "notice",
-   "title": "[내용추가] 10월 21일(수) 20:00 신규 서버 '유희' 오픈 사전 안내",
-   "date": "2026-10-16T15:29+09:00",
-   "tag": "안내",
-   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=149540"
   },
   {
    "id": 13991,
@@ -513,6 +521,11 @@
    "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=9240"
   },
   {
+   "name": "깨비티아이 테스트하고 결과를 공유해 주세요!",
+   "end": "2026-11-04T23:59+09:00",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=637438"
+  },
+  {
    "name": "보름달에 숨은 요귀를 봉인하라!",
    "end": "2026-11-11T23:59+09:00",
    "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=17206"
@@ -530,11 +543,19 @@
  ],
  "videos": [
   {
+   "id": "PPDJT9pVoEU",
+   "title": "[도깨비의세계] 필수재화 달라질 예정입니다!  / 다음주 준비하세요",
+   "channel": "투즈TV",
+   "date": "2026-10-24T23:55+09:00",
+   "views": 25409,
+   "official": false
+  },
+  {
    "id": "ZLGKECAjxfs",
    "title": "🛑도깨비의 세계🔥1500만투자  절명몰빵단 + 레이드4단계 B 도전 │ 깡공 2.6 패치후 도술상화 이야기",
    "channel": "오지조",
    "date": "2026-10-24T22:19+09:00",
-   "views": 6734,
+   "views": 6801,
    "official": false
   },
   {
@@ -542,7 +563,7 @@
    "title": "이제 뭐함?ㅋ황무지만 돌리면 되냐 [도깨비의세꼐]",
    "channel": "센터로드TV",
    "date": "2026-10-24T21:44+09:00",
-   "views": 15603,
+   "views": 17351,
    "official": false
   },
   {
@@ -550,7 +571,7 @@
    "title": "[도깨비의 세계] 패치전까지 단 많이 캐자  2100회피 25만투력 전설가호 [무 소과금 꿀팁  정보 공유]  #도깨비 #슈퍼캣",
    "channel": "깨비야",
    "date": "2026-10-24T20:23+09:00",
-   "views": 32292,
+   "views": 32371,
    "official": false
   },
   {
@@ -558,15 +579,7 @@
    "title": "[도깨비의 세계] 🎁잠수만 타도 금전 받습니다!! 필수참여 '미혹의정원' 가이드TIP",
    "channel": "투즈TV",
    "date": "2026-10-24T19:34+09:00",
-   "views": 7374,
-   "official": false
-  },
-  {
-   "id": "PPDJT9pVoEU",
-   "title": "[도깨비의세계] 필수재화 달라질 예정입니다!  / 다음주 준비하세요",
-   "channel": "투즈TV",
-   "date": "2026-10-24T19:22+09:00",
-   "views": 20991,
+   "views": 8097,
    "official": false
   },
   {
@@ -582,7 +595,7 @@
    "title": "[도깨비의 세계] D-4 1분에 60마리 잡는 황무지 최고점 파밍 스킬트리 [뽕맛보장]",
    "channel": "투즈TV",
    "date": "2026-10-24T16:25+09:00",
-   "views": 23550,
+   "views": 24798,
    "official": false
   },
   {
@@ -590,7 +603,7 @@
    "title": "도깨비 무과금 황무지에 밀려 다시 호랑이? 시간 당 얼마 벌까?",
    "channel": "도모",
    "date": "2026-10-24T11:22+09:00",
-   "views": 24153,
+   "views": 24543,
    "official": false
   },
   {
@@ -598,7 +611,7 @@
    "title": "[도깨비의세계] 무과금도 전설 파밍 \"이강인\" 도술덱 리뷰 / 다음주 떡상",
    "channel": "쵸튜브[쵸피]",
    "date": "2026-10-24T08:25+09:00",
-   "views": 47273,
+   "views": 48159,
    "official": false
   },
   {
@@ -606,7 +619,7 @@
    "title": "[도깨비의세계] 7시 공식방송 대기방 / 빌드 너프 또 가나욧!!",
    "channel": "투즈TV",
    "date": "2026-10-24T05:15+09:00",
-   "views": 45501,
+   "views": 45541,
    "official": false
   },
   {
@@ -614,7 +627,7 @@
    "title": "[도깨비의 세계] 10월 23일 공식 방송 핵심 11가지 총정리!🔰무기도술 교체?+사냥터개선+가호분해+강인덱 떡상?",
    "channel": "깨비야",
    "date": "2026-10-24T00:49+09:00",
-   "views": 19989,
+   "views": 20129,
    "official": false
   },
   {
@@ -622,7 +635,7 @@
    "title": "[도깨비의세계] 7시 라이브 방송 - 도술 밸런스 문제와 사냥터 겹사 / 쵸피 무이1서버",
    "channel": "쵸튜브[쵸피]",
    "date": "2026-10-23T23:09+09:00",
-   "views": 29544,
+   "views": 29510,
    "official": false
   },
   {
@@ -646,7 +659,7 @@
    "title": "긴급 라이브를 또 해? [도깨비의세계]",
    "channel": "센터로드TV",
    "date": "2026-10-23T21:34+09:00",
-   "views": 35606,
+   "views": 35644,
    "official": false
   },
   {
@@ -654,7 +667,7 @@
    "title": "[도깨비의세계] 무기 교체 이어서 도술 교체까지?⚡공식 라이브 12가지 핵심 정리",
    "channel": "맛나는꼬꼬",
    "date": "2026-10-23T21:30+09:00",
-   "views": 2546,
+   "views": 2567,
    "official": false
   },
   {
@@ -662,7 +675,7 @@
    "title": "[도깨비의 세계] 얼마 안남은 황무지 꿀빠세요🔥상위지역 드랍상향 + 도술교체까지 [10.23 공식방송 총정리]",
    "channel": "투즈TV",
    "date": "2026-10-23T21:21+09:00",
-   "views": 36613,
+   "views": 36748,
    "official": false
   },
   {
@@ -694,7 +707,7 @@
    "title": "도깨비의세계 LIVE 👾 [26.10.23]",
    "channel": "도깨비의세계 공식",
    "date": "2026-10-23T20:30+09:00",
-   "views": 56906,
+   "views": 56941,
    "official": true
   },
   {
@@ -702,7 +715,7 @@
    "title": "[도깨비의세계] 📢중요 - 도술 교체 시스템과 상위 사냥터 떡상 / 도술 메타의 변화 - 10.23 라방 정리",
    "channel": "쵸튜브[쵸피]",
    "date": "2026-10-23T20:29+09:00",
-   "views": 53051,
+   "views": 53150,
    "official": false
   },
   {
@@ -710,7 +723,7 @@
    "title": "도깨비 무과금 주말맞이 공략 11가지 - 신규외전, 요혼석, 6돌파 메테오?!",
    "channel": "도모",
    "date": "2026-10-23T16:26+09:00",
-   "views": 22454,
+   "views": 22539,
    "official": false
   },
   {
@@ -718,9 +731,9 @@
    "title": "[도깨비의세계] 현재 \"파멸 주술\"메타가 유행하는 이유 / 황무지온라인",
    "channel": "쵸튜브[쵸피]",
    "date": "2026-10-23T12:06+09:00",
-   "views": 58694,
+   "views": 58865,
    "official": false
   }
  ],
- "updated_at": "2026-10-24T23:46+09:00"
+ "updated_at": "2026-10-25T00:10+09:00"
 }
