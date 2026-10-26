@@ -1,5 +1,5 @@
 {
- "saved_at": "2026-10-26T09:31+09:00",
+ "saved_at": "2026-10-26T17:16+09:00",
  "source": "forum.kakaogames.com",
  "responses": {
   "boards/notice/list?size=20": {
@@ -30,7 +30,7 @@
    "last": false,
    "last_page_number": 7,
    "mode": "PAGE",
-   "next_last_post_id": 498563,
+   "next_last_post_id": 9122,
    "page": 1,
    "page_size": 20,
    "posts": [
@@ -39,70 +39,84 @@
      "author_kind": null,
      "author_name": "도깨비의세계",
      "board_id": 1,
-     "comment_count": 56,
+     "comment_count": 51,
+     "like_count": 0,
+     "post_id": 928615,
+     "prefix": null,
+     "published_at": "2026-10-26 06:30:48",
+     "thumbnail_url": null,
+     "title": "10월 27일(화) 19:30 라이브 방송 안내",
+     "view_count": 1892
+    },
+    {
+     "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
+     "author_kind": null,
+     "author_name": "도깨비의세계",
+     "board_id": 1,
+     "comment_count": 80,
      "like_count": 0,
      "post_id": 881533,
      "prefix": null,
      "published_at": "2026-10-25 09:43:59",
      "thumbnail_url": null,
      "title": "비정상적인 게임 진행 관련 계정 제재 및 보호 조치 안내 <15차>",
-     "view_count": 2244
+     "view_count": 3396
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
      "author_kind": null,
      "author_name": "도깨비의세계",
      "board_id": 1,
-     "comment_count": 460,
+     "comment_count": 499,
      "like_count": 0,
      "post_id": 803590,
      "prefix": null,
      "published_at": "2026-10-24 05:16:19",
      "thumbnail_url": null,
      "title": "10월 24일(토) 필드 보스 입장 전투력 기준 변경 안내",
-     "view_count": 12879
+     "view_count": 14319
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
      "author_kind": null,
      "author_name": "도깨비의세계",
      "board_id": 1,
-     "comment_count": 313,
+     "comment_count": 348,
      "like_count": 0,
      "post_id": 794727,
      "prefix": null,
      "published_at": "2026-10-24 02:45:37",
      "thumbnail_url": null,
      "title": "안전한 거래소 이용을 위한 유의사항 안내",
-     "view_count": 10048
+     "view_count": 10992
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
      "author_kind": null,
      "author_name": "도깨비의세계",
      "board_id": 1,
-     "comment_count": 21,
+     "comment_count": 25,
      "like_count": 0,
      "post_id": 794703,
      "prefix": null,
      "published_at": "2026-10-24 02:45:15",
      "thumbnail_url": null,
      "title": "신기 쟁탈전 및 미혹의 정원 주요 변경사항 안내",
-     "view_count": 4866
+     "view_count": 5293
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
      "author_kind": null,
      "author_name": "도깨비의세계",
      "board_id": 1,
-     "comment_count": 55,
+     "comment_count": 56,
      "like_count": 0,
      "post_id": 746447,
      "prefix": null,
      "published_at": "2026-10-23 11:50:29",
      "thumbnail_url": null,
      "title": "비정상적인 게임 진행 관련 계정 제재 및 보호 조치 안내 <14차>",
-     "view_count": 1867
+     "view_count": 1915
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
@@ -116,7 +130,7 @@
      "published_at": "2026-10-23 11:02:20",
      "thumbnail_url": null,
      "title": "10월 23일(금) 라이브 방송 다시보기 및 감사 보상 안내",
-     "view_count": 8961
+     "view_count": 9131
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
@@ -130,7 +144,7 @@
      "published_at": "2026-10-23 02:16:25",
      "thumbnail_url": null,
      "title": "[링크추가] 10월 23일(금) 19:00 라이브 방송 안내",
-     "view_count": 17392
+     "view_count": 17458
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
@@ -144,7 +158,7 @@
      "published_at": "2026-10-23 01:30:40",
      "thumbnail_url": null,
      "title": "10월 23일(금) 일부 문제 현상 해결을 위한 마켓 업데이트 안내",
-     "view_count": 4987
+     "view_count": 5004
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
@@ -158,7 +172,7 @@
      "published_at": "2026-10-22 10:50:07",
      "thumbnail_url": null,
      "title": "비정상적인 게임 진행 관련 계정 제재 및 보호 조치 안내 <13차>",
-     "view_count": 2732
+     "view_count": 2740
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
@@ -172,7 +186,7 @@
      "published_at": "2026-10-22 02:10:40",
      "thumbnail_url": null,
      "title": "10월 22일(목) 공식 커뮤니티 내 건의 & 오류 제보 게시판 신설 안내",
-     "view_count": 4164
+     "view_count": 4176
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
@@ -186,21 +200,21 @@
      "published_at": "2026-10-22 00:00:00",
      "thumbnail_url": null,
      "title": "10월 22일(목) 임시 점검 완료 및 보상 지급 안내",
-     "view_count": 13016
+     "view_count": 13047
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
      "author_kind": null,
      "author_name": "도깨비의세계",
      "board_id": 1,
-     "comment_count": 378,
+     "comment_count": 379,
      "like_count": 0,
      "post_id": 10859,
      "prefix": null,
      "published_at": "2026-10-21 10:52:00",
      "thumbnail_url": null,
      "title": "오류 및 개선사항 제보 통합 안내 [26/10/23 13:17 최신화]",
-     "view_count": 81066
+     "view_count": 81302
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
@@ -214,7 +228,7 @@
      "published_at": "2026-10-21 10:51:00",
      "thumbnail_url": null,
      "title": "[완료] 10월 22일(목) 임시 점검 안내",
-     "view_count": 55508
+     "view_count": 55623
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
@@ -228,7 +242,7 @@
      "published_at": "2026-10-21 10:50:00",
      "thumbnail_url": null,
      "title": "비정상적인 게임 진행 관련 계정 제재 및 보호 조치 안내 <12차>",
-     "view_count": 1764
+     "view_count": 1767
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
@@ -242,7 +256,7 @@
      "published_at": "2026-10-21 04:00:10",
      "thumbnail_url": null,
      "title": "10월 21일(수) 구글 플레이 포인트(GPP) 상품 판매 안내",
-     "view_count": 4072
+     "view_count": 4097
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
@@ -256,7 +270,7 @@
      "published_at": "2026-10-21 03:38:07",
      "thumbnail_url": null,
      "title": "낙화의 전장 시즌 점수 보상 지급 오류 안내",
-     "view_count": 10743
+     "view_count": 10788
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
@@ -270,7 +284,7 @@
      "published_at": "2026-10-21 03:03:47",
      "thumbnail_url": null,
      "title": "10월 21일(수) 정기 점검 완료 및 보상 지급 안내",
-     "view_count": 16810
+     "view_count": 16831
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
@@ -284,35 +298,21 @@
      "published_at": "2026-10-21 00:10:50",
      "thumbnail_url": null,
      "title": "10월 21일(수) 점검 후 변경되는 확률 정보 안내",
-     "view_count": 13733
+     "view_count": 13768
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
      "author_kind": null,
      "author_name": "도깨비의세계",
      "board_id": 1,
-     "comment_count": 805,
+     "comment_count": 3,
      "like_count": 0,
-     "post_id": 504707,
+     "post_id": 9122,
      "prefix": null,
-     "published_at": "2026-10-20 13:37:49",
+     "published_at": "2026-10-21 00:10:17",
      "thumbnail_url": null,
-     "title": "[완료] 10월 21일(수) 정기 점검 안내",
-     "view_count": 142717
-    },
-    {
-     "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
-     "author_kind": null,
-     "author_name": "도깨비의세계",
-     "board_id": 1,
-     "comment_count": 111,
-     "like_count": 0,
-     "post_id": 498563,
-     "prefix": null,
-     "published_at": "2026-10-20 12:24:29",
-     "thumbnail_url": null,
-     "title": "10월 20일(화) 라이브 방송 다시보기 및 감사 쿠폰 안내",
-     "view_count": 28259
+     "title": "영석 상점 판매 상품 안내 [26/10/21 업데이트 기준]",
+     "view_count": 3526
     }
    ]
   },
@@ -353,42 +353,42 @@
      "author_kind": null,
      "author_name": "도깨비의세계",
      "board_id": 11,
-     "comment_count": 271,
+     "comment_count": 278,
      "like_count": 0,
      "post_id": 539191,
      "prefix": null,
      "published_at": "2026-10-21 00:11:58",
      "thumbnail_url": null,
      "title": "10월 21일(수) 업데이트 안내",
-     "view_count": 57777
+     "view_count": 58261
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
      "author_kind": null,
      "author_name": "도깨비의세계",
      "board_id": 11,
-     "comment_count": 113,
+     "comment_count": 114,
      "like_count": 0,
      "post_id": 538521,
      "prefix": null,
      "published_at": "2026-10-21 00:06:30",
      "thumbnail_url": null,
      "title": "[내용추가] 10월 21일(수) 도술 밸런스 조정 상세 안내",
-     "view_count": 43219
+     "view_count": 43361
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
      "author_kind": null,
      "author_name": "도깨비의세계",
      "board_id": 11,
-     "comment_count": 379,
+     "comment_count": 380,
      "like_count": 0,
      "post_id": 18403,
      "prefix": null,
      "published_at": "2026-10-14 01:07:28",
      "thumbnail_url": null,
      "title": "[내용수정] 10월 14일(수) 업데이트 안내",
-     "view_count": 48883
+     "view_count": 48931
     }
    ]
   },
@@ -429,8 +429,8 @@
      "author_kind": null,
      "author_name": "몽련",
      "board_id": 3,
-     "comment_count": 6042,
-     "like_count": 90,
+     "comment_count": 6344,
+     "like_count": 94,
      "post_id": 637438,
      "prefix": {
       "id": 12,
@@ -439,15 +439,15 @@
      "published_at": "2026-10-22 02:00:27",
      "thumbnail_url": null,
      "title": "깨비티아이 테스트하고 결과를 공유해 주세요! (~11/4 23:59)",
-     "view_count": 25523
+     "view_count": 26929
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492383983_32.webp",
      "author_kind": null,
      "author_name": "몽련",
      "board_id": 3,
-     "comment_count": 186,
-     "like_count": 8,
+     "comment_count": 190,
+     "like_count": 9,
      "post_id": 538162,
      "prefix": {
       "id": 12,
@@ -456,14 +456,14 @@
      "published_at": "2026-10-21 00:03:39",
      "thumbnail_url": null,
      "title": "[유희 서버 전용] 서버 오픈 기념! 교환 상점 (~11/4 08:00)",
-     "view_count": 13970
+     "view_count": 14361
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492383983_32.webp",
      "author_kind": null,
      "author_name": "몽련",
      "board_id": 3,
-     "comment_count": 154,
+     "comment_count": 158,
      "like_count": 7,
      "post_id": 538020,
      "prefix": {
@@ -473,7 +473,7 @@
      "published_at": "2026-10-21 00:02:33",
      "thumbnail_url": null,
      "title": "우당탕탕! 도깨비 대소동 (~11/4 08:00)",
-     "view_count": 19629
+     "view_count": 20120
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492383983_32.webp",
@@ -490,7 +490,7 @@
      "published_at": "2026-10-21 00:01:44",
      "thumbnail_url": null,
      "title": "할로윈 기념! 교환 상점 (~11/4 08:00)",
-     "view_count": 7023
+     "view_count": 7113
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492383983_32.webp",
@@ -507,14 +507,14 @@
      "published_at": "2026-10-21 00:01:05",
      "thumbnail_url": null,
      "title": "할로윈 기념! 출석 (~11/4 08:00)",
-     "view_count": 5337
+     "view_count": 5412
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492383983_32.webp",
      "author_kind": null,
      "author_name": "몽련",
      "board_id": 3,
-     "comment_count": 1245,
+     "comment_count": 1248,
      "like_count": 67,
      "post_id": 20960,
      "prefix": {
@@ -524,15 +524,15 @@
      "published_at": "2026-10-15 02:03:07",
      "thumbnail_url": null,
      "title": "[내용추가] 도사님의 품격과 어울리는 탈것 디자인 공모전! (~10/28)",
-     "view_count": 54293
+     "view_count": 54747
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492383983_32.webp",
      "author_kind": null,
      "author_name": "몽련",
      "board_id": 3,
-     "comment_count": 12450,
-     "like_count": 342,
+     "comment_count": 12547,
+     "like_count": 344,
      "post_id": 17206,
      "prefix": {
       "id": 12,
@@ -541,7 +541,7 @@
      "published_at": "2026-10-15 02:00:00",
      "thumbnail_url": null,
      "title": "보름달에 숨은 요귀를 봉인하라! (~11/11)",
-     "view_count": 422830
+     "view_count": 429672
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492393029_42.webp",
@@ -558,7 +558,7 @@
      "published_at": "2026-10-12 04:00:04",
      "thumbnail_url": null,
      "title": "해월의 응원이 담긴 특별 선물! (~10/12 23:59)",
-     "view_count": 39791
+     "view_count": 39891
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492383983_32.webp",
@@ -575,7 +575,7 @@
      "published_at": "2026-10-10 03:34:45",
      "thumbnail_url": null,
      "title": "[내용추가] 도전! 문파 전투 (~ 별도 공지 시까지)",
-     "view_count": 12606
+     "view_count": 12642
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492383983_32.webp",
@@ -592,14 +592,14 @@
      "published_at": "2026-10-08 10:32:26",
      "thumbnail_url": null,
      "title": "도깨비의세계 정식 오픈 기념! 몽련이 드리는 특별 선물 (~10/21 08:00)",
-     "view_count": 27799
+     "view_count": 27863
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492383983_32.webp",
      "author_kind": null,
      "author_name": "몽련",
      "board_id": 3,
-     "comment_count": 61,
+     "comment_count": 62,
      "like_count": 5,
      "post_id": 10001,
      "prefix": {
@@ -609,7 +609,7 @@
      "published_at": "2026-10-08 03:32:04",
      "thumbnail_url": null,
      "title": "혼자 알고 있기 아까운 도사님의 비법을 공유해 주세요! (~10/21)",
-     "view_count": 16335
+     "view_count": 16358
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492383983_32.webp",
@@ -626,7 +626,7 @@
      "published_at": "2026-10-08 03:28:00",
      "thumbnail_url": null,
      "title": "도사님의 문파를 홍보해 보세요! (~10/21)",
-     "view_count": 11749
+     "view_count": 11758
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492383983_32.webp",
@@ -643,14 +643,14 @@
      "published_at": "2026-10-08 03:27:10",
      "thumbnail_url": null,
      "title": "타바로 성에 입성한 도사님 모여 주세요! (~10/21)",
-     "view_count": 23254
+     "view_count": 23269
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492383983_32.webp",
      "author_kind": null,
      "author_name": "몽련",
      "board_id": 3,
-     "comment_count": 2869,
+     "comment_count": 2901,
      "like_count": 102,
      "post_id": 9285,
      "prefix": {
@@ -660,7 +660,7 @@
      "published_at": "2026-10-08 01:09:29",
      "thumbnail_url": null,
      "title": "도사님을 위한 이벤트 한눈에 보기!",
-     "view_count": 159902
+     "view_count": 161695
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492383983_32.webp",
@@ -677,7 +677,7 @@
      "published_at": "2026-10-08 01:04:20",
      "thumbnail_url": null,
      "title": "[내용수정] 한글날 기념! OX 퀴즈 이벤트 (~10/21 08:00)",
-     "view_count": 12310
+     "view_count": 12320
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492383983_32.webp",
@@ -694,7 +694,7 @@
      "published_at": "2026-10-08 01:03:56",
      "thumbnail_url": null,
      "title": "[기간연장] 훈민증표 수집 이벤트 (~10/28 08:00)",
-     "view_count": 10206
+     "view_count": 10240
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492383983_32.webp",
@@ -711,14 +711,14 @@
      "published_at": "2026-10-08 01:03:19",
      "thumbnail_url": null,
      "title": "[기간연장] 도깨비의세계 패스 (~11/4 08:00)",
-     "view_count": 9609
+     "view_count": 9630
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492383983_32.webp",
      "author_kind": null,
      "author_name": "몽련",
      "board_id": 3,
-     "comment_count": 87,
+     "comment_count": 89,
      "like_count": 8,
      "post_id": 9237,
      "prefix": {
@@ -728,7 +728,7 @@
      "published_at": "2026-10-08 01:02:31",
      "thumbnail_url": null,
      "title": "[기간연장] 초보 도사 성장 지원! (~10/28 08:00)",
-     "view_count": 20914
+     "view_count": 20997
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492383983_32.webp",
@@ -745,7 +745,7 @@
      "published_at": "2026-10-08 01:02:00",
      "thumbnail_url": null,
      "title": "[기간연장] 도깨비의세계 특별 출석! (~11/25 08:00)",
-     "view_count": 11025
+     "view_count": 11090
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492383983_32.webp",
@@ -762,7 +762,7 @@
      "published_at": "2026-10-08 01:01:26",
      "thumbnail_url": null,
      "title": "전래동화 : 콩쥐 팥쥐 이벤트 (~12/10 08:00)",
-     "view_count": 11823
+     "view_count": 11861
     }
    ]
   },
@@ -795,56 +795,70 @@
      "author_kind": null,
      "author_name": "도깨비의세계",
      "board_id": 1,
-     "comment_count": 460,
+     "comment_count": 51,
+     "like_count": 0,
+     "post_id": 928615,
+     "prefix": null,
+     "published_at": "2026-10-26 06:30:48",
+     "thumbnail_url": null,
+     "title": "10월 27일(화) 19:30 라이브 방송 안내",
+     "view_count": 1882
+    },
+    {
+     "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
+     "author_kind": null,
+     "author_name": "도깨비의세계",
+     "board_id": 1,
+     "comment_count": 499,
      "like_count": 0,
      "post_id": 803590,
      "prefix": null,
      "published_at": "2026-10-24 05:16:19",
      "thumbnail_url": null,
      "title": "10월 24일(토) 필드 보스 입장 전투력 기준 변경 안내",
-     "view_count": 12875
+     "view_count": 14317
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
      "author_kind": null,
      "author_name": "도깨비의세계",
      "board_id": 1,
-     "comment_count": 313,
+     "comment_count": 348,
      "like_count": 0,
      "post_id": 794727,
      "prefix": null,
      "published_at": "2026-10-24 02:45:37",
      "thumbnail_url": null,
      "title": "안전한 거래소 이용을 위한 유의사항 안내",
-     "view_count": 10047
+     "view_count": 10990
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
      "author_kind": null,
      "author_name": "도깨비의세계",
      "board_id": 1,
-     "comment_count": 21,
+     "comment_count": 25,
      "like_count": 0,
      "post_id": 794703,
      "prefix": null,
      "published_at": "2026-10-24 02:45:15",
      "thumbnail_url": null,
      "title": "신기 쟁탈전 및 미혹의 정원 주요 변경사항 안내",
-     "view_count": 4866
+     "view_count": 5293
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
      "author_kind": null,
      "author_name": "도깨비의세계",
      "board_id": 1,
-     "comment_count": 378,
+     "comment_count": 379,
      "like_count": 0,
      "post_id": 10859,
      "prefix": null,
      "published_at": "2026-10-21 10:52:00",
      "thumbnail_url": null,
      "title": "오류 및 개선사항 제보 통합 안내 [26/10/23 13:17 최신화]",
-     "view_count": 81066
+     "view_count": 81302
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
@@ -858,21 +872,21 @@
      "published_at": "2026-10-16 10:38:09",
      "thumbnail_url": null,
      "title": "건전한 게임 환경 조성을 위한 불건전 캐릭터 명 집중 단속 및 조치 안내",
-     "view_count": 15534
+     "view_count": 15601
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
      "author_kind": null,
      "author_name": "도깨비의세계",
      "board_id": 1,
-     "comment_count": 475,
+     "comment_count": 477,
      "like_count": 0,
      "post_id": 13991,
      "prefix": null,
      "published_at": "2026-10-11 02:27:51",
      "thumbnail_url": null,
      "title": "도깨비의세계 쿠폰 종합 안내",
-     "view_count": 114831
+     "view_count": 115880
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
@@ -886,7 +900,7 @@
      "published_at": "2026-10-07 02:39:06",
      "thumbnail_url": null,
      "title": "PC 버전(Google Play Games) 이용 환경 및 계정 이용 안내",
-     "view_count": 17674
+     "view_count": 17771
     }
    ]
   },
@@ -934,7 +948,7 @@
      "published_at": "2026-10-21 00:06:00",
      "thumbnail_url": null,
      "title": "확률형 아이템 정보 공개 (26.10.21 12:00 기준)",
-     "view_count": 284378
+     "view_count": 286672
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
@@ -948,7 +962,7 @@
      "published_at": "2026-10-21 00:05:00",
      "thumbnail_url": null,
      "title": "장비 등급별 추가 효과 부여 확률 (26.10.21 12:00~)",
-     "view_count": 32833
+     "view_count": 33081
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
@@ -962,7 +976,7 @@
      "published_at": "2026-10-21 00:05:00",
      "thumbnail_url": null,
      "title": "의복 합성 확률 (26.10.21 12:00~)",
-     "view_count": 33020
+     "view_count": 33222
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
@@ -976,7 +990,7 @@
      "published_at": "2026-10-21 00:05:00",
      "thumbnail_url": null,
      "title": "랜덤 상자 확률 (선택 상자 제외 랜덤 상자) (26.10.21 12:00~)",
-     "view_count": 9323
+     "view_count": 9607
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
@@ -990,7 +1004,7 @@
      "published_at": "2026-10-21 00:05:00",
      "thumbnail_url": null,
      "title": "단 봉인해제 확률 (26.10.21 12:00~)",
-     "view_count": 11461
+     "view_count": 11583
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
@@ -1004,7 +1018,7 @@
      "published_at": "2026-10-14 01:30:00",
      "thumbnail_url": null,
      "title": "랜덤 염색약 확률 (26.10.14 10:30~)",
-     "view_count": 2066
+     "view_count": 2089
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
@@ -1018,7 +1032,7 @@
      "published_at": "2026-10-10 01:50:55",
      "thumbnail_url": null,
      "title": "영석 상점 - 의복 랜덤 열쇠 확률 (26.10.10 11:00~)",
-     "view_count": 8817
+     "view_count": 8849
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
@@ -1032,7 +1046,7 @@
      "published_at": "2026-10-10 01:48:40",
      "thumbnail_url": null,
      "title": "탈것 합성 확률 (26.10.10 11:00~)",
-     "view_count": 13339
+     "view_count": 13406
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
@@ -1046,7 +1060,7 @@
      "published_at": "2026-10-08 01:11:14",
      "thumbnail_url": null,
      "title": "돌파 확률 - 장비, 가호, 도술 (26.10.08~)",
-     "view_count": 11343
+     "view_count": 11399
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
@@ -1060,7 +1074,7 @@
      "published_at": "2026-10-08 01:08:39",
      "thumbnail_url": null,
      "title": "[내용수정] 내면의 길 옵션 확률 (26.10.08~)",
-     "view_count": 2812
+     "view_count": 2850
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
@@ -1074,7 +1088,7 @@
      "published_at": "2026-10-08 01:07:28",
      "thumbnail_url": null,
      "title": "영석 상점 - 염색약 랜덤 상자 확률 (26.10.08~)",
-     "view_count": 2070
+     "view_count": 2096
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
@@ -1088,7 +1102,7 @@
      "published_at": "2026-10-08 01:06:48",
      "thumbnail_url": null,
      "title": "가호 소환 확률 (가호 주머니) (26.10.08~)",
-     "view_count": 49533
+     "view_count": 49935
     },
     {
      "author_image_url": "https://gcdn.pcpf.kakaogames.com/ui-contents/community/dokkaebi/community_dokkaebi_1788492375171_2.webp",
@@ -1102,12 +1116,9 @@
      "published_at": "2026-10-08 01:04:07",
      "thumbnail_url": null,
      "title": "기운 발현 확률 (26.10.08~)",
-     "view_count": 3173
+     "view_count": 3202
     }
    ]
-  },
-  "boards/notice/posts/498563": {
-   "content": "<p><img src=\"https://web-data-cdn.kakaogames.com/qa/platformview/images/202609/20260923175346469.gif\"></p><p><br><span style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">안녕하세요.</span><br><span style=\"color: rgb(97, 100, 198); background-color: rgb(255, 255, 255);\"><strong>'MMORPG의 새로운 차원, 도깨비의세계'</strong></span><span style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">입니다.</span><br><br>10월 20일(화) 진행된 라이브 방송에 함께해 주신 도사님들께 진심으로 감사드리며,<br>라이브 방송을 놓치신 도사님들께서는 아래 영상을 통해 다시 확인해 주시기 바랍니다.</p><div><iframe width=\"640\" height=\"480\" allowfullscreen=\"true\" src=\"https://www.youtube-nocookie.com/embed/kBwYWAicbQk?rel=1\"></iframe></div><p><br>언제나 도깨비의세계를 사랑해 주시는 도사님들께 감사의 마음을 담아,<br>다양한 선물이 가득한 쿠폰을 준비했으니 지급 기간 내 꼭 수령 부탁드립니다.<br><img src=\"https://web-data-cdn.kakaogames.com/qa/platformview/images/202608/20260828115432820.png\"><br><span style=\"color: rgb(120, 27, 51); background-color: rgb(255, 255, 255);\"><strong>📢&nbsp;10월 20일(화) 라이브 방송 다시보기 및 감사 쿠폰 안내</strong></span><br><br><span style=\"color: rgb(95, 109, 43); background-color: rgb(255, 255, 255);\"><strong>⁘ 감사 쿠폰 사용 가능 기간</strong></span><br>10월 20일(화) 라이브 종료 이후 ~ 11월 20일(금) 23:59<br><span style=\"color: rgb(244, 63, 94);\">ⓘ 사용 가능 기간 내 사용하지 않은 감사 쿠폰은 별도의 도움을 드리기 어려우니 반드시 기한 내 사용 부탁드립니다.</span><br><br><span style=\"color: rgb(95, 109, 43); background-color: rgb(255, 255, 255);\"><strong>⁘ 감사 쿠폰</strong></span></p><table style=\"min-width: 75px;\"><colgroup><col style=\"min-width: 25px;\"><col style=\"min-width: 25px;\"><col style=\"min-width: 25px;\"></colgroup><tbody><tr><th colspan=\"3\" rowspan=\"1\"><p style=\"text-align: left;\"><span style=\"color: rgb(244, 63, 94);\"><strong>쿠폰명 : 도깨비의보답</strong></span></p></th></tr><tr><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center;\">천요석 (귀속) 10개</p></td><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center;\">도전자의 희귀 장신구</p><p style=\"text-align: center;\">선택 상자 (귀속) 1개</p></td><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center;\">기운 발현 재료 선택 상자 (귀속) 100개</p></td></tr></tbody></table><p><br><span style=\"color: rgb(95, 109, 43); background-color: rgb(255, 255, 255);\"><strong>⁘ 쿠폰 사용 방법</strong></span><br><span style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">위 안내해 드린 쿠폰은 [</span><a target=\"_blank\" class=\"link\" href=\"https://coupon.kakaogames.com/dokkaebi/ko/\"><span style=\"color: rgb(37, 99, 235); background-color: rgb(255, 255, 255);\">쿠폰 입력</span></a><span style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">] 페이지에 접속하여 사용이 가능하며,</span><br><span style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">사용 방법 등에 대한 자세한 내용은 게임 가이드 </span><span style=\"color: rgb(13, 13, 13); background-color: rgb(255, 255, 255);\">[</span><a target=\"_blank\" class=\"link\" href=\"https://forum.kakaogames.com/dokkaebi/postView/?code=guide&amp;id=7733\"><span style=\"color: rgb(37, 99, 235); background-color: rgb(255, 255, 255);\">쿠폰 등록</span></a><span style=\"color: rgb(13, 13, 13); background-color: rgb(255, 255, 255);\">]</span><span style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">에서 확인하실 수 있습니다.</span><br><br><span style=\"color: rgb(239, 83, 105); background-color: rgb(255, 255, 255);\"><strong>⁘ 주의사항</strong></span><br><span style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">- 감사 쿠폰은 계정당 1회만 수령할 수 있습니다.</span><br><span style=\"color: rgb(13, 13, 13); background-color: rgb(255, 255, 255);\">- 감사 쿠폰을 사용하여 획득한 보상은 우편함으로 지급되며,</span><br><span style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">기간 내에 수령하지 않으면 삭제되며 복구가 불가하오니 반드시 기간 내 수령하여 주시기 바랍니다.</span><img src=\"https://web-data-cdn.kakaogames.com/qa/platformview/images/202609/20260910162847406.png\"><br><span style=\"color: rgb(13, 13, 13); background-color: rgb(255, 255, 255);\">앞으로도 도사님들께 안정적인 게임 환경을 제공해 드릴 수 있도록 최선을 다하겠습니다.</span><br><br><span style=\"color: rgb(13, 13, 13); background-color: rgb(255, 255, 255);\">감사합니다.</span></p><p><br><img src=\"https://web-data-cdn.kakaogames.com/qa/platformview/images/202609/20260929115328745.gif\"></p>"
   },
   "boards/notice/posts/13991": {
    "content": "<p><img src=\"https://web-data-cdn.kakaogames.com/qa/platformview/images/202608/20260813152331115.gif\"></p><p><br><span style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">안녕하세요.</span><br><span style=\"color: rgb(97, 100, 198); background-color: rgb(255, 255, 255);\"><strong>'MMORPG의&nbsp;새로운&nbsp;차원, 도깨비의세계'</strong></span><span style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">입니다.</span><br><br>도깨비의세계 정식 오픈 이후 다양한 이벤트와 방송 등을 통해 안내된<br>쿠폰 정보를 한 곳에 모아 안내드립니다.<br><br>아직 사용하지 않은 쿠폰이 있다면 아래 내용을 확인하여<br>사용 가능 기간 내 반드시 사용해 주시기 바랍니다.<br><br>또한 주변에 아직 쿠폰을 사용하지 않은 도사님이 있으시다면<br>본 공지를 함께 공유하여 쿠폰 혜택을 놓치지 않도록 공유해 주시면 감사드리겠습니다.<br><br>지금까지 공개된 쿠폰 및 사용 가능 기간은 <span style=\"color: rgb(13, 13, 13); background-color: rgb(255, 255, 255);\">아래에서 확인하실 수 있습니다.</span><img src=\"https://web-data-cdn.kakaogames.com/qa/platformview/images/202609/20260911182916709.png\" alt=\"\"><span style=\"color: rgb(95, 109, 43); background-color: rgb(255, 255, 255);\"><strong>📢&nbsp;</strong></span><span style=\"color: rgb(120, 27, 51); background-color: rgb(255, 255, 255);\"><strong>도깨비의세계 쿠폰 종합 안내</strong></span></p><table style=\"min-width: 75px;\"><colgroup><col style=\"min-width: 25px;\"><col style=\"min-width: 25px;\"><col style=\"min-width: 25px;\"></colgroup><tbody><tr><th colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center;\">구분</p></th><th colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center;\">쿠폰 코드</p></th><th colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center;\">사용 가능 기간</p></th></tr><tr><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center;\"><a target=\"_blank\" class=\"link\" href=\"https://forum.kakaogames.com/dokkaebi/postView/?code=notice&amp;id=9112\"><span style=\"color: rgb(37, 99, 235);\"><u>무기 외형</u></span></a></p></td><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center;\"><span style=\"color: rgb(88, 28, 135);\">도깨비1008</span></p></td><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center;\">~ 2026년 11월 5일 23:59</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center;\"><a target=\"_blank\" class=\"link\" href=\"https://forum.kakaogames.com/dokkaebi/postView/?code=notice&amp;id=17089\"><span style=\"color: rgb(37, 99, 235);\"><u>마켓 매출 1위 달성 기념 특별 쿠폰</u></span></a></p></td><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center;\"><span style=\"color: rgb(88, 28, 135);\">매출1위감사합니다</span></p></td><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center;\">~ 2026년 11월 11일 23:59</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center;\"><a target=\"_blank\" class=\"link\" href=\"https://forum.kakaogames.com/dokkaebi/postView/?code=notice&amp;id=9112\"><span style=\"color: rgb(37, 99, 235);\"><u>SNS&nbsp;구독&nbsp;이벤트</u></span></a></p></td><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center;\"><span style=\"color: rgb(88, 28, 135);\">칭호나와라뚝딱</span></p></td><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center;\">~ 2026년 11월 11일 23:59</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center;\"><a target=\"_blank\" class=\"link\" href=\"https://forum.kakaogames.com/dokkaebi/postView/?code=notice&amp;id=9200\"><span style=\"color: rgb(37, 99, 235);\"><u>앱스토어 마켓 인기 순위 1위</u></span></a></p></td><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center;\"><span style=\"color: rgb(88, 28, 135);\">애플1위풍악을울려라</span></p></td><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center;\">~ 2026년 11월 11일 23:59</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center;\"><a target=\"_blank\" class=\"link\" href=\"https://forum.kakaogames.com/dokkaebi/postView/?code=notice&amp;id=10503\"><span style=\"color: rgb(37, 99, 235);\"><u>구글 플레이 스토어 인기 순위 1위</u></span></a></p></td><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center;\"><span style=\"color: rgb(88, 28, 135);\">구글1위잔치로구나</span></p></td><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center;\">~ 2026년 11월 11일 23:59</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center;\"><a target=\"_blank\" class=\"link\" href=\"https://forum.kakaogames.com/dokkaebi/postView/?code=notice&amp;id=12167\"><span style=\"color: rgb(37, 99, 235);\"><u>10월 9일(금) 라이브 방송<br>감사 쿠폰</u></span></a></p></td><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center;\"><span style=\"color: rgb(88, 28, 135);\">도깨비의다짐</span></p></td><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center;\">제한 없음</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center;\"><a target=\"_blank\" class=\"link\" href=\"https://forum.kakaogames.com/dokkaebi/postView/?code=notice&amp;id=12167\"><span style=\"color: rgb(37, 99, 235);\"><u>10월 9일(금) 라이브 방송<br>감사 쿠폰</u></span></a></p></td><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center;\"><span style=\"color: rgb(88, 28, 135);\">도깨비의약속</span></p></td><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center;\">제한 없음</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center;\"><a target=\"_blank\" class=\"link\" href=\"https://forum.kakaogames.com/dokkaebi/postView/?code=notice&amp;id=12167\"><span style=\"color: rgb(37, 99, 235);\"><u>10월 9일(금) 라이브 방송<br>감사 쿠폰</u></span></a></p></td><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center;\"><span style=\"color: rgb(88, 28, 135);\">도깨비의마음</span></p></td><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center;\">제한 없음</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center;\"><a target=\"_blank\" class=\"link\" href=\"https://forum.kakaogames.com/dokkaebi/postView/?code=library&amp;id=17814\"><span style=\"color: rgb(37, 99, 235);\"><u>10월 13일(화) 라이브 방송<br>감사 쿠폰</u></span></a></p></td><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center;\"><span style=\"color: rgb(88, 28, 135);\">도깨비의내일</span></p></td><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center;\">~ 2026년 11월 11일 23:59</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center;\"><a target=\"_blank\" class=\"link\" href=\"https://forum.kakaogames.com/dokkaebi/postView/?code=notice&amp;id=498563\"><span style=\"color: rgb(37, 99, 235);\"><u>10월 20일(화) 라이브 방송<br>감사 쿠폰</u></span></a></p></td><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center;\"><span style=\"color: rgb(88, 28, 135);\">도깨비의보답</span></p></td><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center;\">~ 2026년 11월 20일 23:59</p></td></tr></tbody></table><p><span style=\"color: rgb(244, 63, 94);\">ⓘ 사용 기간이 종료된 쿠폰은 사용할 수 없습니다.</span><br><span style=\"color: rgb(244, 63, 94);\">ⓘ 각 쿠폰의 자세한 내용은 [구분] 항목의 쿠폰명에 연결된 공지에서 확인하실 수 있습니다.<br>ⓘ 신규 쿠폰이 추가될 경우 본 공지를 통해 지속적으로 업데이트할 예정입니다.</span><br><br><span style=\"color: rgb(13, 13, 13); background-color: rgb(255, 255, 255);\">&nbsp;</span><span style=\"color: rgb(95, 109, 43); background-color: rgb(255, 255, 255);\"><strong>⁘ 쿠폰별 상세 안내</strong></span><br><strong>1. 무기 외형</strong><br>- 쿠폰 코드 : 도깨비1008<br>- 구성품 : 꿀떡 무기 외형<br>- 사용 가능 기간 : ~ 2026년 11월 5일(목) 23:59<br><br><strong>2. SNS 구독 이벤트 쿠폰</strong><br>- 쿠폰 코드 : 칭호나와라뚝딱<br>- 구성품 : 인게임 칭호 [타바로 소식통] (방어력+3) + 엽전 100,000개<br>- 사용 가능 기간 : ~ 2026년 11월 11일(수) 23:59<br><br><strong>3. 애플 앱스토어 인기 순위 1위 기념 쿠폰</strong><br>- 쿠폰 코드 : 애플1위풍악을울려라<br>- 구성품 : 염색약 선택 상자 1개 + (귀속) 엽전 111,111개 + 1위 기념 도술 조각 선택 상자 1개 (귀속)<br>- 사용 가능 기간 : ~ 2026년 11월 11일(수) 23:59<br><br><strong>4. 구글 플레이 스토어 인기 순위 1위 기념 쿠폰</strong><br>- 쿠폰 코드 : 구글1위잔치로구나<br>- 구성품 : 염색약 선택 상자 1개 + (귀속) 엽전 111,111개 + 1위 기념 도술 조각 선택 상자 1개 (귀속)<br>- 사용 가능 기간 : ~ 2026년 11월 11일(수) 23:59<br><br><strong>5. 10월 9일(금) 라이브 방송 감사 쿠폰</strong><br>- 쿠폰 코드 : 도깨비의다짐<br>- 구성품 : 가호 주머니 (귀속) 20개 + 엽전 1,000,000개 + 희귀 가호의 정수 (귀속) 100개<br>- 사용 가능 기간: 제한 없음<br><br><strong>6. 10월 9일(금) 라이브 방송 감사 쿠폰</strong><br>- 쿠폰 코드: 도깨비의약속<br>- 구성품: 1위 도술 조각 선택 상자 (귀속) 3개 + 도술 강화 요령서 선택 첩 (귀속) 10개 + 요혼석 (귀속) 100개<br>- 사용 가능 기간: 제한 없음<br><br><strong>7. 10월 9일(금) 라이브 방송 감사 쿠폰</strong><br>- 쿠폰 코드: 도깨비의마음<br>- 구성품: 요혼석 (귀속) 200개 + 도전자의 희귀 장신구 선택 상자 (귀속) 1개 + 희귀 무기 선택 상자 (귀속) 1개<br>- 사용 가능 기간: 제한 없음<br><br><strong>8. 마켓 매출 1위 달성 기념 특별 쿠폰</strong><br>- 쿠폰 코드: 매출1위감사합니다<br>- 구성품: 의복 랜덤 열쇠 (귀속) 1개 + 단일 염색약 선택 상자 (귀속) 11개 + 요혼석 (귀속) 1,111개 + 엽전 1,111,111개<br>- 사용 가능 기간: ~ 2026년 11월 11일(수) 23:59<br><br><strong>9. 10월 13일(화) 라이브 방송 감사 쿠폰</strong><br>- 쿠폰 코드: 도깨비의내일<br>- 구성품: 산척의 방어구 도안 선택 상자 (귀속) 1개 + 기운 발현 재료 선택 상자 (귀속) 50개 + 레이드 추가 티켓 (귀속) 1개 + 영기 수련 가속권 (10분)(귀속) 6개 + 3단계 체력 회복 물약 (귀속) 100개<br>- 사용 가능 기간: ~ 2026년 11월 11일(수) 23:59<br><br><strong>10. 10월 20일(화) 라이브 방송 감사 쿠폰</strong><br>- 쿠폰 코드: 도깨비의보답<br>- 구성품: 천요석 (귀속) 10개 + 도전자의 희귀 장신구 선택 상자 (귀속) 1개 + 기운 발현 재료 선택 상자 (귀속) 100개<br>- 사용 가능 기간: ~ 2026년 11월 20일(금) 23:59<br><img src=\"https://web-data-cdn.kakaogames.com/qa/platformview/images/202609/20260923181607853.png\" alt=\"\"><span style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">언제나 즐거운 경험을 선사해 드릴 수 있도록 최선을 다하겠습니다.</span><br><br><span style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">감사합니다.</span></p><p><br><img src=\"https://web-data-cdn.kakaogames.com/qa/platformview/images/202609/20260923181634022.gif\"></p>"
