@@ -1,6 +1,14 @@
 {
  "notices": [
   {
+   "id": 928615,
+   "board": "notice",
+   "title": "10월 27일(화) 19:30 라이브 방송 안내",
+   "date": "2026-10-26T15:30+09:00",
+   "tag": "방송",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=928615"
+  },
+  {
    "id": 881533,
    "board": "notice",
    "title": "비정상적인 게임 진행 관련 계정 제재 및 보호 조치 안내 <15차>",
@@ -161,6 +169,14 @@
    "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=539215"
   },
   {
+   "id": 9122,
+   "board": "notice",
+   "title": "영석 상점 판매 상품 안내 [26/10/21 업데이트 기준]",
+   "date": "2026-10-21T09:10+09:00",
+   "tag": "안내",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=9122"
+  },
+  {
    "id": 538521,
    "board": "update",
    "title": "[내용추가] 10월 21일(수) 도술 밸런스 조정 상세 안내",
@@ -199,22 +215,6 @@
    "date": "2026-10-21T09:01+09:00",
    "tag": "이벤트",
    "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=537801"
-  },
-  {
-   "id": 504707,
-   "board": "notice",
-   "title": "[완료] 10월 21일(수) 정기 점검 안내",
-   "date": "2026-10-20T22:37+09:00",
-   "tag": "점검",
-   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=504707"
-  },
-  {
-   "id": 498563,
-   "board": "notice",
-   "title": "10월 20일(화) 라이브 방송 다시보기 및 감사 쿠폰 안내",
-   "date": "2026-10-20T21:24+09:00",
-   "tag": "방송",
-   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=498563"
   },
   {
    "id": 20960,
@@ -322,6 +322,14 @@
   }
  ],
  "pinned": [
+  {
+   "id": 928615,
+   "board": "notice",
+   "title": "10월 27일(화) 19:30 라이브 방송 안내",
+   "date": "2026-10-26T15:30+09:00",
+   "tag": "방송",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=928615"
+  },
   {
    "id": 803590,
    "board": "notice",
@@ -543,11 +551,19 @@
  ],
  "videos": [
   {
+   "id": "c9bYs_W18vM",
+   "title": "도깨비 무과금 절대 놓치면 안되는 질문 TOP 10 - 도술, 강화서, 호랑이단, 전설 장비 등등",
+   "channel": "도모",
+   "date": "2026-10-26T16:32+09:00",
+   "views": 1746,
+   "official": false
+  },
+  {
    "id": "sCFfdtmDqrk",
    "title": "[도깨비의세계] 무과금 캐릭터 최종 전설 악세 획득 / 대형 사고 쳤습니다!!",
    "channel": "쵸튜브[쵸피]",
    "date": "2026-10-26T14:18+09:00",
-   "views": 4393,
+   "views": 8339,
    "official": false
   },
   {
@@ -555,7 +571,7 @@
    "title": "[도깨비의세계] 기동덱 창시자 짭강인으로 돌아오다 강타 몰빵 무이 서버",
    "channel": "맛나는꼬꼬",
    "date": "2026-10-26T13:07+09:00",
-   "views": 19298,
+   "views": 19410,
    "official": false
   },
   {
@@ -563,7 +579,7 @@
    "title": "[도깨비의세계] 핵심 도술 모두 6돌파 / 과연 최상위 랭커의 최종덱은? - 오다님 취재",
    "channel": "쵸튜브[쵸피]",
    "date": "2026-10-26T08:09+09:00",
-   "views": 24922,
+   "views": 27062,
    "official": false
   },
   {
@@ -571,7 +587,7 @@
    "title": "[도깨비의 세계]뉴비가이드🔰무소과금 요혼석 사용 우선순위! 어디부터 투자해야 할까?",
    "channel": "깨비야",
    "date": "2026-10-25T22:53+09:00",
-   "views": 40610,
+   "views": 41761,
    "official": false
   },
   {
@@ -579,7 +595,7 @@
    "title": "[도깨비의세계] 6돌파 도술 실험 / 무과금 캐릭터 사고쳤습니다!! - 쵸피 무이1서버",
    "channel": "쵸튜브[쵸피]",
    "date": "2026-10-25T21:24+09:00",
-   "views": 57233,
+   "views": 57243,
    "official": false
   },
   {
@@ -587,7 +603,7 @@
    "title": "🛑도깨비의 세계🔥26만투력 4단레이드 A = 전설 악세  +  1500 단 오픈 ㄱㄱ (괴량1문파원구함)",
    "channel": "오지조",
    "date": "2026-10-25T21:11+09:00",
-   "views": 6314,
+   "views": 6593,
    "official": false
   },
   {
@@ -595,7 +611,7 @@
    "title": "[도깨비의세계] 무과금 돌파 없이 가능한 짭강인 온몸비틀기덱! 상위 사냥터 끝판왕",
    "channel": "맛나는꼬꼬",
    "date": "2026-10-25T20:00+09:00",
-   "views": 20276,
+   "views": 20952,
    "official": false
   },
   {
@@ -603,7 +619,7 @@
    "title": "[도깨비의 세계] 깨푸어 존버충ㅋ_ㅋ 2100회피 25만투력 전설가호 [무 소과금 꿀팁  정보 공유]  #도깨비 #슈퍼캣",
    "channel": "깨비야",
    "date": "2026-10-25T19:16+09:00",
-   "views": 35713,
+   "views": 35744,
    "official": false
   },
   {
@@ -619,7 +635,7 @@
    "title": "도깨비 무과금 핵심 공략 10가지 - 게임을 하지 마라!!",
    "channel": "도모",
    "date": "2026-10-25T16:29+09:00",
-   "views": 34253,
+   "views": 34617,
    "official": false
   },
   {
@@ -635,7 +651,7 @@
    "title": "도깨비 무과금 하루 3000정기단, 300만 엽전, 전설 장비 2주마다 2개 호랑이단 공략 8가지 - 이게 맞나??...",
    "channel": "도모",
    "date": "2026-10-25T12:29+09:00",
-   "views": 54232,
+   "views": 54657,
    "official": false
   },
   {
@@ -643,7 +659,7 @@
    "title": "[도깨비의세계] 무과금 성장 핵심 팁 총정리 / 도술 6돌파 계획까지",
    "channel": "쵸튜브[쵸피]",
    "date": "2026-10-25T09:05+09:00",
-   "views": 60171,
+   "views": 60763,
    "official": false
   },
   {
@@ -651,7 +667,7 @@
    "title": "도깨비의 세계🔥고민 끝! 26만투력 ✅선택상자 TOP3로 시작해 최종 '전설' 파밍·도술 50강화 + 돌파",
    "channel": "오지조",
    "date": "2026-10-25T08:42+09:00",
-   "views": 29514,
+   "views": 29909,
    "official": false
   },
   {
@@ -659,7 +675,7 @@
    "title": "[도깨비의 세계] 무소과금용 최저스펙 이강인빌드 리뷰&가이드 [패치후 대떡상 예정 미리준비하세요]",
    "channel": "투즈TV",
    "date": "2026-10-25T07:00+09:00",
-   "views": 47454,
+   "views": 47821,
    "official": false
   },
   {
@@ -667,7 +683,7 @@
    "title": "[도깨비의세계] 필수재화 달라질 예정입니다!  / 다음주 준비하세요",
    "channel": "투즈TV",
    "date": "2026-10-24T23:55+09:00",
-   "views": 41949,
+   "views": 41997,
    "official": false
   },
   {
@@ -675,7 +691,7 @@
    "title": "🛑도깨비의 세계🔥1500만투자  절명몰빵단 + 레이드4단계 B 도전 │ 깡공 2.6 패치후 도술상화 이야기",
    "channel": "오지조",
    "date": "2026-10-24T22:19+09:00",
-   "views": 8056,
+   "views": 8092,
    "official": false
   },
   {
@@ -683,7 +699,7 @@
    "title": "이제 뭐함?ㅋ황무지만 돌리면 되냐 [도깨비의세꼐]",
    "channel": "센터로드TV",
    "date": "2026-10-24T21:44+09:00",
-   "views": 22531,
+   "views": 22533,
    "official": false
   },
   {
@@ -699,7 +715,7 @@
    "title": "[도깨비의 세계] 🎁잠수만 타도 금전 받습니다!! 필수참여 '미혹의정원' 가이드TIP",
    "channel": "투즈TV",
    "date": "2026-10-24T19:34+09:00",
-   "views": 13867,
+   "views": 13930,
    "official": false
   },
   {
@@ -707,7 +723,7 @@
    "title": "[도깨비의 세계] D-4 1분에 60마리 잡는 황무지 최고점 파밍 스킬트리 [뽕맛보장]",
    "channel": "투즈TV",
    "date": "2026-10-24T16:25+09:00",
-   "views": 49548,
+   "views": 49968,
    "official": false
   },
   {
@@ -715,7 +731,7 @@
    "title": "도깨비 무과금 황무지에 밀려 다시 호랑이? 시간 당 얼마 벌까?",
    "channel": "도모",
    "date": "2026-10-24T11:22+09:00",
-   "views": 34817,
+   "views": 35072,
    "official": false
   },
   {
@@ -725,15 +741,7 @@
    "date": "2026-10-24T08:25+09:00",
    "views": 58799,
    "official": false
-  },
-  {
-   "id": "zNlDa5W4k1E",
-   "title": "[도깨비의세계] 7시 공식방송 대기방 / 빌드 너프 또 가나욧!!",
-   "channel": "투즈TV",
-   "date": "2026-10-24T05:15+09:00",
-   "views": 45130,
-   "official": false
   }
  ],
- "updated_at": "2026-10-26T16:10+09:00"
+ "updated_at": "2026-10-26T17:15+09:00"
 }
