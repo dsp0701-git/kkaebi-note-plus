@@ -543,35 +543,11 @@
  ],
  "videos": [
   {
-   "id": "w9hrxghvGZk",
-   "title": "[도깨비의세계] 핵심 도술 모두 6돌파 / 과연 최상위 랭커의 최종덱은? - 오다님 취재",
-   "channel": "쵸튜브[쵸피]",
-   "date": "2026-10-26T08:09+09:00",
-   "views": 4628,
-   "official": false
-  },
-  {
-   "id": "QHFMSRXIxB4",
-   "title": "[도깨비의세계] 기동덱 창시자 짭강인으로 돌아오다 강타 몰빵 무이 서버",
-   "channel": "맛나는꼬꼬",
-   "date": "2026-10-26T07:44+09:00",
-   "views": 4301,
-   "official": false
-  },
-  {
-   "id": "bIBzd2x46EE",
-   "title": "[도깨비의 세계]뉴비가이드🔰무소과금 요혼석 사용 우선순위! 어디부터 투자해야 할까?",
-   "channel": "깨비야",
-   "date": "2026-10-25T22:53+09:00",
-   "views": 30521,
-   "official": false
-  },
-  {
    "id": "SLMsHKJH9DQ",
    "title": "[도깨비의세계] 6돌파 도술 실험 / 무과금 캐릭터 사고쳤습니다!! - 쵸피 무이1서버",
    "channel": "쵸튜브[쵸피]",
    "date": "2026-10-25T21:24+09:00",
-   "views": 56956,
+   "views": null,
    "official": false
   },
   {
@@ -587,7 +563,7 @@
    "title": "[도깨비의세계] 무과금 돌파 없이 가능한 짭강인 온몸비틀기덱! 상위 사냥터 끝판왕",
    "channel": "맛나는꼬꼬",
    "date": "2026-10-25T20:00+09:00",
-   "views": 16653,
+   "views": null,
    "official": false
   },
   {
@@ -595,15 +571,7 @@
    "title": "[도깨비의 세계] 깨푸어 존버충ㅋ_ㅋ 2100회피 25만투력 전설가호 [무 소과금 꿀팁  정보 공유]  #도깨비 #슈퍼캣",
    "channel": "깨비야",
    "date": "2026-10-25T19:16+09:00",
-   "views": 35533,
-   "official": false
-  },
-  {
-   "id": "SuM3XptvpHw",
-   "title": "[도깨비의 세계] 깨푸어 존버충ㅋ_ㅋ 2100회피 25만투력 전설가호 [무 소과금 꿀팁  정보 공유]  #도깨비 #슈퍼캣",
-   "channel": "깨비야",
-   "date": "2026-10-25T18:19+09:00",
-   "views": 0,
+   "views": null,
    "official": false
   },
   {
@@ -619,7 +587,7 @@
    "title": "[도깨비의세계] 기동덱 그립다 강타 몰빵했는데 강인이 없다 무이 서버",
    "channel": "맛나는꼬꼬",
    "date": "2026-10-25T14:24+09:00",
-   "views": 14550,
+   "views": null,
    "official": false
   },
   {
@@ -628,14 +596,6 @@
    "channel": "도모",
    "date": "2026-10-25T12:29+09:00",
    "views": null,
-   "official": false
-  },
-  {
-   "id": "qMOT4X49ISg",
-   "title": "[도깨비의세계] 무과금 성장 핵심 팁 총정리 / 도술 6돌파 계획까지",
-   "channel": "쵸튜브[쵸피]",
-   "date": "2026-10-25T09:05+09:00",
-   "views": 56229,
    "official": false
   },
   {
@@ -655,19 +615,11 @@
    "official": false
   },
   {
-   "id": "BexjOagSHnA",
-   "title": "이제 뭐함?ㅋ황무지만 돌리면 되냐 [도깨비의세꼐]",
-   "channel": "센터로드TV",
-   "date": "2026-10-24T21:44+09:00",
-   "views": 22432,
-   "official": false
-  },
-  {
    "id": "EFJo07pATYg",
    "title": "[도깨비의 세계] 패치전까지 단 많이 캐자  2100회피 25만투력 전설가호 [무 소과금 꿀팁  정보 공유]  #도깨비 #슈퍼캣",
    "channel": "깨비야",
    "date": "2026-10-24T20:23+09:00",
-   "views": 33245,
+   "views": null,
    "official": false
   },
   {
@@ -675,6 +627,38 @@
    "title": "도깨비 무과금 황무지에 밀려 다시 호랑이? 시간 당 얼마 벌까?",
    "channel": "도모",
    "date": "2026-10-24T11:22+09:00",
+   "views": null,
+   "official": false
+  },
+  {
+   "id": "kwojETv5cWE",
+   "title": "[도깨비의세계] 7시 라이브 방송 - 도술 밸런스 문제와 사냥터 겹사 / 쵸피 무이1서버",
+   "channel": "쵸튜브[쵸피]",
+   "date": "2026-10-24T11:00+09:00",
+   "views": null,
+   "official": false
+  },
+  {
+   "id": "KhOJOVnf6F4",
+   "title": "[도깨비의세계] 무기 교체 이어서 도술 교체까지?⚡공식 라이브 12가지 핵심 정리",
+   "channel": "맛나는꼬꼬",
+   "date": "2026-10-24T11:00+09:00",
+   "views": null,
+   "official": false
+  },
+  {
+   "id": "bfngoQmC-gM",
+   "title": "[도깨비의세계] 7시 공식 라방 시청 기동덱 다시 돌아오나? 무이 서버",
+   "channel": "맛나는꼬꼬",
+   "date": "2026-10-24T11:00+09:00",
+   "views": null,
+   "official": false
+  },
+  {
+   "id": "EDT1YhcDGIg",
+   "title": "[도깨비의 세계] 7시 개발자라이브방송,슬슬 오버파밍 해볼까? 파멸+강타덱 2100회피 24만투력 전설가호 [무 소과금 꿀팁  정보 공유]  #도깨비 #슈퍼캣",
+   "channel": "깨비야",
+   "date": "2026-10-24T11:00+09:00",
    "views": null,
    "official": false
   },
@@ -711,14 +695,6 @@
    "official": false
   },
   {
-   "id": "OJZ5pnfO--0",
-   "title": "[도깨비의세계] 무과금도 전설 파밍 \"이강인\" 도술덱 리뷰 / 다음주 떡상",
-   "channel": "쵸튜브[쵸피]",
-   "date": "2026-10-24T08:25+09:00",
-   "views": 58433,
-   "official": false
-  },
-  {
    "id": "zNlDa5W4k1E",
    "title": "[도깨비의세계] 7시 공식방송 대기방 / 빌드 너프 또 가나욧!!",
    "channel": "투즈TV",
@@ -727,13 +703,37 @@
    "official": false
   },
   {
-   "id": "CYFQEU7Z9Gs",
-   "title": "[도깨비의 세계] 10월 23일 공식 방송 핵심 11가지 총정리!🔰무기도술 교체?+사냥터개선+가호분해+강인덱 떡상?",
-   "channel": "깨비야",
-   "date": "2026-10-24T00:49+09:00",
-   "views": 23758,
+   "id": "4PnUU4K9B5s",
+   "title": "도깨비 무과금 업뎃 후 전래동화 3시간 광역 사냥 시 재료 얼마나 먹을까?",
+   "channel": "도모",
+   "date": "2026-10-23T11:00+09:00",
+   "views": null,
+   "official": false
+  },
+  {
+   "id": "DzRWy_6dR5k",
+   "title": "도깨비 무과금 비경 실험 3가지 공략 - 상시 비경, 전래동화 비경, 엽전 비경",
+   "channel": "도모",
+   "date": "2026-10-23T11:00+09:00",
+   "views": null,
+   "official": false
+  },
+  {
+   "id": "-DjTOR8cE30",
+   "title": "[도깨비의세계] 강화서 어디다쓸까 고민중... 득템 많이하셨나요?",
+   "channel": "투즈TV",
+   "date": "2026-10-23T11:00+09:00",
+   "views": null,
+   "official": false
+  },
+  {
+   "id": "oCp8_wMFaV8",
+   "title": "[도깨비의세계] 무소과금 보상 효율 2배💎신기 쟁탈전 핵심 꿀팁 5가지",
+   "channel": "맛나는꼬꼬",
+   "date": "2026-10-23T11:00+09:00",
+   "views": null,
    "official": false
   }
  ],
- "updated_at": "2026-10-26T10:13+09:00"
+ "updated_at": "2026-10-26T11:52+09:00"
 }
