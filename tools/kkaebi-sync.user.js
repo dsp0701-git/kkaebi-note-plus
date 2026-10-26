@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         깨비노트 플러스 공지 동기화
 // @namespace    https://dsp0701-git.github.io/kkaebi-note-plus/
-// @version      1.0.1
+// @version      1.0.2
 // @description  도깨비의세계 공식 커뮤니티에 들어가면 공지·점검·쿠폰·장비확률 원본을 깨비노트 플러스 저장소(data/forum_cache.json)로 올린다.
 // @match        https://forum.kakaogames.com/dokkaebi/*
 // @match        https://m-forum.kakaogames.com/dokkaebi/*
@@ -26,7 +26,6 @@
 
   GM_registerMenuCommand('지금 동기화', () => run(true));
   GM_registerMenuCommand('GitHub 토큰 다시 입력', () => { GM_setValue('token', ''); askToken(); });
-  run(false);
 
   function askToken() {
     const t = prompt('깨비노트 동기화: GitHub fine-grained 토큰 입력\n(저장소 kkaebi-note-plus 전용, Contents: Read and write)');
@@ -142,4 +141,6 @@
       toast('동기화 실패: ' + e.message, true);
     }
   }
+
+  run(false); // 맨 끝에서 호출 — 위의 const(sleep, key 등) 초기화 후
 })();
