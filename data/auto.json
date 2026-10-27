@@ -559,14 +559,6 @@
    "official": false
   },
   {
-   "id": "sCFfdtmDqrk",
-   "title": "[도깨비의세계] 무과금 캐릭터 최종 전설 악세 획득 / 대형 사고 쳤습니다!!",
-   "channel": "쵸튜브[쵸피]",
-   "date": "2026-10-26T14:18+09:00",
-   "views": 36640,
-   "official": false
-  },
-  {
    "id": "QHFMSRXIxB4",
    "title": "[도깨비의세계] 기동덱 창시자 짭강인으로 돌아오다 강타 몰빵 무이 서버",
    "channel": "맛나는꼬꼬",
@@ -575,19 +567,11 @@
    "official": false
   },
   {
-   "id": "w9hrxghvGZk",
-   "title": "[도깨비의세계] 핵심 도술 모두 6돌파 / 과연 최상위 랭커의 최종덱은? - 오다님 취재",
-   "channel": "쵸튜브[쵸피]",
-   "date": "2026-10-26T08:09+09:00",
-   "views": 47406,
-   "official": false
-  },
-  {
    "id": "SLMsHKJH9DQ",
    "title": "[도깨비의세계] 6돌파 도술 실험 / 무과금 캐릭터 사고쳤습니다!! - 쵸피 무이1서버",
    "channel": "쵸튜브[쵸피]",
    "date": "2026-10-25T21:24+09:00",
-   "views": 57143,
+   "views": null,
    "official": false
   },
   {
@@ -639,14 +623,6 @@
    "official": false
   },
   {
-   "id": "qMOT4X49ISg",
-   "title": "[도깨비의세계] 무과금 성장 핵심 팁 총정리 / 도술 6돌파 계획까지",
-   "channel": "쵸튜브[쵸피]",
-   "date": "2026-10-25T09:05+09:00",
-   "views": 67033,
-   "official": false
-  },
-  {
    "id": "PPDJT9pVoEU",
    "title": "[도깨비의세계] 필수재화 달라질 예정입니다!  / 다음주 준비하세요",
    "channel": "투즈TV",
@@ -675,6 +651,22 @@
    "title": "도깨비 무과금 황무지에 밀려 다시 호랑이? 시간 당 얼마 벌까?",
    "channel": "도모",
    "date": "2026-10-24T11:22+09:00",
+   "views": null,
+   "official": false
+  },
+  {
+   "id": "kwojETv5cWE",
+   "title": "[도깨비의세계] 7시 라이브 방송 - 도술 밸런스 문제와 사냥터 겹사 / 쵸피 무이1서버",
+   "channel": "쵸튜브[쵸피]",
+   "date": "2026-10-24T11:00+09:00",
+   "views": null,
+   "official": false
+  },
+  {
+   "id": "zNlDa5W4k1E",
+   "title": "[도깨비의세계] 7시 공식방송 대기방 / 빌드 너프 또 가나욧!!",
+   "channel": "투즈TV",
+   "date": "2026-10-24T11:00+09:00",
    "views": null,
    "official": false
   },
@@ -735,13 +727,21 @@
    "official": false
   },
   {
-   "id": "OJZ5pnfO--0",
-   "title": "[도깨비의세계] 무과금도 전설 파밍 \"이강인\" 도술덱 리뷰 / 다음주 떡상",
-   "channel": "쵸튜브[쵸피]",
-   "date": "2026-10-24T08:25+09:00",
-   "views": 59652,
+   "id": "qWa1qFthaNI",
+   "title": "[도깨비의세계] BGM 늘 곁에 | 1 Hour Loop 🌿",
+   "channel": "도깨비의세계 공식",
+   "date": "2026-10-23T11:00+09:00",
+   "views": null,
+   "official": true
+  },
+  {
+   "id": "4PnUU4K9B5s",
+   "title": "도깨비 무과금 업뎃 후 전래동화 3시간 광역 사냥 시 재료 얼마나 먹을까?",
+   "channel": "도모",
+   "date": "2026-10-23T11:00+09:00",
+   "views": null,
    "official": false
   }
  ],
- "updated_at": "2026-10-27T10:57+09:00"
+ "updated_at": "2026-10-27T11:51+09:00"
 }
