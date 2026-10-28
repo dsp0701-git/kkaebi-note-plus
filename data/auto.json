@@ -1,6 +1,14 @@
 {
  "notices": [
   {
+   "id": 1021818,
+   "board": "notice",
+   "title": "10월 28일(수) 업데이트 관련 사과 보상 안내",
+   "date": "2026-10-28T14:02+09:00",
+   "tag": "보상",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=1021818"
+  },
+  {
    "id": 1018352,
    "board": "notice",
    "title": "[링크추가] 10월 28일(수) 13:00 라이브 방송 안내",
@@ -19,7 +27,7 @@
   {
    "id": 10859,
    "board": "notice",
-   "title": "오류 및 개선사항 제보 통합 안내 [26/10/28 12:00 최신화]",
+   "title": "오류 및 개선사항 제보 통합 안내 [26/10/28 13:41 최신화]",
    "date": "2026-10-28T11:30+09:00",
    "tag": "안내",
    "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=10859"
@@ -71,6 +79,14 @@
    "date": "2026-10-28T09:39+09:00",
    "tag": "이벤트",
    "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=1011708"
+  },
+  {
+   "id": 9122,
+   "board": "notice",
+   "title": "영석 상점 판매 상품 안내 [26/10/28 업데이트 기준]",
+   "date": "2026-10-28T09:10+09:00",
+   "tag": "안내",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=9122"
   },
   {
    "id": 991284,
@@ -175,22 +191,6 @@
    "date": "2026-10-23T10:30+09:00",
    "tag": "안내",
    "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=713229"
-  },
-  {
-   "id": 662174,
-   "board": "notice",
-   "title": "비정상적인 게임 진행 관련 계정 제재 및 보호 조치 안내 <13차>",
-   "date": "2026-10-22T19:50+09:00",
-   "tag": "제재",
-   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=662174"
-  },
-  {
-   "id": 638128,
-   "board": "notice",
-   "title": "10월 22일(목) 공식 커뮤니티 내 건의 & 오류 제보 게시판 신설 안내",
-   "date": "2026-10-22T11:10+09:00",
-   "tag": "안내",
-   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=638128"
   },
   {
    "id": 637438,
@@ -299,7 +299,7 @@
   {
    "id": 10001,
    "board": "event",
-   "title": "혼자 알고 있기 아까운 도사님의 비법을 공유해 주세요! (~10/21)",
+   "title": "[내용수정] 혼자 알고 있기 아까운 도사님의 비법을 공유해 주세요! (~10/21)",
    "date": "2026-10-08T12:32+09:00",
    "tag": "이벤트",
    "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=10001"
@@ -307,7 +307,7 @@
   {
    "id": 9990,
    "board": "event",
-   "title": "도사님의 문파를 홍보해 보세요! (~10/21)",
+   "title": "[내용수정] 도사님의 문파를 홍보해 보세요! (~10/21)",
    "date": "2026-10-08T12:28+09:00",
    "tag": "이벤트",
    "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=9990"
@@ -315,7 +315,7 @@
   {
    "id": 9983,
    "board": "event",
-   "title": "타바로 성에 입성한 도사님 모여 주세요! (~10/21)",
+   "title": "[내용수정] 타바로 성에 입성한 도사님 모여 주세요! (~10/21)",
    "date": "2026-10-08T12:27+09:00",
    "tag": "이벤트",
    "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=event&id=9983"
@@ -323,12 +323,20 @@
  ],
  "pinned": [
   {
-   "id": 1013353,
+   "id": 1021818,
    "board": "notice",
-   "title": "[내용추가] 10월 28일(수) 정기 점검 완료 및 보상 지급 안내",
-   "date": "2026-10-28T10:02+09:00",
+   "title": "10월 28일(수) 업데이트 관련 사과 보상 안내",
+   "date": "2026-10-28T14:02+09:00",
    "tag": "보상",
-   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=1013353"
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=1021818"
+  },
+  {
+   "id": 10859,
+   "board": "notice",
+   "title": "오류 및 개선사항 제보 통합 안내 [26/10/28 13:41 최신화]",
+   "date": "2026-10-28T11:30+09:00",
+   "tag": "안내",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=10859"
   },
   {
    "id": 979147,
@@ -337,14 +345,6 @@
    "date": "2026-10-27T18:03+09:00",
    "tag": "안내",
    "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=979147"
-  },
-  {
-   "id": 10859,
-   "board": "notice",
-   "title": "오류 및 개선사항 제보 통합 안내 [26/10/28 12:00 최신화]",
-   "date": "2026-10-28T11:30+09:00",
-   "tag": "안내",
-   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=10859"
   },
   {
    "id": 794727,
@@ -550,7 +550,7 @@
    "title": "[도깨비의 세계] 업데이트후 반드시 알아야할❗공식라방 7가지 핵심정보 총정리",
    "channel": "투즈TV",
    "date": "2026-10-28T15:06+09:00",
-   "views": 823,
+   "views": 2777,
    "official": false
   },
   {
@@ -558,7 +558,7 @@
    "title": "[도깨비의세계] 👻귀신…아니, 도깨비 잡아라!!",
    "channel": "도깨비의세계 공식",
    "date": "2026-10-28T15:00+09:00",
-   "views": 248,
+   "views": 453,
    "official": true
   },
   {
@@ -566,7 +566,7 @@
    "title": "[도깨비의세계] 긴급라방 정리 / 상위 사냥터 한번더 상향 패치 - 역대급 보상까지",
    "channel": "쵸튜브[쵸피]",
    "date": "2026-10-28T14:55+09:00",
-   "views": 1464,
+   "views": 4168,
    "official": false
   },
   {
@@ -574,7 +574,7 @@
    "title": "도깨비 긴급 생방송 요약 9가지 - 재료 비경 원상복구! 전설 무기 내일 제작!!!",
    "channel": "도모",
    "date": "2026-10-28T14:37+09:00",
-   "views": 3594,
+   "views": 9173,
    "official": false
   },
   {
@@ -582,7 +582,7 @@
    "title": "[도깨비의 세계]오늘 7시30분 공식라방! 깨푸어 ㅋ_ㅋ 2100회피 26만투력 전설가호 [무 소과금 꿀팁  정보 공유]  #도깨비 #슈퍼캣",
    "channel": "깨비야",
    "date": "2026-10-28T14:35+09:00",
-   "views": 38808,
+   "views": 38859,
    "official": false
   },
   {
@@ -590,7 +590,7 @@
    "title": "도깨비의 세계🔥패치후, LV9찍고, 385K 범위 전설도안 파밍 ★강타떡상덱 │ 쿠폰: 도깨비의본색(?)🤣",
    "channel": "오지조",
    "date": "2026-10-28T14:27+09:00",
-   "views": 618,
+   "views": 2545,
    "official": false
   },
   {
@@ -598,7 +598,7 @@
    "title": "[도깨비의세계👾] 긴급 LIVE 📢 [26.10.28]",
    "channel": "도깨비의세계 공식",
    "date": "2026-10-28T14:16+09:00",
-   "views": 27749,
+   "views": 30900,
    "official": true
   },
   {
@@ -606,7 +606,7 @@
    "title": "[도깨비의세계]💥180도 달라진 메타-  10.28 사냥터, 도술 대격변 리뷰 / 강타떡상, 하위사냥터 멸망",
    "channel": "쵸튜브[쵸피]",
    "date": "2026-10-28T13:27+09:00",
-   "views": 8000,
+   "views": 17864,
    "official": false
   },
   {
@@ -614,7 +614,7 @@
    "title": "도깨비 무과금 업뎃 후 사냥터 비교 실험 10가지",
    "channel": "도모",
    "date": "2026-10-28T11:43+09:00",
-   "views": 15190,
+   "views": 16906,
    "official": false
   },
   {
@@ -622,7 +622,7 @@
    "title": "[도깨비의세계] 1시 긴급라방 /  최고의 사냥터, 최고의 빌드찾기",
    "channel": "투즈TV",
    "date": "2026-10-28T09:39+09:00",
-   "views": 46619,
+   "views": 58889,
    "official": false
   },
   {
@@ -630,7 +630,7 @@
    "title": "[도깨비의세계] 1시 긴급라방 - 최고의 사냥터, 도술덱 실험중 - 파멸 vs 강타 / 쵸피 무이1서버",
    "channel": "쵸튜브[쵸피]",
    "date": "2026-10-28T09:28+09:00",
-   "views": 34606,
+   "views": 35845,
    "official": false
   },
   {
@@ -638,7 +638,7 @@
    "title": "[도깨비의세계] 7시 30분 라이브 방송 사냥터 대격변! 과연 어떤 도술을 6돌파를 해야 할까요?  - 쵸피",
    "channel": "쵸튜브[쵸피]",
    "date": "2026-10-27T23:37+09:00",
-   "views": 23727,
+   "views": 23716,
    "official": false
   },
   {
@@ -646,7 +646,7 @@
    "title": "[도깨비의세계] 7시반 공식방송 이번패치 생사 달렸습니다 / 영웅각성 VS 전설셋팅",
    "channel": "투즈TV",
    "date": "2026-10-27T22:57+09:00",
-   "views": 51256,
+   "views": 51310,
    "official": false
   },
   {
@@ -654,7 +654,7 @@
    "title": "광역 도술, 후발주자들 큰일났다ㄷㄷ라이브 정리 [도깨비의세계]",
    "channel": "센터로드TV",
    "date": "2026-10-27T22:44+09:00",
-   "views": 32477,
+   "views": 32968,
    "official": false
   },
   {
@@ -662,7 +662,7 @@
    "title": "[도깨비의 세계] 공식방송 핵심18가지 총정리📢드랍 패널티+신규드랍템등 10.28 업데이트 미리보기",
    "channel": "투즈TV",
    "date": "2026-10-27T22:40+09:00",
-   "views": 21893,
+   "views": 22330,
    "official": false
   },
   {
@@ -670,7 +670,7 @@
    "title": "이제 뭐함? 소통 라이브 봅니다 [도깨비의세계]",
    "channel": "센터로드TV",
    "date": "2026-10-27T22:36+09:00",
-   "views": 28764,
+   "views": 28784,
    "official": false
   },
   {
@@ -678,7 +678,7 @@
    "title": "[도깨비의세계]📢중요- 상위 사냥터 떡상 -  \"강인,강타\"의 도술 메타 / 10.27 라방 요약",
    "channel": "쵸튜브[쵸피]",
    "date": "2026-10-27T21:42+09:00",
-   "views": 55797,
+   "views": 57197,
    "official": false
   },
   {
@@ -686,7 +686,7 @@
    "title": "도깨비 무과금 생방송 48가지 정리 - 하위 사냥터 너프, 상위 사냥터 버프 갓겜 등극!!",
    "channel": "도모",
    "date": "2026-10-27T21:16+09:00",
-   "views": 29716,
+   "views": 29883,
    "official": false
   },
   {
@@ -694,7 +694,7 @@
    "title": "도깨비의세계 LIVE 👾 [26.10.27]",
    "channel": "도깨비의세계 공식",
    "date": "2026-10-27T20:53+09:00",
-   "views": 73416,
+   "views": 73581,
    "official": true
   },
   {
@@ -702,7 +702,7 @@
    "title": "[도깨비의 세계]긴급방송 할줄알았다  ㅋ_ㅋ 2100회피 26만투력 전설가호 [무 소과금 꿀팁  정보 공유]  #도깨비 #슈퍼캣",
    "channel": "깨비야",
    "date": "2026-10-27T20:45+09:00",
-   "views": 11448,
+   "views": 18995,
    "official": false
   },
   {
@@ -718,7 +718,7 @@
    "title": "[도깨비의 세계] 전설 준비하세요🔥바뀐 필수재화 + 구매목록 정리 [상급 사냥터 패치 너무기대되네요]",
    "channel": "투즈TV",
    "date": "2026-10-27T17:21+09:00",
-   "views": 56794,
+   "views": 57168,
    "official": false
   },
   {
@@ -726,7 +726,7 @@
    "title": "[도깨비의세계] 짭강인덱 내일 패치후 떡상 갑니다 기동덱 돌아와줘",
    "channel": "맛나는꼬꼬",
    "date": "2026-10-27T13:56+09:00",
-   "views": 10017,
+   "views": 10032,
    "official": false
   },
   {
@@ -734,9 +734,9 @@
    "title": "[도깨비의 세계] 무과금 29만까지 내실스펙업 가이드 8가지 총정리",
    "channel": "투즈TV",
    "date": "2026-10-26T19:05+09:00",
-   "views": 75947,
+   "views": 76257,
    "official": false
   }
  ],
- "updated_at": "2026-10-28T16:17+09:00"
+ "updated_at": "2026-10-28T17:54+09:00"
 }
