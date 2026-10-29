@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         깨비노트 플러스 공지 동기화
-// @namespace    https://dsp0701-git.github.io/kkaebi-note-plus/
-// @version      1.0.2
+// @namespace    https://kkaebinote.github.io/
+// @version      1.0.3
 // @description  도깨비의세계 공식 커뮤니티에 들어가면 공지·점검·쿠폰·장비확률 원본을 깨비노트 플러스 저장소(data/forum_cache.json)로 올린다.
 // @match        https://forum.kakaogames.com/dokkaebi/*
 // @match        https://m-forum.kakaogames.com/dokkaebi/*
@@ -12,13 +12,13 @@
 // @grant        unsafeWindow
 // @connect      api.github.com
 // @run-at       document-idle
-// @downloadURL  https://raw.githubusercontent.com/dsp0701-git/kkaebi-note-plus/main/tools/kkaebi-sync.user.js
-// @updateURL    https://raw.githubusercontent.com/dsp0701-git/kkaebi-note-plus/main/tools/kkaebi-sync.user.js
+// @downloadURL  https://raw.githubusercontent.com/kkaebinote/kkaebinote.github.io/main/tools/kkaebi-sync.user.js
+// @updateURL    https://raw.githubusercontent.com/kkaebinote/kkaebinote.github.io/main/tools/kkaebi-sync.user.js
 // ==/UserScript==
 
 (async () => {
   'use strict';
-  const REPO = 'dsp0701-git/kkaebi-note-plus';
+  const REPO = 'kkaebinote/kkaebinote.github.io';
   const FILE = 'data/forum_cache.json';
   const API = 'https://forum-api.kakaogames.com/v1/dokkaebi';
   const MIN_INTERVAL = 30 * 60 * 1000;          // 30분에 한 번만 동기화
@@ -28,7 +28,7 @@
   GM_registerMenuCommand('GitHub 토큰 다시 입력', () => { GM_setValue('token', ''); askToken(); });
 
   function askToken() {
-    const t = prompt('깨비노트 동기화: GitHub fine-grained 토큰 입력\n(저장소 kkaebi-note-plus 전용, Contents: Read and write)');
+    const t = prompt('깨비노트 동기화: GitHub fine-grained 토큰 입력\n(저장소 kkaebinote.github.io 전용, Contents: Read and write)');
     if (t) GM_setValue('token', t.trim());
     return t ? t.trim() : '';
   }
