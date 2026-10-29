@@ -6,7 +6,7 @@
  */
 (function () {
   var SITE = (document.currentScript && document.currentScript.src.replace(/coupon-helper\.js.*$/, '')) ||
-    'https://dsp0701-git.github.io/kkaebi-note-plus/';
+    'https://kkaebinote.github.io/';
   var OFFICIAL = 'https://coupon.kakaogames.com/dokkaebi/ko/';
   if (!/coupon\.kakaogames\.com\/dokkaebi/.test(location.href)) {
     if (confirm('공식 쿠폰 등록 페이지에서 실행해야 합니다.\n지금 열까요? 열린 페이지에서 북마크를 한 번 더 누르세요.')) location.href = OFFICIAL;
