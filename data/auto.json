@@ -1,6 +1,46 @@
 {
  "notices": [
   {
+   "id": 10859,
+   "board": "notice",
+   "title": "오류 및 개선사항 제보 통합 안내 [26/10/28 20:40 최신화]",
+   "date": "2026-10-28T20:40+09:00",
+   "tag": "안내",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=10859"
+  },
+  {
+   "id": 1034315,
+   "board": "notice",
+   "title": "비정상적인 게임 진행 관련 계정 제재 및 보호 조치 안내 <18차>",
+   "date": "2026-10-28T20:34+09:00",
+   "tag": "제재",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=1034315"
+  },
+  {
+   "id": 1033973,
+   "board": "notice",
+   "title": "10월 28일(수) 임시 점검 완료 및 보상 지급 안내",
+   "date": "2026-10-28T20:27+09:00",
+   "tag": "보상",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=1033973"
+  },
+  {
+   "id": 1029210,
+   "board": "notice",
+   "title": "전체 서버 캐릭터 생성 제한 해제 안내 (10/28 임시 점검 완료 이후 기준)",
+   "date": "2026-10-28T18:33+09:00",
+   "tag": "보상",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=1029210"
+  },
+  {
+   "id": 1028946,
+   "board": "notice",
+   "title": "[완료][내용추가] 10월 28일(수) 임시 점검 안내",
+   "date": "2026-10-28T18:27+09:00",
+   "tag": "점검",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=1028946"
+  },
+  {
    "id": 1021818,
    "board": "notice",
    "title": "10월 28일(수) 업데이트 관련 사과 보상 안내",
@@ -23,14 +63,6 @@
    "date": "2026-10-28T11:54+09:00",
    "tag": "안내",
    "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=1017874"
-  },
-  {
-   "id": 10859,
-   "board": "notice",
-   "title": "오류 및 개선사항 제보 통합 안내 [26/10/28 13:41 최신화]",
-   "date": "2026-10-28T11:30+09:00",
-   "tag": "안내",
-   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=10859"
   },
   {
    "id": 1013353,
@@ -159,38 +191,6 @@
    "date": "2026-10-24T11:45+09:00",
    "tag": "안내",
    "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=794703"
-  },
-  {
-   "id": 746447,
-   "board": "notice",
-   "title": "비정상적인 게임 진행 관련 계정 제재 및 보호 조치 안내 <14차>",
-   "date": "2026-10-23T20:50+09:00",
-   "tag": "제재",
-   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=746447"
-  },
-  {
-   "id": 743966,
-   "board": "notice",
-   "title": "10월 23일(금) 라이브 방송 다시보기 및 감사 보상 안내",
-   "date": "2026-10-23T20:02+09:00",
-   "tag": "보상",
-   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=743966"
-  },
-  {
-   "id": 716824,
-   "board": "notice",
-   "title": "[링크추가] 10월 23일(금) 19:00 라이브 방송 안내",
-   "date": "2026-10-23T11:16+09:00",
-   "tag": "방송",
-   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=716824"
-  },
-  {
-   "id": 713229,
-   "board": "notice",
-   "title": "10월 23일(금) 일부 문제 현상 해결을 위한 마켓 업데이트 안내",
-   "date": "2026-10-23T10:30+09:00",
-   "tag": "안내",
-   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=713229"
   },
   {
    "id": 637438,
@@ -333,8 +333,8 @@
   {
    "id": 10859,
    "board": "notice",
-   "title": "오류 및 개선사항 제보 통합 안내 [26/10/28 13:41 최신화]",
-   "date": "2026-10-28T11:30+09:00",
+   "title": "오류 및 개선사항 제보 통합 안내 [26/10/28 20:40 최신화]",
+   "date": "2026-10-28T20:40+09:00",
    "tag": "안내",
    "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=10859"
   },
@@ -353,14 +353,6 @@
    "date": "2026-10-24T11:45+09:00",
    "tag": "안내",
    "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=794727"
-  },
-  {
-   "id": 794703,
-   "board": "notice",
-   "title": "신기 쟁탈전 및 미혹의 정원 주요 변경사항 안내",
-   "date": "2026-10-24T11:45+09:00",
-   "tag": "안내",
-   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=794703"
   },
   {
    "id": 162825,
@@ -546,6 +538,14 @@
  ],
  "videos": [
   {
+   "id": "ohdkPLipJZY",
+   "title": "[도깨비의세계] 기동덱 창시자 짭강인으로 돌아오다 490K 사냥중 무이 서버",
+   "channel": "맛나는꼬꼬",
+   "date": "2026-10-29T12:00+09:00",
+   "views": null,
+   "official": false
+  },
+  {
    "id": "qt39ZIP4V0U",
    "title": "[도깨비의세계] 무과금캐릭 6돌파 도전 / 패치후 최고의 사냥터, 도술덱 실험중/ 쵸피 무이1서버",
    "channel": "쵸튜브[쵸피]",
@@ -578,6 +578,14 @@
    "official": false
   },
   {
+   "id": "1lDr3dfpIFk",
+   "title": "[도깨비의세계] 1시 긴급라방 /  최고의 사냥터, 최고의 빌드찾기",
+   "channel": "투즈TV",
+   "date": "2026-10-28T18:00+09:00",
+   "views": null,
+   "official": false
+  },
+  {
    "id": "S2BbAHy6Q8c",
    "title": "도깨비 긴급 생방송 요약 9가지 - 재료 비경 원상복구! 전설 무기 내일 제작!!!",
    "channel": "도모",
@@ -600,6 +608,14 @@
    "date": "2026-10-28T14:16+09:00",
    "views": null,
    "official": true
+  },
+  {
+   "id": "n8aJ8PhSRN0",
+   "title": "[도깨비의세계] 7시반 공식방송 이번패치 생사 달렸습니다 / 영웅각성 VS 전설셋팅",
+   "channel": "투즈TV",
+   "date": "2026-10-28T12:00+09:00",
+   "views": null,
+   "official": false
   },
   {
    "id": "RC1-8UY1Mq0",
@@ -698,45 +714,21 @@
    "official": false
   },
   {
-   "id": "q5ZDNdctzDg",
-   "title": "도깨비 무과금 하루 3000정기단, 300만 엽전, 전설 장비 2주마다 2개 호랑이단 공략 8가지 - 이게 맞나??...",
+   "id": "4wCBRUn90mk",
+   "title": "도깨비 무과금 핵심 공략 10가지 - 게임을 하지 마라!!",
    "channel": "도모",
    "date": "2026-10-26T12:00+09:00",
    "views": null,
    "official": false
   },
   {
-   "id": "SLMsHKJH9DQ",
-   "title": "[도깨비의세계] 6돌파 도술 실험 / 무과금 캐릭터 사고쳤습니다!! - 쵸피 무이1서버",
-   "channel": "쵸튜브[쵸피]",
+   "id": "q5ZDNdctzDg",
+   "title": "도깨비 무과금 하루 3000정기단, 300만 엽전, 전설 장비 2주마다 2개 호랑이단 공략 8가지 - 이게 맞나??...",
+   "channel": "도모",
    "date": "2026-10-26T12:00+09:00",
-   "views": null,
-   "official": false
-  },
-  {
-   "id": "fzeHM7u9o60",
-   "title": "[도깨비의세계] 무과금 돌파 없이 가능한 짭강인 온몸비틀기덱! 상위 사냥터 끝판왕",
-   "channel": "맛나는꼬꼬",
-   "date": "2026-10-26T12:00+09:00",
-   "views": null,
-   "official": false
-  },
-  {
-   "id": "DRo8-vVoj-k",
-   "title": "[도깨비의세계] 기동덱 그립다 강타 몰빵했는데 강인이 없다 무이 서버",
-   "channel": "맛나는꼬꼬",
-   "date": "2026-10-26T12:00+09:00",
-   "views": null,
-   "official": false
-  },
-  {
-   "id": "Y58f9pC0uos",
-   "title": "[도깨비의 세계] 깨푸어 존버충ㅋ_ㅋ 2100회피 25만투력 전설가호 [무 소과금 꿀팁  정보 공유]  #도깨비 #슈퍼캣",
-   "channel": "깨비야",
-   "date": "2026-10-26T10:00+09:00",
    "views": null,
    "official": false
   }
  ],
- "updated_at": "2026-10-29T12:02+09:00"
+ "updated_at": "2026-10-29T12:45+09:00"
 }
