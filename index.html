@@ -304,6 +304,18 @@ details.pentry[open] .pcnt svg{transform:rotate(180deg)}
  .sidelinks small{font-size:11.5px;color:var(--ink3)}
  .ext{display:none}
 }
+/* 중간 폭(사이드 패널 열린 브라우저 등): 좁은 세로 레일 */
+@media (min-width:1240px) and (max-width:1399px){
+ .sidelinks{display:flex;flex-direction:column;gap:8px;position:fixed;top:92px;width:88px;left:max(8px,calc((100vw - 1040px)/2 - 96px));z-index:4}
+ .sl-head{margin:0;font-family:var(--f-display);font-size:14px;color:#f5ead2;text-shadow:0 2px 8px rgba(0,0,0,.5);text-align:center}
+ .sl-head small{display:none}
+ .sidelinks a{display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;text-decoration:none;color:var(--ink);background:color-mix(in srgb,var(--surface) 88%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid color-mix(in srgb,var(--line) 70%,transparent);border-radius:12px;padding:10px 6px;box-shadow:var(--shadow);transition:transform .15s,border-color .15s}
+ .sidelinks a:hover{transform:translateX(2px);border-color:var(--gold)}
+ .sidelinks i{font-style:normal;font-size:24px;line-height:1}
+ .sidelinks b{font-size:12px;line-height:1.25;word-break:keep-all}
+ .sidelinks a small{display:none}
+ .ext{display:none}
+}
 </style>
 </head>
 <body>
