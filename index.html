@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>깨비노트 플러스</title>
-<meta name="description" content="도깨비의세계 공지·쿠폰·이벤트 마감·점검 카운트다운·숙제·거래소 계산기">
+<meta name="description" content="도깨비의세계 공지·쿠폰·이벤트 마감·점검 카운트다운·숙제·강화 재화 계산기">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=IBM+Plex+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
@@ -230,10 +230,10 @@ el.querySelector('.enter').focus();})();
     <button data-tab="todo">숙제</button>
     <button data-tab="coupon">쿠폰<span class="nbadge hidden" id="nb-coupon"></span></button>
     <button data-tab="feed">공지·영상<span class="nbadge hidden" id="nb-feed"></span></button>
-    <button data-tab="market">거래소</button>
     <button data-tab="growth">강화 재화</button>
     <a href="https://kkaebigg.com/deck/" target="_blank" rel="noopener" title="깨비지지 도술 빌더 (외부 사이트)">도술 빌더 ↗</a>
     <a href="https://kkaebigg.com/treasure/" target="_blank" rel="noopener" title="깨비지지 보물상자 지도 (외부 사이트)">보물상자 지도 ↗</a>
+    <a href="https://rok03.github.io/kkaebi-note/" target="_blank" rel="noopener" title="원본 깨비노트 — 사냥 드랍률·주간 문파 기여도 탭 (외부 사이트)">원본 깨비노트 (사냥드랍률/주간기여도) ↗</a>
   </nav>
 </div></header>
 
@@ -276,7 +276,7 @@ el.querySelector('.enter').focus();})();
   <div class="card">
     <p class="eyebrow">타임라인 · 최신 순 · 공식 공지 요약</p>
     <h2>정식 오픈 이후 변경 사항</h2>
-    <input class="search" id="p-search" placeholder="검색 (예: 엽전, 거래소, 추가 효과)">
+    <input class="search" id="p-search" placeholder="검색 (예: 엽전, 강화, 추가 효과)">
     <div class="chips" id="p-chips"></div>
     <div id="p-list"></div>
   </div>
@@ -377,65 +377,6 @@ el.querySelector('.enter').focus();})();
   </div>
 </section>
 
-<!-- ============ 거래소 계산기 ============ -->
-<section id="tab-market" class="hidden">
-  <div class="grid2">
-    <div class="card">
-      <p class="eyebrow">멤버십 시세 기준</p>
-      <h3>금전 가치 환산</h3>
-      <label>멤버십 상품</label>
-      <select id="m-item"></select>
-      <label>내 서버 거래소 시세</label>
-      <div class="unit"><input id="m-price" type="number" min="1" value="500"><span>금전</span></div>
-      <div class="res">
-        <div class="row"><span>상품 원화 가치</span><b id="m-krw">-</b></div>
-        <div class="row big"><span>1,000금전 (산 사람 기준)</span><b id="m-k1000">-</b></div>
-        <div class="row"><span>1,000금전 (판 사람 실수령 기준)</span><b id="m-k1000s">-</b></div>
-        <div class="row"><span>1금전</span><b id="m-k1">-</b></div>
-        <div class="row"><span>1만 엽전 (환전소 300:1 기준)</span><b id="m-yeop">-</b></div>
-      </div>
-    </div>
-    <div class="card">
-      <p class="eyebrow">위 시세로 환산</p>
-      <h3>금전 ↔ 원 변환</h3>
-      <label>금전 → 원</label>
-      <div class="unit"><input id="c-g" type="number" min="0" value="10000"><span>금전</span></div>
-      <div class="row big"><span>환산</span><b id="c-g2w">-</b></div>
-      <label>원 → 금전</label>
-      <div class="unit"><input id="c-w" type="number" min="0" value="10000"><span>원</span></div>
-      <div class="row big"><span>환산</span><b id="c-w2g">-</b></div>
-    </div>
-    <div class="card">
-      <p class="eyebrow">판매자용</p>
-      <h3>등록가 → 예상 수령액</h3>
-      <label>판매 등록가</label>
-      <div class="unit"><input id="s-price" type="number" min="10" value="1000"><span>금전</span></div>
-      <div class="res">
-        <div class="row warn"><span>수수료 (10%)</span><b id="s-fee">-</b></div>
-        <div class="row big"><span>예상 수령액</span><b id="s-get">-</b></div>
-        <div class="row"><span>수령액 원화 가치</span><b id="s-krw">-</b></div>
-      </div>
-    </div>
-    <div class="card">
-      <p class="eyebrow">판매자용</p>
-      <h3>원하는 수령액 → 최소 등록가</h3>
-      <label>받고 싶은 금액</label>
-      <div class="unit"><input id="r-want" type="number" min="1" value="900"><span>금전</span></div>
-      <div class="res">
-        <div class="row big"><span>최소 등록가</span><b id="r-price">-</b></div>
-        <div class="row"><span>그때 수령액</span><b id="r-get">-</b></div>
-      </div>
-    </div>
-  </div>
-  <div class="note"><b>계산 기준</b>
-    <ul>
-      <li>1영석 ≈ 13.75원 (영석 상점 정가, 보너스 영석 제외) · 거래소 수수료 10%(올림 처리 가정) · 최소 등록가 10금전</li>
-      <li>금전 → 엽전 환전소 1:300 (10/14 패치). 엽전 → 금전은 불가</li>
-      <li>시세는 서버마다 다르니 내 서버 거래소의 멤버십 가격을 넣으세요. 입력값은 이 브라우저에 저장됩니다.</li>
-    </ul>
-  </div>
-</section>
-
 <!-- ============ 강화 재화 계산기 ============ -->
 <section id="tab-growth" class="hidden">
   <div class="card">
@@ -455,7 +396,6 @@ el.querySelector('.enter').focus();})();
     <div class="res">
       <div class="row"><span>부족한 엽전</span><b id="g-ylack">-</b></div>
       <div class="row big"><span>엽전 부족분을 금전으로 환전하면</span><b id="g-gold">-</b></div>
-      <div class="row"><span>그 금전의 원화 가치 (거래소 탭 시세 기준)</span><b id="g-krw">-</b></div>
     </div>
   </div>
   <div class="card">
@@ -478,7 +418,6 @@ el.querySelector('.enter').focus();})();
 /* ================= 유틸 ================= */
 const $=id=>document.getElementById(id);
 const fmt=n=>isFinite(n)?Math.round(n).toLocaleString('ko-KR'):'-';
-const fmt2=n=>isFinite(n)?n.toLocaleString('ko-KR',{maximumFractionDigits:2}):'-';
 const num=el=>Math.max(0,parseFloat(el.value)||0);
 const store={
   get(k,d){try{const v=localStorage.getItem('knp-'+k);return v==null?d:JSON.parse(v)}catch(e){return d}},
@@ -520,7 +459,7 @@ async function loadJSON(path){
 }
 
 /* ================= 탭 ================= */
-const TABS=['home','patch','equip','todo','coupon','feed','market','growth'];
+const TABS=['home','patch','equip','todo','coupon','feed','growth'];
 document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{
   document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('on',x===b));
   TABS.forEach(t=>$('tab-'+t).classList.toggle('hidden',t!==b.dataset.tab));
@@ -721,33 +660,8 @@ function renderVideos(){
 const setV=c=>{vChan=c;chips($('vchips'),['전체',...new Set((AUTO.videos||[]).map(v=>v.channel))],c,setV);renderVideos();};
 $('vsearch').oninput=renderVideos;
 
-/* ================= 거래소 계산기 ================= */
-const MEMBERSHIP=[['전투 멤버십 10일',270],['전투 멤버십 20일',540],['전투 멤버십 30일',800],['성장 멤버십 10일',540],['성장 멤버십 20일',1080],['성장 멤버십 30일',1600]];
-const WON_PER_YS=13.75,FEE=0.10,MIN_PRICE=10,YEOP_PER_GOLD=300;
-$('m-item').innerHTML=MEMBERSHIP.map((m,i)=>`<option value="${i}">${m[0]} (${m[1].toLocaleString()}영석)</option>`).join('');
-const feeOf=p=>Math.ceil(p*FEE);
-let wonPerGold=NaN;
-function calcMarket(){
-  const m=MEMBERSHIP[+$('m-item').value],price=num($('m-price')),krw=m[1]*WON_PER_YS;
-  wonPerGold=price>0?krw/price:NaN;
-  $('m-krw').textContent=fmt(krw)+'원';
-  $('m-k1000').textContent='≈ '+fmt(wonPerGold*1000)+'원';
-  $('m-k1000s').textContent='≈ '+fmt(wonPerGold*1000/(1-FEE))+'원';
-  $('m-k1').textContent='≈ '+fmt2(wonPerGold)+'원';
-  $('m-yeop').textContent='≈ '+fmt(wonPerGold*10000/YEOP_PER_GOLD)+'원';
-  $('c-g2w').textContent='≈ '+fmt(num($('c-g'))*wonPerGold)+'원';
-  $('c-w2g').textContent='≈ '+fmt(num($('c-w'))/wonPerGold)+'금전';
-  const sp=Math.max(MIN_PRICE,Math.floor(num($('s-price')))),fee=feeOf(sp);
-  $('s-fee').textContent='− '+fmt(fee)+' 금전';$('s-get').textContent=fmt(sp-fee)+' 금전';
-  $('s-krw').textContent='≈ '+fmt((sp-fee)*wonPerGold)+'원';
-  const want=Math.ceil(num($('r-want')));let p=Math.max(MIN_PRICE,Math.ceil(want/(1-FEE))-1);
-  while(p-feeOf(p)<want)p++;
-  $('r-price').textContent=fmt(p)+' 금전';$('r-get').textContent=fmt(p-feeOf(p))+' 금전';
-  store.set('market',{item:$('m-item').value,price:$('m-price').value});
-  calcGrowth();
-}
-{const s=store.get('market',null);if(s){$('m-item').value=s.item;$('m-price').value=s.price;}}
-['m-item','m-price','c-g','c-w','s-price','r-want'].forEach(id=>$(id).addEventListener('input',calcMarket));
+/* ================= 공통 상수 ================= */
+const YEOP_PER_GOLD=300; // 금전 → 엽전 환전소 1:300
 
 /* ================= 강화 재화 계산기 ================= */
 const DEFAULT_MATS=[['엽전',0,0],['요혼석',0,0],['천요석',0,0],['장비 강화 비법서',0,0]];
@@ -770,7 +684,6 @@ function calcGrowth(){
     c.innerHTML=r[1]===0?'<span class="muted">-</span>':lack>0?`<span class="lack">${fmt(lack)}</span>`:'<span class="ok">충분</span>';});
   const y=Math.max(0,mats[0][1]-mats[0][2]),gold=Math.ceil(y/YEOP_PER_GOLD);
   $('g-ylack').textContent=fmt(y)+' 엽전';$('g-gold').textContent=fmt(gold)+' 금전';
-  $('g-krw').textContent='≈ '+fmt(gold*wonPerGold)+'원';
   const perDay=num($('d-yeop'))+num($('d-gold'))*YEOP_PER_GOLD;
   $('d-days').textContent=y===0?'부족 없음':perDay>0?Math.ceil(y/perDay).toLocaleString()+'일':'-';
   store.set('mats',mats);store.set('daily',[$('d-yeop').value,$('d-gold').value]);
@@ -939,9 +852,9 @@ function initEquip(){
   if(a.status==='rejected'&&location.protocol==='file:')
     toast('로컬 파일로 열면 데이터가 안 보여요. README의 로컬 실행 방법을 참고하세요.');
   initTodo();setStatus();renderTips();setN('전체');setV('전체');setP('전체');initEquip();
-  calcMarket();renderMats();
+  renderMats();
   lastDKey=0;tick();setInterval(tick,1000);
-  const t=store.get('tab','home');const b=document.querySelector(`nav button[data-tab="${t}"]`);if(b)b.click();
+  let t=store.get('tab','home');if(!TABS.includes(t))t='home';const b=document.querySelector(`nav button[data-tab="${t}"]`);if(b)b.click();
 })();
 </script>
 </body>
