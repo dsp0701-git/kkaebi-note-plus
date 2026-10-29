@@ -290,6 +290,20 @@ details.pentry[open] .pcnt svg{transform:rotate(180deg)}
 .more:hover{border-color:var(--jade);color:var(--jade)}
 .more:empty{display:none}
 @media (max-width:560px){.vgrid{grid-template-columns:1fr 1fr;gap:10px}.vbody{padding:8px 9px}.vtitle{font-size:12.5px}.vmeta{font-size:11px}.pitems .tag{min-width:0}.fseg{width:100%}.fseg button{flex:1;padding:8px 6px}}
+/* 왼쪽 바로가기 사이드바 (넓은 화면) */
+.sidelinks{display:none}
+@media (min-width:1400px){
+ .sidelinks{display:flex;flex-direction:column;gap:10px;position:fixed;top:96px;width:184px;left:max(16px,calc((100vw - 1040px)/2 - 208px));z-index:4}
+ .sl-head{margin:0 4px 2px;font-family:var(--f-display);font-size:18px;color:#f5ead2;text-shadow:0 2px 8px rgba(0,0,0,.45);display:flex;flex-direction:column;line-height:1.2}
+ .sidelinks .sl-head small{font-family:var(--f-body);font-size:11.5px;color:#f5ead2;opacity:.9;margin-top:3px}
+ .sidelinks a{display:flex;flex-direction:column;gap:2px;text-decoration:none;color:var(--ink);background:color-mix(in srgb,var(--surface) 85%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid color-mix(in srgb,var(--line) 70%,transparent);border-radius:14px;padding:14px 16px;box-shadow:var(--shadow);transition:transform .15s,box-shadow .15s,border-color .15s;position:relative}
+ .sidelinks a::after{content:"↗";position:absolute;right:14px;top:12px;color:var(--ink3);font-size:13px}
+ .sidelinks a:hover{transform:translateX(3px);border-color:var(--gold);box-shadow:var(--shadow-lg)}
+ .sidelinks i{font-style:normal;font-size:26px;line-height:1;margin-bottom:6px}
+ .sidelinks b{font-size:15px}
+ .sidelinks small{font-size:11.5px;color:var(--ink3)}
+ .ext{display:none}
+}
 </style>
 </head>
 <body>
@@ -329,6 +343,12 @@ el.querySelector('.enter').focus();})();
     </details>
   </nav>
 </div></header>
+<aside class="sidelinks" aria-label="외부 바로가기">
+  <p class="sl-head">바로가기<small>외부 사이트 · 새 창</small></p>
+  <a href="https://kkaebigg.com/deck/" target="_blank" rel="noopener"><i>🃏</i><b>도술 빌더</b><small>깨비지지</small></a>
+  <a href="https://kkaebigg.com/treasure/" target="_blank" rel="noopener"><i>🗺️</i><b>보물상자 지도</b><small>깨비지지</small></a>
+  <a href="https://rok03.github.io/kkaebi-note/" target="_blank" rel="noopener"><i>📒</i><b>원본 깨비노트</b><small>사냥 드랍률 · 주간 기여도</small></a>
+</aside>
 
 <main>
 <!-- ============ 홈 ============ -->
