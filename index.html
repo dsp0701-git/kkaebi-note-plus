@@ -264,6 +264,32 @@ h2{font-size:21px;letter-spacing:-.01em}
 .dlist li:hover,.nlist li:hover{background:color-mix(in srgb,var(--sunk) 45%,transparent);margin:0 -10px;padding-left:10px;padding-right:10px;border-radius:8px}
 .toast{box-shadow:var(--shadow-lg)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+/* 패치노트 접기 */
+.ptools{display:flex;justify-content:space-between;align-items:center;margin:-2px 0 8px}
+details.pentry{display:block;padding:0;border-top:1px solid var(--line)}
+details.pentry:first-child{border-top:0}
+details.pentry>summary{list-style:none;display:grid;grid-template-columns:76px 1fr auto;gap:14px;align-items:center;padding:14px 4px;cursor:pointer;border-radius:10px}
+details.pentry>summary::-webkit-details-marker{display:none}
+details.pentry>summary:hover{background:color-mix(in srgb,var(--sunk) 45%,transparent)}
+.psum{min-width:0}
+.psum .ptitle{margin:2px 0 4px}
+.ptags{display:flex;gap:4px;flex-wrap:wrap}
+.ptags .tag{font-size:10.5px}
+.pcnt{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--ink3);white-space:nowrap}
+.pcnt svg{width:14px;height:14px;transition:transform .2s}
+details.pentry[open] .pcnt svg{transform:rotate(180deg)}
+.pbody{padding:0 4px 16px 94px}
+@media (max-width:560px){details.pentry>summary{grid-template-columns:1fr auto;gap:6px 10px}.pdate b{display:inline;font-size:18px;margin-right:6px}.psum{grid-column:1/-1;grid-row:2}.pbody{padding-left:4px}}
+/* 공지·영상 전환 */
+.fseg{display:flex;gap:6px;margin-bottom:14px;background:color-mix(in srgb,var(--surface) 75%,transparent);backdrop-filter:blur(8px);padding:5px;border-radius:12px;width:fit-content;box-shadow:var(--shadow)}
+.fseg button{border:0;background:none;font:inherit;font-size:14px;font-weight:700;color:var(--ink2);padding:8px 16px;border-radius:9px;cursor:pointer;transition:background .15s,color .15s}
+.fseg button b{font-family:var(--f-mono);font-weight:500;font-size:12px;background:var(--sunk);color:var(--ink3);border-radius:99px;padding:1px 7px;margin-left:4px}
+.fseg button.on{background:var(--jade);color:#fff}
+.fseg button.on b{background:rgba(255,255,255,.22);color:#fff}
+.more{display:block;width:100%;margin-top:10px;border:1px dashed var(--line);background:none;color:var(--ink2);font:inherit;font-size:13.5px;padding:9px;border-radius:10px;cursor:pointer}
+.more:hover{border-color:var(--jade);color:var(--jade)}
+.more:empty{display:none}
+@media (max-width:560px){.vgrid{grid-template-columns:1fr 1fr;gap:10px}.vbody{padding:8px 9px}.vtitle{font-size:12.5px}.vmeta{font-size:11px}.pitems .tag{min-width:0}.fseg{width:100%}.fseg button{flex:1;padding:8px 6px}}
 </style>
 </head>
 <body>
@@ -345,6 +371,7 @@ el.querySelector('.enter').focus();})();
     <h2>정식 오픈 이후 변경 사항</h2>
     <input class="search" id="p-search" placeholder="검색 (예: 엽전, 강화, 추가 효과)">
     <div class="chips" id="p-chips"></div>
+    <div class="ptools"><span class="muted" id="p-count"></span><button class="chip" id="p-toggle" type="button">모두 펼치기</button></div>
     <div id="p-list"></div>
   </div>
 </section>
@@ -429,13 +456,18 @@ el.querySelector('.enter').focus();})();
 
 <!-- ============ 공지·영상 ============ -->
 <section id="tab-feed" class="hidden">
-  <div class="card">
+  <div class="fseg" role="tablist">
+    <button type="button" data-f="notice" class="on">📢 공식 공지 <b id="f-ncount"></b></button>
+    <button type="button" data-f="video">▶️ 공략 영상 <b id="f-vcount"></b></button>
+  </div>
+  <div class="card" id="f-notice">
     <p class="eyebrow">공식 커뮤니티 · 자동 수집</p>
     <h2>공식 공지 모아보기</h2>
     <div class="chips" id="nchips"></div>
     <ul class="nlist" id="nlist"></ul>
+    <button class="more" id="n-more" type="button"></button>
   </div>
-  <div class="card">
+  <div class="card hidden" id="f-video">
     <p class="eyebrow">YouTube · 최근 2주</p>
     <h2>최근 공략 영상</h2>
     <input class="search" id="vsearch" placeholder="제목·채널 검색 (예: 황무지, 기동, 무과금)">
@@ -698,11 +730,14 @@ $('c-copyall').onclick=()=>{const l=liveCoupons().filter(c=>!used.has(c.code)).m
 $('c-hide').onclick=()=>{hideUsed=!hideUsed;store.set('hideUsed',hideUsed);renderCoupons();};
 
 /* ================= 공지 ================= */
-let nFilter='전체';
+let nFilter='전체',nShowAll=false;const N_LIMIT=10;
 const lastSeen=store.get('lastSeenNotice',null);   // 마지막 방문 때 본 최신 공지 시각
 function isNew(n){return lastSeen&&n.date>lastSeen;}
 function renderNotices(){
-  const list=(AUTO.notices||[]).filter(n=>nFilter==='전체'||n.tag===nFilter);
+  const all=(AUTO.notices||[]).filter(n=>nFilter==='전체'||n.tag===nFilter);
+  const list=nShowAll?all:all.slice(0,N_LIMIT);
+  $('n-more').textContent=all.length>N_LIMIT?(nShowAll?'접기 ▲':`이전 공지 ${all.length-N_LIMIT}개 더 보기 ▼`):'';
+  $('f-ncount').textContent=(AUTO.notices||[]).length||'';
   $('nlist').innerHTML=list.map(n=>`<li><span class="date">${fmtDay(new Date(n.date))}</span><span class="tag t-${esc(n.tag)}">${esc(n.tag)}</span>
      <span class="ntitle"><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.title)}</a>${isNew(n)?'<span class="new">N</span>':''}</span></li>`).join('')
     ||'<li class="empty">공지가 없습니다.</li>';
@@ -714,12 +749,18 @@ function markFeedSeen(){
   if(top) store.set('lastSeenNotice',top.date);
   $('nb-feed').classList.add('hidden');
 }
-const setN=t=>{nFilter=t;const tags=['전체',...new Set((AUTO.notices||[]).map(n=>n.tag))];chips($('nchips'),tags,t,setN);renderNotices();};
+$('n-more').onclick=()=>{nShowAll=!nShowAll;renderNotices();if(!nShowAll)$('f-notice').scrollIntoView({block:'start',behavior:'smooth'});};
+const setFeed=f=>{document.querySelectorAll('.fseg button').forEach(b=>b.classList.toggle('on',b.dataset.f===f));
+  $('f-notice').classList.toggle('hidden',f!=='notice');$('f-video').classList.toggle('hidden',f!=='video');store.set('feedView',f);};
+document.querySelectorAll('.fseg button').forEach(b=>b.onclick=()=>setFeed(b.dataset.f));
+setFeed(store.get('feedView','notice')==='video'?'video':'notice');
+const setN=t=>{nFilter=t;nShowAll=false;const tags=['전체',...new Set((AUTO.notices||[]).map(n=>n.tag))];chips($('nchips'),tags,t,setN);renderNotices();};
 
 /* ================= 영상 ================= */
 let vChan='전체';
 function renderVideos(){
   const q=$('vsearch').value.trim().toLowerCase();
+  $('f-vcount').textContent=(AUTO.videos||[]).length||'';
   const list=(AUTO.videos||[]).filter(v=>(vChan==='전체'||v.channel===vChan)&&(!q||(v.title+v.channel).toLowerCase().includes(q)));
   $('vgrid').innerHTML=list.length?list.map(v=>
     `<a class="vcard" href="https://youtu.be/${esc(v.id)}" target="_blank" rel="noopener">
@@ -799,19 +840,30 @@ function setStatus(){
 /* ================= 패치노트 ================= */
 let pTag='전체';
 const PTAGS=['전체','신규','성장','밸런스','재화·상점','보상','사냥','확률','주의','편의','오류','이벤트'];
+let pOpenAll=false;
+const CHEV='<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 function renderPatch(){
-  const q=$('p-search').value.trim().toLowerCase();
+  const q=$('p-search').value.trim().toLowerCase(),filtering=!!q||pTag!=='전체';
+  let n=0,first=true;
   const html=(TIMELINE.entries||[]).map(e=>{
     const items=e.items.filter(([t,x])=>(pTag==='전체'||t===pTag)&&(!q||x.toLowerCase().includes(q)||e.title.toLowerCase().includes(q)));
     if(!items.length) return '';
+    n++;const open=pOpenAll||filtering||first;first=false;
     const d=new Date(e.date+'T00:00:00+09:00');
-    return `<div class="pentry"><div class="pdate"><b>${pad(d.getMonth()+1)}.${pad(d.getDate())}</b><span>${WD[d.getDay()]}요일</span></div>
-      <div><span class="pkind k-${esc(e.kind)}">${esc(e.kind)}</span><p class="ptitle">${esc(e.title)}</p>
-      <ul class="pitems">${items.map(([t,x])=>`<li><span class="tag t-${esc(t)}">${esc(t)}</span><span>${esc(x)}</span></li>`).join('')}</ul>
-      ${e.sources?.length?`<div class="psrc">원문: ${e.sources.map(([n,u])=>`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(n)}</a>`).join(' · ')}</div>`:''}</div></div>`;
+    const tags=[...new Set(items.map(i=>i[0]))];
+    return `<details class="pentry"${open?' open':''}><summary>
+      <div class="pdate"><b>${pad(d.getMonth()+1)}.${pad(d.getDate())}</b><span>${WD[d.getDay()]}요일</span></div>
+      <div class="psum"><span class="pkind k-${esc(e.kind)}">${esc(e.kind)}</span><p class="ptitle">${esc(e.title)}</p>
+        <div class="ptags">${tags.map(t=>`<span class="tag t-${esc(t)}">${esc(t)}</span>`).join('')}</div></div>
+      <span class="pcnt">${items.length}건${CHEV}</span></summary>
+      <div class="pbody"><ul class="pitems">${items.map(([t,x])=>`<li><span class="tag t-${esc(t)}">${esc(t)}</span><span>${esc(x)}</span></li>`).join('')}</ul>
+      ${e.sources?.length?`<div class="psrc">원문: ${e.sources.map(([n,u])=>`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(n)}</a>`).join(' · ')}</div>`:''}</div></details>`;
   }).join('');
   $('p-list').innerHTML=html||'<p class="empty">해당하는 변경 사항이 없습니다.</p>';
+  $('p-count').textContent=n?`${n}개 패치 · 제목을 눌러 펼치기/접기`:'';
+  $('p-toggle').textContent=pOpenAll?'모두 접기':'모두 펼치기';
 }
+$('p-toggle').onclick=()=>{pOpenAll=!pOpenAll;renderPatch();};
 const setP=t=>{pTag=t;const used=new Set((TIMELINE.entries||[]).flatMap(e=>e.items.map(i=>i[0])));
   chips($('p-chips'),PTAGS.filter(x=>x==='전체'||used.has(x)),t,setP);renderPatch();};
 $('p-search').oninput=renderPatch;
