@@ -1,6 +1,14 @@
 {
  "notices": [
   {
+   "id": 1083153,
+   "board": "notice",
+   "title": "10월 30일(금) 18:30 소통 라이브 방송 안내",
+   "date": "2026-10-30T13:27+09:00",
+   "tag": "방송",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=1083153"
+  },
+  {
    "id": 1062323,
    "board": "notice",
    "title": "10월 29일(목) 일부 문제 현상 해결을 위한 마켓 업데이트 안내",
@@ -185,14 +193,6 @@
    "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=881533"
   },
   {
-   "id": 803590,
-   "board": "notice",
-   "title": "10월 24일(토) 필드 보스 입장 전투력 기준 변경 안내",
-   "date": "2026-10-24T14:16+09:00",
-   "tag": "안내",
-   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=803590"
-  },
-  {
    "id": 637438,
    "board": "event",
    "title": "깨비티아이 테스트하고 결과를 공유해 주세요! (~11/4 23:59)",
@@ -323,12 +323,12 @@
  ],
  "pinned": [
   {
-   "id": 1021818,
+   "id": 1083153,
    "board": "notice",
-   "title": "10월 28일(수) 업데이트 관련 사과 보상 안내",
-   "date": "2026-10-28T14:02+09:00",
-   "tag": "보상",
-   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=1021818"
+   "title": "10월 30일(금) 18:30 소통 라이브 방송 안내",
+   "date": "2026-10-30T13:27+09:00",
+   "tag": "방송",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=1083153"
   },
   {
    "id": 10859,
@@ -337,6 +337,14 @@
    "date": "2026-10-28T20:40+09:00",
    "tag": "안내",
    "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=10859"
+  },
+  {
+   "id": 1021818,
+   "board": "notice",
+   "title": "10월 28일(수) 업데이트 관련 사과 보상 안내",
+   "date": "2026-10-28T14:02+09:00",
+   "tag": "보상",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=1021818"
   },
   {
    "id": 979147,
@@ -650,6 +658,30 @@
    "official": false
   },
   {
+   "id": "bGwNXxoi72s",
+   "title": "[도깨비의세계]📢중요- 상위 사냥터 떡상 -  \"강인,강타\"의 도술 메타 / 10.27 라방 요약",
+   "channel": "쵸튜브[쵸피]",
+   "date": "2026-10-28T15:00+09:00",
+   "views": null,
+   "official": false
+  },
+  {
+   "id": "9nWhx95CtUQ",
+   "title": "[도깨비의세계] 7시 30분 라이브 방송 사냥터 대격변! 과연 어떤 도술을 6돌파를 해야 할까요?  - 쵸피",
+   "channel": "쵸튜브[쵸피]",
+   "date": "2026-10-28T15:00+09:00",
+   "views": null,
+   "official": false
+  },
+  {
+   "id": "n8aJ8PhSRN0",
+   "title": "[도깨비의세계] 7시반 공식방송 이번패치 생사 달렸습니다 / 영웅각성 VS 전설셋팅",
+   "channel": "투즈TV",
+   "date": "2026-10-28T15:00+09:00",
+   "views": null,
+   "official": false
+  },
+  {
    "id": "S2BbAHy6Q8c",
    "title": "도깨비 긴급 생방송 요약 9가지 - 재료 비경 원상복구! 전설 무기 내일 제작!!!",
    "channel": "도모",
@@ -704,31 +736,7 @@
    "date": "2026-10-28T12:00+09:00",
    "views": null,
    "official": true
-  },
-  {
-   "id": "RC1-8UY1Mq0",
-   "title": "도깨비 무과금 업뎃 후 사냥터 비교 실험 10가지",
-   "channel": "도모",
-   "date": "2026-10-28T12:00+09:00",
-   "views": null,
-   "official": false
-  },
-  {
-   "id": "10U7gvsn_g4",
-   "title": "도깨비 무과금 생방송 48가지 정리 - 하위 사냥터 너프, 상위 사냥터 버프 갓겜 등극!!",
-   "channel": "도모",
-   "date": "2026-10-28T12:00+09:00",
-   "views": null,
-   "official": false
-  },
-  {
-   "id": "1Zo2AfKZywM",
-   "title": "도깨비 무과금 비경 공략 10가지 - 엽전, 요혼석, 강화 비법서??",
-   "channel": "도모",
-   "date": "2026-10-28T12:00+09:00",
-   "views": null,
-   "official": false
   }
  ],
- "updated_at": "2026-10-30T14:01+09:00"
+ "updated_at": "2026-10-30T15:33+09:00"
 }
