@@ -1,9 +1,33 @@
 {
  "notices": [
   {
+   "id": 1099884,
+   "board": "notice",
+   "title": "[점검연장] 10월 31일(토) 임시 점검 안내",
+   "date": "2026-10-31T05:09+09:00",
+   "tag": "점검",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=1099884"
+  },
+  {
+   "id": 1089851,
+   "board": "notice",
+   "title": "비정상적인 게임 진행 관련 계정 제재 및 보호 조치 안내 <20차>",
+   "date": "2026-10-30T19:28+09:00",
+   "tag": "제재",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=1089851"
+  },
+  {
+   "id": 1089693,
+   "board": "notice",
+   "title": "10월 30일(금) 라이브 방송 다시보기 및 감사 선물 안내",
+   "date": "2026-10-30T19:26+09:00",
+   "tag": "방송",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=1089693"
+  },
+  {
    "id": 1083153,
    "board": "notice",
-   "title": "10월 30일(금) 18:30 소통 라이브 방송 안내",
+   "title": "[링크추가] 10월 30일(금) 18:30 소통 라이브 방송 안내",
    "date": "2026-10-30T13:27+09:00",
    "tag": "방송",
    "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=1083153"
@@ -169,30 +193,6 @@
    "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=979147"
   },
   {
-   "id": 935103,
-   "board": "notice",
-   "title": "비정상적인 게임 진행 관련 계정 제재 및 보호 조치 안내 <16차>",
-   "date": "2026-10-26T18:50+09:00",
-   "tag": "제재",
-   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=935103"
-  },
-  {
-   "id": 928615,
-   "board": "notice",
-   "title": "[링크추가] 10월 27일(화) 19:30 라이브 방송 안내",
-   "date": "2026-10-26T15:30+09:00",
-   "tag": "방송",
-   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=928615"
-  },
-  {
-   "id": 881533,
-   "board": "notice",
-   "title": "비정상적인 게임 진행 관련 계정 제재 및 보호 조치 안내 <15차>",
-   "date": "2026-10-25T18:43+09:00",
-   "tag": "제재",
-   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=881533"
-  },
-  {
    "id": 637438,
    "board": "event",
    "title": "깨비티아이 테스트하고 결과를 공유해 주세요! (~11/4 23:59)",
@@ -323,12 +323,12 @@
  ],
  "pinned": [
   {
-   "id": 1083153,
+   "id": 1099884,
    "board": "notice",
-   "title": "10월 30일(금) 18:30 소통 라이브 방송 안내",
-   "date": "2026-10-30T13:27+09:00",
-   "tag": "방송",
-   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=1083153"
+   "title": "[점검연장] 10월 31일(토) 임시 점검 안내",
+   "date": "2026-10-31T05:09+09:00",
+   "tag": "점검",
+   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=1099884"
   },
   {
    "id": 10859,
@@ -337,14 +337,6 @@
    "date": "2026-10-30T08:00+09:00",
    "tag": "안내",
    "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=10859"
-  },
-  {
-   "id": 1021818,
-   "board": "notice",
-   "title": "10월 28일(수) 업데이트 관련 사과 보상 안내",
-   "date": "2026-10-28T14:02+09:00",
-   "tag": "보상",
-   "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=1021818"
   },
   {
    "id": 979147,
@@ -388,11 +380,11 @@
   }
  ],
  "maintenance": {
-  "title": "10월 28일(수) 정기 점검 안내",
-  "kind": "정기",
-  "start": "2026-10-28T07:00+09:00",
-  "end": "2026-10-28T10:00+09:00",
-  "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=991284"
+  "title": "[점검연장] 10월 31일(토) 임시 점검 안내",
+  "kind": "임시",
+  "start": "2026-10-31T07:00+09:00",
+  "end": "2026-10-31T09:00+09:00",
+  "url": "https://forum.kakaogames.com/dokkaebi/postView/?code=notice&id=1099884"
  },
  "coupons": [
   {
@@ -738,5 +730,5 @@
    "official": false
   }
  ],
- "updated_at": "2026-10-31T10:19+09:00"
+ "updated_at": "2026-10-31T10:28+09:00"
 }
